@@ -1,0 +1,17 @@
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\obj\Debug\DAL.dll
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\obj\Debug\DAL.pdb
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\DTO.dll
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\DTO.pdb
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\DAL.dll.config
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\System.Net.Http.dll
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\System.Net.Http.WebRequest.dll
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\System.Net.Http.xml
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\bin\Debug\System.Net.Http.WebRequest.xml
+C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
