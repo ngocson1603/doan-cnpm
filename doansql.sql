@@ -1,5 +1,5 @@
-﻿CREATE DATABASE QL_CUAHANGLINHKIENMAYTINH1
-use QL_CUAHANGLINHKIENMAYTINH1
+﻿CREATE DATABASE QL_CUAHANGLINHKIENMAYTINH
+use QL_CUAHANGLINHKIENMAYTINH
 
 CREATE TABLE [dbo].[NhanVien](
 	[MaNhanVien] int IDENTITY(1,1), 
@@ -148,7 +148,7 @@ create table [dbo].[CTBaoHanh](
 	SoLuong int,
 	LyDo nvarchar(100),
 
-	CONSTRAINT PK_ddh PRIMARY KEY (MaBH)
+	CONSTRAINT PK_ddhct PRIMARY KEY (MaBH,MaSanPham)
 )
 
 CREATE TABLE [dbo].[TinhTrangOne](
@@ -196,6 +196,7 @@ ALTER TABLE [dbo].[DonDatHang]
 ADD CONSTRAINT FK_ddh_nv FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
 ALTER TABLE [dbo].[DonDatHang]
 ADD CONSTRAINT FK_ddh_npp FOREIGN KEY(MaNhaPhanPhoi) REFERENCES [dbo].[NhaPhanPhoi](MaNhaPhanPhoi)
+
 ALTER TABLE [dbo].[SeriSP]
 ADD CONSTRAINT FK_seri FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
 ALTER TABLE [dbo].[SeriHD]
