@@ -59,6 +59,7 @@ namespace GUI
                     TenSanPham = txt_TenSP.Text,
                     LoaiSanPham = int.Parse(txt_LoaiSP.SelectedValue.ToString()),
                     HangSanXuat = int.Parse(txt_HangSX.SelectedValue.ToString()),
+                    HSD = int.Parse(txtHSD.Text),
                     GiaBan = int.Parse(txt_GiaBan.Text),
                     TonKho = int.Parse(txt_TonKho.Text),
                     Image = txt_Image.Text
@@ -80,10 +81,11 @@ namespace GUI
             {
                 QuanLySanPham kh = new QuanLySanPham()
                 {
-                    MaSanPham = int.Parse(txt_MaSP.Text),
+                    //MaSanPham = int.Parse(txt_MaSP.Text),
                     TenSanPham = txt_TenSP.Text,
                     LoaiSanPham = int.Parse(txt_LoaiSP.SelectedValue.ToString()),
                     HangSanXuat = int.Parse(txt_HangSX.SelectedValue.ToString()),
+                    HSD = int.Parse(txtHSD.Text),
                     GiaBan = int.Parse(txt_GiaBan.Text),
                     TonKho = int.Parse(txt_TonKho.Text),
                     Image = txt_Image.Text
@@ -180,6 +182,7 @@ namespace GUI
                 TenSanPham = txt_TenSP.Text,
                 LoaiSanPham = int.Parse(txt_LoaiSP.SelectedValue.ToString()),
                 HangSanXuat = int.Parse(txt_HangSX.SelectedValue.ToString()),
+                HSD = int.Parse(txtHSD.Text),
                 GiaBan = int.Parse(txt_GiaBan.Text),
                 TonKho = int.Parse(txt_TonKho.Text),
                 Image = txt_Image.Text
@@ -267,7 +270,7 @@ namespace GUI
 
         private void btn_nhapvao_Click(object sender, EventArgs e)
         {
-            
+            int soluong = 1;
             string ma = txt_MaSP.Text;
             
             string tensp = txt_TenSP.Text;
@@ -277,7 +280,7 @@ namespace GUI
             string anh = txt_Image.Text;
            
                 MessageBox.Show("Đã thêm");
-                ThemSanPham sp = new ThemSanPham(tensp, loai, hang, gia, anh, ma);
+                ThemSanPham sp = new ThemSanPham(tensp, loai, hang, gia, soluong, anh, ma);
                 lstnhap.Add(sp);
 
         }

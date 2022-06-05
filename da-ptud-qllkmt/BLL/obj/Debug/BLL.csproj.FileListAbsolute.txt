@@ -20,3 +20,14 @@ D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\DTO.pdb
 D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\obj\Debug\BLL.dll
 D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\obj\Debug\BLL.pdb
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\BLL.dll
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\BLL.pdb
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\DTO.dll
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\DTO.pdb
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\BLL\obj\Debug\BLL.dll
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\BLL\obj\Debug\BLL.pdb

@@ -70,6 +70,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -171,6 +172,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.guna2Button1);
             this.groupBox1.Controls.Add(this.guna2Button3);
             this.groupBox1.Controls.Add(this.cbb_npp);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
@@ -508,6 +510,30 @@
             this.Column7.HeaderText = "Mã SP";
             this.Column7.Name = "Column7";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 23;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Red;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::GUI.Properties.Resources.sell;
+            this.guna2Button1.Location = new System.Drawing.Point(552, 125);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.BorderRadius = 26;
+            this.guna2Button1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2Button1.ShadowDecoration.Enabled = true;
+            this.guna2Button1.Size = new System.Drawing.Size(139, 49);
+            this.guna2Button1.TabIndex = 105;
+            this.guna2Button1.Text = "Hủy Sản Phẩm";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // frmNhapLinhKien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -582,6 +608,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
 
     }
 }

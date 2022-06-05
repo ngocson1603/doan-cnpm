@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="QL_CUAHANGLINHKIENMAYTINH" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=ADMIN\SQLEXPRESS;Initial Catalog=QL_CUAHANGLINHKIENMAYTINH;User ID=sa;Password=123</Value>
+      <Value Profile="(Default)">Data Source=LAPTOP-D97AHVVU\SQLEXPRESS;Initial Catalog=QL_CUAHANGLINHKIENMAYTINH;User ID=sa;Password=sa123</Value>
     </Setting>
   </Settings>
 </SettingsFile>

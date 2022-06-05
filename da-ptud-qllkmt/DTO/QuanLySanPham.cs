@@ -12,6 +12,7 @@ namespace DTO
         public string TenSanPham { get; set; }
         public int LoaiSanPham { get; set; }
         public int HangSanXuat { get; set; }
+        public int HSD { get; set; }
         public int GiaBan { get; set; }
         public int TonKho { get; set; }
         public string Image { get; set; }
