@@ -33,7 +33,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.txt_TongTien = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -66,7 +65,7 @@
             // dataExcel
             // 
             this.dataExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataExcel.Location = new System.Drawing.Point(284, 40);
+            this.dataExcel.Location = new System.Drawing.Point(246, 45);
             this.dataExcel.Margin = new System.Windows.Forms.Padding(2);
             this.dataExcel.Name = "dataExcel";
             this.dataExcel.RowTemplate.Height = 24;
@@ -78,7 +77,6 @@
             // 
             this.groupBox1.Controls.Add(this.guna2Button3);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.txt_TongTien);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
@@ -88,11 +86,11 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_MaHoaDon);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(0, 54);
+            this.groupBox1.Location = new System.Drawing.Point(11, 76);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(427, 173);
+            this.groupBox1.Size = new System.Drawing.Size(452, 151);
             this.groupBox1.TabIndex = 97;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa Đơn";
@@ -110,12 +108,12 @@
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.Image = global::GUI.Properties.Resources.sell;
-            this.guna2Button3.Location = new System.Drawing.Point(190, 106);
+            this.guna2Button3.Location = new System.Drawing.Point(225, 100);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.BorderRadius = 26;
             this.guna2Button3.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2Button3.ShadowDecoration.Enabled = true;
-            this.guna2Button3.Size = new System.Drawing.Size(104, 40);
+            this.guna2Button3.Size = new System.Drawing.Size(198, 40);
             this.guna2Button3.TabIndex = 103;
             this.guna2Button3.Text = "Chọn Sản Phẩm";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
@@ -123,23 +121,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(84, 68);
+            this.comboBox1.Location = new System.Drawing.Point(95, 60);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(87, 21);
             this.comboBox1.TabIndex = 102;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(178, 66);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(27, 23);
-            this.button2.TabIndex = 101;
-            this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // txt_TongTien
             // 
-            this.txt_TongTien.Location = new System.Drawing.Point(84, 103);
+            this.txt_TongTien.Location = new System.Drawing.Point(95, 100);
             this.txt_TongTien.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TongTien.Name = "txt_TongTien";
             this.txt_TongTien.Size = new System.Drawing.Size(87, 20);
@@ -148,7 +137,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 106);
+            this.label4.Location = new System.Drawing.Point(23, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 98;
@@ -158,7 +147,7 @@
             // 
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(323, 23);
+            this.dateTimePicker1.Location = new System.Drawing.Point(323, 20);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
@@ -167,7 +156,7 @@
             // txt_MaNV
             // 
             this.txt_MaNV.Enabled = false;
-            this.txt_MaNV.Location = new System.Drawing.Point(323, 73);
+            this.txt_MaNV.Location = new System.Drawing.Point(323, 60);
             this.txt_MaNV.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MaNV.Name = "txt_MaNV";
             this.txt_MaNV.Size = new System.Drawing.Size(100, 20);
@@ -176,7 +165,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(222, 76);
+            this.label5.Location = new System.Drawing.Point(222, 63);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 13);
@@ -186,7 +175,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(222, 27);
+            this.label6.Location = new System.Drawing.Point(222, 23);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 13);
@@ -196,7 +185,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 71);
+            this.label1.Location = new System.Drawing.Point(23, 63);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
@@ -205,7 +194,7 @@
             // 
             // txt_MaHoaDon
             // 
-            this.txt_MaHoaDon.Location = new System.Drawing.Point(84, 20);
+            this.txt_MaHoaDon.Location = new System.Drawing.Point(95, 20);
             this.txt_MaHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MaHoaDon.Name = "txt_MaHoaDon";
             this.txt_MaHoaDon.Size = new System.Drawing.Size(87, 20);
@@ -214,7 +203,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 23);
+            this.label3.Location = new System.Drawing.Point(23, 23);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
@@ -225,10 +214,10 @@
             // 
             this.dgv_Chitiethoadon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Chitiethoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Chitiethoadon.Location = new System.Drawing.Point(4, 404);
+            this.dgv_Chitiethoadon.Location = new System.Drawing.Point(11, 394);
             this.dgv_Chitiethoadon.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Chitiethoadon.Name = "dgv_Chitiethoadon";
-            this.dgv_Chitiethoadon.Size = new System.Drawing.Size(861, 150);
+            this.dgv_Chitiethoadon.Size = new System.Drawing.Size(852, 144);
             this.dgv_Chitiethoadon.TabIndex = 96;
             this.dgv_Chitiethoadon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Chitiethoadon_CellClick);
             // 
@@ -236,10 +225,10 @@
             // 
             this.dgv_HoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_HoaDon.Location = new System.Drawing.Point(4, 232);
+            this.dgv_HoaDon.Location = new System.Drawing.Point(11, 232);
             this.dgv_HoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_HoaDon.Name = "dgv_HoaDon";
-            this.dgv_HoaDon.Size = new System.Drawing.Size(459, 158);
+            this.dgv_HoaDon.Size = new System.Drawing.Size(452, 158);
             this.dgv_HoaDon.TabIndex = 95;
             this.dgv_HoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoaDon_CellClick);
             // 
@@ -250,7 +239,7 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(330, 22);
+            this.label2.Location = new System.Drawing.Point(286, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(324, 33);
             this.label2.TabIndex = 94;
@@ -326,14 +315,14 @@
             this.dgv_chitiet.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_chitiet.Name = "dgv_chitiet";
             this.dgv_chitiet.RowTemplate.Height = 24;
-            this.dgv_chitiet.Size = new System.Drawing.Size(390, 158);
+            this.dgv_chitiet.Size = new System.Drawing.Size(396, 158);
             this.dgv_chitiet.TabIndex = 103;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(446, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(467, 76);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(411, 171);
+            this.pictureBox1.Size = new System.Drawing.Size(396, 151);
             this.pictureBox1.TabIndex = 102;
             this.pictureBox1.TabStop = false;
             // 
@@ -391,7 +380,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txt_TongTien;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dgv_chitiet;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;

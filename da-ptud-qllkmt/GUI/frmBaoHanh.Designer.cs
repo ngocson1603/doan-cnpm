@@ -68,7 +68,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(345, 25);
+            this.label1.Location = new System.Drawing.Point(347, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 25);
             this.label1.TabIndex = 0;
@@ -76,33 +76,34 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "MM/dd/yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(142, 31);
+            this.dateTimePicker1.Location = new System.Drawing.Point(101, 19);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(119, 20);
             this.dateTimePicker1.TabIndex = 1;
             // 
             // txtManv
             // 
             this.txtManv.Enabled = false;
-            this.txtManv.Location = new System.Drawing.Point(142, 57);
+            this.txtManv.Location = new System.Drawing.Point(101, 60);
             this.txtManv.Name = "txtManv";
-            this.txtManv.Size = new System.Drawing.Size(153, 20);
+            this.txtManv.Size = new System.Drawing.Size(119, 20);
             this.txtManv.TabIndex = 2;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(142, 88);
+            this.comboBox1.Location = new System.Drawing.Point(101, 100);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 21);
+            this.comboBox1.Size = new System.Drawing.Size(119, 21);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 37);
+            this.label2.Location = new System.Drawing.Point(23, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 4;
@@ -111,7 +112,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 64);
+            this.label3.Location = new System.Drawing.Point(23, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 5;
@@ -120,7 +121,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 88);
+            this.label4.Location = new System.Drawing.Point(23, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 6;
@@ -128,9 +129,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(501, 263);
+            this.button1.Location = new System.Drawing.Point(501, 273);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 33);
+            this.button1.Size = new System.Drawing.Size(152, 33);
             this.button1.TabIndex = 7;
             this.button1.Text = "Xem sản phẩm";
             this.button1.UseVisualStyleBackColor = true;
@@ -204,9 +205,9 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(31, 70);
+            this.groupBox1.Location = new System.Drawing.Point(12, 70);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(464, 187);
+            this.groupBox1.Size = new System.Drawing.Size(483, 197);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bảo hành sản phẩm";
@@ -214,16 +215,16 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(142, 149);
+            this.comboBox2.Location = new System.Drawing.Point(328, 20);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(153, 21);
+            this.comboBox2.Size = new System.Drawing.Size(119, 21);
             this.comboBox2.TabIndex = 13;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 152);
+            this.label7.Location = new System.Drawing.Point(252, 23);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 12;
@@ -232,15 +233,15 @@
             // txtMaSP
             // 
             this.txtMaSP.Enabled = false;
-            this.txtMaSP.Location = new System.Drawing.Point(142, 119);
+            this.txtMaSP.Location = new System.Drawing.Point(101, 140);
             this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.Size = new System.Drawing.Size(153, 20);
+            this.txtMaSP.Size = new System.Drawing.Size(119, 20);
             this.txtMaSP.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 119);
+            this.label6.Location = new System.Drawing.Point(23, 143);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 10;
@@ -248,16 +249,16 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(301, 55);
+            this.richTextBox1.Location = new System.Drawing.Point(255, 79);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(157, 96);
+            this.richTextBox1.Size = new System.Drawing.Size(192, 81);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(337, 37);
+            this.label5.Location = new System.Drawing.Point(252, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 7;
@@ -268,7 +269,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(501, 70);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(419, 187);
+            this.dataGridView2.Size = new System.Drawing.Size(419, 197);
             this.dataGridView2.TabIndex = 11;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
@@ -315,16 +316,16 @@
             // 
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(31, 315);
+            this.dataGridView3.Location = new System.Drawing.Point(12, 315);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(458, 211);
+            this.dataGridView3.Size = new System.Drawing.Size(483, 211);
             this.dataGridView3.TabIndex = 13;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(33, 263);
+            this.button2.Location = new System.Drawing.Point(12, 273);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 36);
+            this.button2.Size = new System.Drawing.Size(152, 36);
             this.button2.TabIndex = 14;
             this.button2.Text = "Xem đơn bảo hàng";
             this.button2.UseVisualStyleBackColor = true;

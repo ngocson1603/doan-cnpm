@@ -80,7 +80,7 @@
             // 
             this.btnThanhToan.Location = new System.Drawing.Point(654, 369);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(91, 58);
+            this.btnThanhToan.Size = new System.Drawing.Size(321, 34);
             this.btnThanhToan.TabIndex = 3;
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 38);
+            this.label1.Location = new System.Drawing.Point(23, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 4;
@@ -98,7 +98,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 69);
+            this.label2.Location = new System.Drawing.Point(23, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 5;
@@ -107,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(245, 38);
+            this.label3.Location = new System.Drawing.Point(254, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 6;
@@ -139,15 +139,15 @@
             // txtMaKH
             // 
             this.txtMaKH.Enabled = false;
-            this.txtMaKH.Location = new System.Drawing.Point(90, 101);
+            this.txtMaKH.Location = new System.Drawing.Point(114, 100);
             this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(137, 20);
+            this.txtMaKH.Size = new System.Drawing.Size(120, 20);
             this.txtMaKH.TabIndex = 14;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 104);
+            this.label5.Location = new System.Drawing.Point(23, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 13);
             this.label5.TabIndex = 13;
@@ -156,9 +156,9 @@
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(564, 32);
+            this.button1.Location = new System.Drawing.Point(257, 92);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 49);
+            this.button1.Size = new System.Drawing.Size(179, 34);
             this.button1.TabIndex = 12;
             this.button1.Text = "Hủy";
             this.button1.UseVisualStyleBackColor = true;
@@ -167,15 +167,15 @@
             // txtTongTien
             // 
             this.txtTongTien.Enabled = false;
-            this.txtTongTien.Location = new System.Drawing.Point(313, 66);
+            this.txtTongTien.Location = new System.Drawing.Point(313, 60);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(137, 20);
+            this.txtTongTien.Size = new System.Drawing.Size(123, 20);
             this.txtTongTien.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(245, 69);
+            this.label4.Location = new System.Drawing.Point(251, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 10;
@@ -184,26 +184,27 @@
             // txtTK
             // 
             this.txtTK.Enabled = false;
-            this.txtTK.Location = new System.Drawing.Point(90, 66);
+            this.txtTK.Location = new System.Drawing.Point(114, 60);
             this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(137, 20);
+            this.txtTK.Size = new System.Drawing.Size(120, 20);
             this.txtTK.TabIndex = 9;
             // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(90, 38);
+            this.textBox1.Location = new System.Drawing.Point(114, 20);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
+            this.textBox1.Size = new System.Drawing.Size(120, 20);
             this.textBox1.TabIndex = 8;
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "MM/dd/yyyy";
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(313, 32);
+            this.dateTimePicker1.Location = new System.Drawing.Point(313, 20);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(137, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(123, 20);
             this.dateTimePicker1.TabIndex = 7;
             // 
             // tableLayoutPanel1
