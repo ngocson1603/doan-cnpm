@@ -64,26 +64,16 @@ namespace GUI
             }
         }
         public static BindingList<ThemBH> lstspbh = new BindingList<ThemBH>();
-
-        public int thang(DateTime compareTo, DateTime now)
-        {
-            int nMonths = 0;
-            if (now.Year == compareTo.Year)
-                nMonths = now.Month - compareTo.Month;
-            else
-                nMonths = (12 - compareTo.Month) + now.Month;
-            return nMonths;
-        }
+     
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            
-
+           
             DateTime compareTo = DateTime.Parse(bllbh.getngay(int.Parse(comboBox1.Text)));
             DateTime now = DateTime.Now;
-            int so = thang(compareTo, now);
+            var diffMonths = (now.Month + now.Year * 12) - (compareTo.Month + compareTo.Year * 12);
             int hsd = int.Parse(bllbh.loadhsd(int.Parse(txtMaSP.Text)));
 
-            if (so > hsd)
+            if (diffMonths > hsd)
             {
                 MessageBox.Show("Sản phẩm đã hết bảo hành");
                 return;
