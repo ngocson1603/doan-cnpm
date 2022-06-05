@@ -20,6 +20,7 @@ namespace GUI
         BLLKhachHang bllkh = new BLLKhachHang();
         BLLDangNhap blldn = new BLLDangNhap();
         BLLSeri bllsr = new BLLSeri();
+        BLLBaoHanh bllbh = new BLLBaoHanh();
 
         Helper hp = new Helper();
         public static string taikhoan;
@@ -65,7 +66,7 @@ namespace GUI
                 txt_MaNV.Text = row.Cells[3].Value.ToString();
 
                 btn_Xuat.Enabled = true;
-
+                toolStripButton1.Enabled = true;
 
                 
                 dgv_chitiet.DataSource = bllgio.loadChiTietHoaDon(int.Parse(row.Cells[0].Value.ToString()));
@@ -250,6 +251,7 @@ namespace GUI
             }
 
             btn_Xuat.Enabled = false;
+            toolStripButton1.Enabled = false;
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -279,6 +281,74 @@ namespace GUI
                 frm.btn_Xoa.Visible = false;
                 frm.btn.Enabled = false;
             }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            ten = blldn.loadtentheomakh(comboBox1.Text);
+            tennv = blldn.loadtentheoma(txt_MaNV.Text);
+
+            dataExcel.DataSource = bllbh.loadbieumau(int.Parse(txt_MaHoaDon.Text));
+            taikhoan = comboBox1.Text;
+            mahd = int.Parse(dgv_HoaDon.CurrentRow.Cells[0].Value.ToString());
+            ExcelExportBH ex = new ExcelExportBH();
+            if (dgv_HoaDon.Rows.Count == 0)
+            {
+                MessageBox.Show("khong co du lieu de xuat");
+                return;
+            }
+            int a = 0;
+            for (int x = 0; x < dataExcel.Rows.Count; x++)
+            {
+                tongtien += 1 * int.Parse(dataExcel.Rows[a].Cells[2].Value.ToString());
+                a++;
+            }
+            manv = int.Parse(txt_MaNV.Text);
+            List<View_BieuMauBaoHanh> pListKhoa = new List<View_BieuMauBaoHanh>();
+            int b = 0;
+                for (int x = 0; x < dataExcel.Rows.Count; x++)
+                {
+
+                    View_BieuMauBaoHanh i = new View_BieuMauBaoHanh();
+                    
+                    if (b <= dataExcel.Rows.Count)
+                    {
+                        i.TenSanPham = dataExcel.Rows[b].Cells[0].Value.ToString();
+                        i.soluong = 1;
+                        i.giaban = int.Parse(dataExcel.Rows[b].Cells[2].Value.ToString());
+                        i.NgayLapHoaDon = DateTime.Parse((dataExcel.Rows[b].Cells[3].Value.ToString()));
+                        i.TongTien = int.Parse(dataExcel.Rows[b].Cells[2].Value.ToString());
+                        i.Seri = dataExcel.Rows[b].Cells[7].Value.ToString();
+                        pListKhoa.Add(i);
+                        //if (dataExcel.Rows[b - 1].Cells[0].Value.ToString() == dataExcel.Rows[b].Cells[0].Value.ToString())
+                        //{
+                        //    i.TenSanPham = null;
+                        //    i.soluong = null;
+                        //    i.giaban = null;
+                        //    i.NgayLapHoaDon = null;
+                        //    i.TongTien = null;
+                        //    i.Seri = dataExcel.Rows[b].Cells[7].Value.ToString();
+                        //    pListKhoa.Add(i);
+                        //}
+                    } b++;
+                    
+                }
+                
+
+            string path = string.Empty;
+
+            ex.ExportKhoa(pListKhoa, ref path, false);
+
+            DialogResult r = MessageBox.Show("ban co muon mo file khong", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (!string.IsNullOrEmpty(path) && r == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start(path);
+            }
+
+            btn_Xuat.Enabled = false;
+            toolStripButton1.Enabled = false;
+            tongtien = 0;
         }
     }
 }

@@ -411,6 +411,7 @@
     <Compile Include="XuLy\Constants.cs" />
     <Compile Include="XuLy\DangNhap.cs" />
     <Compile Include="XuLy\ExcelExport.cs" />
+    <Compile Include="XuLy\ExcelExportBH.cs" />
     <Compile Include="XuLy\ExcelExportNV.cs" />
     <Compile Include="XuLy\FileCommon.cs" />
     <Compile Include="XuLy\Global.cs" />

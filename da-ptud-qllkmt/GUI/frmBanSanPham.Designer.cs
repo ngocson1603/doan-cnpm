@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBanSanPham));
             this.dataExcel = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -50,6 +51,7 @@
             this.btn_XoaHD = new System.Windows.Forms.ToolStripButton();
             this.btn_SuaHD = new System.Windows.Forms.ToolStripButton();
             this.btn_Xuat = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dgv_chitiet = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataExcel)).BeginInit();
@@ -64,8 +66,8 @@
             // dataExcel
             // 
             this.dataExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataExcel.Location = new System.Drawing.Point(431, 56);
-            this.dataExcel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataExcel.Location = new System.Drawing.Point(284, 40);
+            this.dataExcel.Margin = new System.Windows.Forms.Padding(2);
             this.dataExcel.Name = "dataExcel";
             this.dataExcel.RowTemplate.Height = 24;
             this.dataExcel.Size = new System.Drawing.Size(10, 10);
@@ -87,9 +89,9 @@
             this.groupBox1.Controls.Add(this.txt_MaHoaDon);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(0, 54);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(427, 173);
             this.groupBox1.TabIndex = 97;
             this.groupBox1.TabStop = false;
@@ -138,7 +140,7 @@
             // txt_TongTien
             // 
             this.txt_TongTien.Location = new System.Drawing.Point(84, 103);
-            this.txt_TongTien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_TongTien.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TongTien.Name = "txt_TongTien";
             this.txt_TongTien.Size = new System.Drawing.Size(87, 20);
             this.txt_TongTien.TabIndex = 99;
@@ -157,7 +159,7 @@
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(323, 23);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
             this.dateTimePicker1.TabIndex = 97;
@@ -166,7 +168,7 @@
             // 
             this.txt_MaNV.Enabled = false;
             this.txt_MaNV.Location = new System.Drawing.Point(323, 73);
-            this.txt_MaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MaNV.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MaNV.Name = "txt_MaNV";
             this.txt_MaNV.Size = new System.Drawing.Size(100, 20);
             this.txt_MaNV.TabIndex = 96;
@@ -204,7 +206,7 @@
             // txt_MaHoaDon
             // 
             this.txt_MaHoaDon.Location = new System.Drawing.Point(84, 20);
-            this.txt_MaHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MaHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MaHoaDon.Name = "txt_MaHoaDon";
             this.txt_MaHoaDon.Size = new System.Drawing.Size(87, 20);
             this.txt_MaHoaDon.TabIndex = 91;
@@ -224,7 +226,7 @@
             this.dgv_Chitiethoadon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Chitiethoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Chitiethoadon.Location = new System.Drawing.Point(4, 404);
-            this.dgv_Chitiethoadon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Chitiethoadon.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Chitiethoadon.Name = "dgv_Chitiethoadon";
             this.dgv_Chitiethoadon.Size = new System.Drawing.Size(861, 150);
             this.dgv_Chitiethoadon.TabIndex = 96;
@@ -235,7 +237,7 @@
             this.dgv_HoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HoaDon.Location = new System.Drawing.Point(4, 232);
-            this.dgv_HoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_HoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_HoaDon.Name = "dgv_HoaDon";
             this.dgv_HoaDon.Size = new System.Drawing.Size(459, 158);
             this.dgv_HoaDon.TabIndex = 95;
@@ -261,7 +263,8 @@
             this.btn_ThemHD,
             this.btn_XoaHD,
             this.btn_SuaHD,
-            this.btn_Xuat});
+            this.btn_Xuat,
+            this.toolStripButton1});
             this.toolStrip3.Location = new System.Drawing.Point(0, 0);
             this.toolStrip3.Name = "toolStrip3";
             this.toolStrip3.Size = new System.Drawing.Size(874, 27);
@@ -305,11 +308,22 @@
             this.btn_Xuat.Text = "Xuất Hóa Đơn";
             this.btn_Xuat.Click += new System.EventHandler(this.btn_Xuat_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(90, 24);
+            this.toolStripButton1.Text = "Xuất Bảo Hành";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // dgv_chitiet
             // 
             this.dgv_chitiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_chitiet.Location = new System.Drawing.Point(467, 232);
-            this.dgv_chitiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_chitiet.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_chitiet.Name = "dgv_chitiet";
             this.dgv_chitiet.RowTemplate.Height = 24;
             this.dgv_chitiet.Size = new System.Drawing.Size(390, 158);
@@ -337,7 +351,7 @@
             this.Controls.Add(this.dgv_HoaDon);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.toolStrip3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmBanSanPham";
             this.Text = "frmBanSanPham";
             this.Load += new System.EventHandler(this.frmBanSanPham_Load);
@@ -381,6 +395,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dgv_chitiet;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
 
     }
 }

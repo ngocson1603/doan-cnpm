@@ -29,6 +29,10 @@ namespace BLL
         {
             return dalbh.GetWatchListCT(ma);
         }
+        public List<View_BieuMauBaoHanh> loadbieumau(int ma)
+        {
+            return dalbh.getbieumau(ma);
+        }
         public string getten(int ma)
         {
             return dalbh.gettensp(ma);

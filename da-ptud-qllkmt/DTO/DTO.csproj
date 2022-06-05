@@ -79,6 +79,7 @@
     <Compile Include="ThemPhieuNhap.cs" />
     <Compile Include="ThemSanPham.cs" />
     <Compile Include="TinhTrang.cs" />
+    <Compile Include="View_BieuMauBaoHanh.cs" />
     <Compile Include="View_BieuMauGio.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -21,7 +21,10 @@ namespace DAL
         {
             return qllk.View_CTHDSPs.Where(t => t.MaHoaDon == ma).Select(t => t).ToList();
         }
-
+        public List<View_BieuMauBaoHanh> getbieumau(int ma)
+        {
+            return qllk.View_BieuMauBaoHanhs.Where(t => t.MaHoaDon == ma).Select(t => t).ToList();
+        }
         public List<HoaDon> getmahd()
         {
             return qllk.HoaDons.Select(t => t).ToList();
