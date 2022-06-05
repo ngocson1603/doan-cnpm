@@ -83,6 +83,7 @@ namespace GUI
             int a = 0;
             if (comboBox1.Text == a.ToString())
             {
+                MessageBox.Show("Vui lòng chọn khách hàng");
                 return;
             }
             QuanLyHoaDon cthdsp = new QuanLyHoaDon()
