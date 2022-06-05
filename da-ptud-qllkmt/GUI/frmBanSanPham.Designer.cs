@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBanSanPham));
             this.dataExcel = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txt_TongTien = new System.Windows.Forms.TextBox();
@@ -53,7 +54,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dgv_chitiet = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataExcel)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Chitiethoadon)).BeginInit();
@@ -76,6 +77,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.guna2Button1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.guna2Button3);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -97,6 +99,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa Đơn";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(188, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(29, 21);
+            this.button1.TabIndex = 104;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // guna2Button3
             // 
             this.guna2Button3.AutoRoundedCorners = true;
@@ -110,12 +123,12 @@
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.Image = global::GUI.Properties.Resources.sell;
-            this.guna2Button3.Location = new System.Drawing.Point(225, 100);
+            this.guna2Button3.Location = new System.Drawing.Point(188, 100);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.BorderRadius = 26;
             this.guna2Button3.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2Button3.ShadowDecoration.Enabled = true;
-            this.guna2Button3.Size = new System.Drawing.Size(198, 40);
+            this.guna2Button3.Size = new System.Drawing.Size(132, 40);
             this.guna2Button3.TabIndex = 103;
             this.guna2Button3.Text = "Chọn Sản Phẩm";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
@@ -328,16 +341,28 @@
             this.pictureBox1.TabIndex = 102;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // guna2Button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(188, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(29, 21);
-            this.button1.TabIndex = 104;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 19;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Enabled = false;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::GUI.Properties.Resources.trash_can_1153122;
+            this.guna2Button1.Location = new System.Drawing.Point(368, 103);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.BorderRadius = 26;
+            this.guna2Button1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2Button1.ShadowDecoration.Enabled = true;
+            this.guna2Button1.Size = new System.Drawing.Size(79, 40);
+            this.guna2Button1.TabIndex = 105;
+            this.guna2Button1.Text = "Hủy";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // frmBanSanPham
             // 
@@ -398,6 +423,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ComboBox comboBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
 
     }
 }

@@ -44,12 +44,13 @@ namespace GUI
             {
                 dgv_Chitiethoadon.Columns[5].Visible = false;
             }
-
             txt_MaNV.Text = frmTrangChuNhanVien.manv;
             comboBox1.DataSource = bllkh.loadmakh();
             comboBox1.DisplayMember = "MaKH";
             comboBox1.ValueMember = "MaKH";
             comboBox1.SelectedIndex = 0;
+
+            comboBox1.Text = frmChonKhachHang.ma.ToString();
 
             guna2Button3.Enabled = true;
         }
@@ -77,8 +78,13 @@ namespace GUI
 
         private void btn_ThemHD_Click(object sender, EventArgs e)
         {
+            
             loaddata(frmQuanLySP.lstsp);
             int a = 0;
+            if (comboBox1.Text == a.ToString())
+            {
+                return;
+            }
             QuanLyHoaDon cthdsp = new QuanLyHoaDon()
                 {
                     MaKH = int.Parse(comboBox1.Text),
@@ -182,6 +188,8 @@ namespace GUI
                 txt_TongTien.Text = kq.ToString();
                 string direct = hp.Directory() + dgv_Chitiethoadon.CurrentRow.Cells[5].Value.ToString();
                 pictureBox1.Image = GetImg(direct, pictureBox1.Width, pictureBox1.Height);
+
+                guna2Button1.Enabled = true;
             }
         }
         public void loaddata(BindingList<ThemSanPham> loadsp)
@@ -196,7 +204,10 @@ namespace GUI
             dgv_Chitiethoadon.Columns[5].ReadOnly = true;
             dgv_Chitiethoadon.Columns[6].ReadOnly = true;
         }
-
+        public void loadkh(BindingList<ThemSanPham> loadsp)
+        {
+            comboBox1.DataSource = loadsp;
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
             
@@ -354,8 +365,14 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmChonKhachHang frm = new frmChonKhachHang();
+            frmChonKhachHang frm = new frmChonKhachHang(this);
             frm.ShowDialog();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            frmQuanLySP.lstsp.RemoveAt(dgv_Chitiethoadon.CurrentCell.RowIndex);
+            guna2Button1.Enabled = false;
         }
     }
 }
