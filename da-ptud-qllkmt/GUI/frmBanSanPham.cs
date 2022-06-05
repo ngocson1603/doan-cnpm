@@ -72,7 +72,13 @@ namespace GUI
 
                 
                 dgv_chitiet.DataSource = bllgio.loadChiTietHoaDon(int.Parse(row.Cells[0].Value.ToString()));
-
+                int tongtien=0;
+                for(int i=0;i< dgv_chitiet.RowCount ; i++)
+                {
+                    tongtien +=int.Parse(dgv_chitiet.Rows[i].Cells[4].Value.ToString());
+                   
+                }
+                txt_TongTien.Text = tongtien.ToString();
             }
         }
 
@@ -132,6 +138,7 @@ namespace GUI
                     }
                     MessageBox.Show("Mua hàng thành công");
                 }
+            frmQuanLySP.lstsp.Clear();
         }
 
         private void btn_XoaHD_Click(object sender, EventArgs e)
@@ -185,8 +192,8 @@ namespace GUI
         {
             if (e.RowIndex >= 0)
             {
-                kq = int.Parse(dgv_Chitiethoadon.CurrentRow.Cells[3].Value.ToString()) * int.Parse(dgv_Chitiethoadon.CurrentRow.Cells[4].Value.ToString());
-                txt_TongTien.Text = kq.ToString();
+                //kq = int.Parse(dgv_Chitiethoadon.CurrentRow.Cells[3].Value.ToString()) * int.Parse(dgv_Chitiethoadon.CurrentRow.Cells[4].Value.ToString());
+                //txt_TongTien.Text = kq.ToString();
                 string direct = hp.Directory() + dgv_Chitiethoadon.CurrentRow.Cells[5].Value.ToString();
                 pictureBox1.Image = GetImg(direct, pictureBox1.Width, pictureBox1.Height);
 

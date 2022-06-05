@@ -300,6 +300,12 @@ namespace GUI
             }
         }
 
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            frmQuanLySP.lstnhap.RemoveAt(dgv_Chitiethoadon.CurrentCell.RowIndex);
+            guna2Button1.Enabled = false;
+        }
+
    
 
 

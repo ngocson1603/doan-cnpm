@@ -18,6 +18,8 @@ namespace GUI
     {
         Helper hp = new Helper();
         BLLGioHang bllgiohang = new BLLGioHang();
+        BLLSeri bllsr = new BLL.BLLSeri();
+       
         QL_CUAHANGLINHKIENMAYTINHDataContext qllk = new QL_CUAHANGLINHKIENMAYTINHDataContext();
         public static int kq;
         public frmChiTietGio()
@@ -110,18 +112,28 @@ namespace GUI
                                 TongTien = int.Parse(dataGridView1.Rows[a].Cells[3].Value.ToString()) * int.Parse(dataGridView1.Rows[a].Cells[4].Value.ToString()),
 
                             };
-                            a++;
+                         
                             if (bllgiohang.postGioHangCTHD(cthd))
                             {
-                                detailProduct.lstsp.Clear();
+                                for (int i = 0; i < int.Parse(dataGridView1.Rows[a].Cells[4].Value.ToString()); i++)
+                                {
+                                    SeriHD sr = new SeriHD()
+                                    {
+                                        Seri = bllsr.loadseritheoma(int.Parse(dataGridView1.Rows[a].Cells[6].Value.ToString())),
+                                        MaHoaDon = int.Parse(textBox1.Text),
+                                    };
+                                    bllsr.postSP(sr);
+                                }
                             }
                             else
                             {
                                 MessageBox.Show("Mua hàng không thành công");
                                 break;
                             }
+                            a++;
                         }
                         MessageBox.Show("Mua hàng thành công");
+                        detailProduct.lstsp.Clear();
                     }
                 }
                 else
