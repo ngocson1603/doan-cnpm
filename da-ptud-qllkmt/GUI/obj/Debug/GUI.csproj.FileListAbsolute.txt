@@ -399,3 +399,4 @@ D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\Syncfusion.XlsIO
 D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\System.Net.Http.xml
 D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\System.Net.Http.WebRequest.xml
 D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\DAL.pdb
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.frmChonKhachHang.resources

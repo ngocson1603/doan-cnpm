@@ -29,6 +29,7 @@ namespace GUI
         public static int manv;
         public static string ten;
         public static string tennv;
+        public static int chonmanv;
         public frmBanSanPham()
         {
             InitializeComponent();
@@ -349,6 +350,12 @@ namespace GUI
             btn_Xuat.Enabled = false;
             toolStripButton1.Enabled = false;
             tongtien = 0;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmChonKhachHang frm = new frmChonKhachHang();
+            frm.ShowDialog();
         }
     }
 }
