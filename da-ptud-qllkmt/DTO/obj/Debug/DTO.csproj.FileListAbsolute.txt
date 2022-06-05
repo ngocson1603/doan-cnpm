@@ -8,3 +8,12 @@ C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DTO\bin\Debug\System.Net.Ht
 C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DTO\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DTO\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\DTO\bin\Debug\DTO.dll.config
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\DTO\bin\Debug\DTO.dll
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\DTO\bin\Debug\DTO.pdb
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\DTO\bin\Debug\Newtonsoft.Json.dll
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\DTO\bin\Debug\System.Net.Http.Formatting.dll
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\DTO\bin\Debug\System.Net.Http.Formatting.xml
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\DTO\obj\Debug\DTO.dll
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\DTO\obj\Debug\DTO.pdb

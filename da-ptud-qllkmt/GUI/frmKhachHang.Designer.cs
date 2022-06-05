@@ -168,9 +168,9 @@
             this.groupBox1.Controls.Add(this.txt_timkiem);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Location = new System.Drawing.Point(404, 168);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(304, 60);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
@@ -188,7 +188,8 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label18.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(13, 19);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(133, 13);
@@ -203,7 +204,7 @@
             this.dgvKhachhang.BackgroundColor = System.Drawing.Color.White;
             this.dgvKhachhang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachhang.Location = new System.Drawing.Point(16, 16);
-            this.dgvKhachhang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvKhachhang.Margin = new System.Windows.Forms.Padding(2);
             this.dgvKhachhang.Name = "dgvKhachhang";
             this.dgvKhachhang.RowHeadersWidth = 62;
             this.dgvKhachhang.RowTemplate.Height = 28;
@@ -217,7 +218,7 @@
             this.dateTimeNgaysinhkhachhang.CustomFormat = "dd/MM/yyyy";
             this.dateTimeNgaysinhkhachhang.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeNgaysinhkhachhang.Location = new System.Drawing.Point(129, 125);
-            this.dateTimeNgaysinhkhachhang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeNgaysinhkhachhang.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeNgaysinhkhachhang.Name = "dateTimeNgaysinhkhachhang";
             this.dateTimeNgaysinhkhachhang.Size = new System.Drawing.Size(181, 20);
             this.dateTimeNgaysinhkhachhang.TabIndex = 30;
@@ -274,7 +275,8 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label1.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(415, 152);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
@@ -293,7 +295,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label2.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(416, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
@@ -303,7 +306,8 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label9.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(62, 89);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 13);
@@ -313,7 +317,8 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label10.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(62, 125);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 13);
@@ -325,7 +330,8 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label12.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(415, 117);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 13);
@@ -337,7 +343,8 @@
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label13.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(416, 51);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(33, 13);
@@ -347,11 +354,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label14.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(64, 51);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 15);
+            this.label14.Size = new System.Drawing.Size(40, 13);
             this.label14.TabIndex = 8;
             this.label14.Text = "Mã KH";
             // 
@@ -401,7 +408,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 495);
             this.Controls.Add(this.groupBox4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmKhachHang";
             this.Text = "frmKhachHang";
             this.Load += new System.EventHandler(this.frmKhachHang_Load);

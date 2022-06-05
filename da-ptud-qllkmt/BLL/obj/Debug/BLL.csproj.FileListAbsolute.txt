@@ -9,3 +9,14 @@ C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\BLL\bin\Debug\DTO.pdb
 C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\BLL\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\BLL\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Admin\Desktop\DA-PTUD-QLLKMT\da-ptud-qllkmt\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\BLL.dll
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\BLL.pdb
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\DAL.dll
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\DTO.dll
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\System.Net.Http.Formatting.dll
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\Newtonsoft.Json.dll
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\DAL.pdb
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\bin\Debug\DTO.pdb
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\obj\Debug\BLL.dll
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\BLL\obj\Debug\BLL.pdb

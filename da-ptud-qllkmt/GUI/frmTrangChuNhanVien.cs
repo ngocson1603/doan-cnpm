@@ -77,8 +77,7 @@ namespace GUI
 
         private void frmTrangChuNhanVien_Load(object sender, EventArgs e)
         {
-            panel2.Controls.Clear();
-            hp.motrangcon(new frmHienThiSP(), panel2);
+
             pnltrang = panel2;
 
             string ma = blldn.loadmanv(frmDN.taikhoan);
