@@ -30,6 +30,7 @@ namespace GUI
         public static string ten;
         public static string tennv;
         public static int chonmanv;
+        public static DataGridView dgv;
         public frmBanSanPham()
         {
             InitializeComponent();
@@ -37,9 +38,11 @@ namespace GUI
 
         private void frmBanSanPham_Load(object sender, EventArgs e)
         {
-            Refresh();
+            dgv = dgv_Chitiethoadon;
+            dgv_Chitiethoadon.Refresh();
             dgv_HoaDon.DataSource = bllhoadon.LoadHoaDonNV(int.Parse(frmTrangChuNhanVien.manv));
             loaddata(UserControls.detailProduct.lstspb);
+            dgv_Chitiethoadon.Refresh();
             if (dgv_Chitiethoadon.Rows.Count >= 0)
             {
                 dgv_Chitiethoadon.Columns[5].Visible = false;
@@ -384,6 +387,12 @@ namespace GUI
         {
             frmQuanLySP.lstsp.RemoveAt(dgv_Chitiethoadon.CurrentCell.RowIndex);
             guna2Button1.Enabled = false;
+        }
+
+        private void btnrs_Click(object sender, EventArgs e)
+        {
+            loaddata(UserControls.detailProduct.lstspb);
+            dgv_Chitiethoadon.Refresh();
         }
     }
 }

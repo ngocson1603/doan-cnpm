@@ -85,5 +85,10 @@ namespace GUI
             initdb();
             AddProDuct(dsSP);
         }
+
+        private void frmProductList_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmBanSanPham.dgv.Refresh();
+        }
     }
 }

@@ -98,6 +98,7 @@
             this.Name = "frmProductList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProductList";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmProductList_FormClosed);
             this.Load += new System.EventHandler(this.frmProductList_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);

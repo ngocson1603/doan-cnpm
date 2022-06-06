@@ -92,7 +92,7 @@ namespace GUI.UserControls
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng kiểm tra trong phần giỏ hàng");
+                    MessageBox.Show("Vui lòng kiểm tra");
 
                     ThemSanPham sp = new ThemSanPham(tensp, loai, hang, gia, tonkho, anh, ma);
                     lstspb.Add(sp);
