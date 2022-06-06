@@ -44,8 +44,8 @@ namespace GUI
                 rbtnNam.Checked = true;
             else
                 rbtnNu.Checked = true;
-            txt_Diachi.Text = dgvKhachhang.Rows[numrow].Cells[5].Value.ToString();
-            txt_Sdt.Text = dgvKhachhang.Rows[numrow].Cells[6].Value.ToString();
+            txt_Diachi.Text = dgvKhachhang.Rows[numrow].Cells[6].Value.ToString();
+            txt_Sdt.Text = dgvKhachhang.Rows[numrow].Cells[7].Value.ToString();
         }
 
         private void btn_ThemKH_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace GUI
             int ngay = int.Parse(DateTime.Now.Year.ToString());
             int ngaysinh = int.Parse(dateTimeNgaysinhkhachhang.Value.Year.ToString());
             int kq = ngay - ngaysinh;
-            if (txtMakh.Text == string.Empty || txt_Pass.Text == string.Empty || txtHotenkh.Text == string.Empty || txt_Diachi.Text == string.Empty || txt_Sdt.Text == string.Empty)
+            if (txt_Pass.Text == string.Empty || txtHotenkh.Text == string.Empty || txt_Diachi.Text == string.Empty || txt_Sdt.Text == string.Empty)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
@@ -134,7 +134,7 @@ namespace GUI
                 int ngay = int.Parse(DateTime.Now.Year.ToString());
                 int ngaysinh = int.Parse(dateTimeNgaysinhkhachhang.Value.Year.ToString());
                 int kq = ngay - ngaysinh;
-                if (txtMakh.Text == string.Empty || txt_Pass.Text == string.Empty || txtHotenkh.Text == string.Empty || txt_Diachi.Text == string.Empty || txt_Sdt.Text == string.Empty)
+                if (txt_Pass.Text == string.Empty || txtHotenkh.Text == string.Empty || txt_Diachi.Text == string.Empty || txt_Sdt.Text == string.Empty)
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                     return;
@@ -144,11 +144,11 @@ namespace GUI
                     MessageBox.Show("Khách hàng chưa đủ 18");
                     return;
                 }
-                if (bllkhachhang.kiemtratontai(txt_Gmail.Text))
-                {
-                    MessageBox.Show("Tài khoản này đã được đăng ký");
-                    return;
-                }
+                //if (bllkhachhang.kiemtratontai(txt_Gmail.Text))
+                //{
+                //    MessageBox.Show("Tài khoản này đã được đăng ký");
+                //    return;
+                //}
                 else
                 {
                     KhachHang kh = new KhachHang()
