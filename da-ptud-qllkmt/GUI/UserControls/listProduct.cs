@@ -38,11 +38,19 @@ namespace GUI.UserControls
         {
             ten = lblTenSanPham.Text;
             Panel pnl = this.Parent as Panel;
-            //Form frm1 = pnl.Parent as Form;
-            //frm1.Close();
 
-            frmDetailProduct frm = new frmDetailProduct();
-            hp.motrangcon(frm,frmTrangChu.pnltrang);
+            
+            if (frmBanSanPham.laygiatri == true)
+            {
+                frmDetailProduct frm1 = new frmDetailProduct();
+                frm1.ShowDialog();
+            }
+            else
+            {
+                frmDetailProduct frm = new frmDetailProduct();
+                hp.motrangcon(frm, frmTrangChu.pnltrang);
+            }
+            
         }
     }
 }

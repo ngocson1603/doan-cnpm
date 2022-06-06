@@ -43,13 +43,14 @@ namespace GUI.UserControls
 
         private void gunathoat_Click(object sender, EventArgs e)
         {
-            Panel pnl = this.Parent as Panel;
-            Form frm1 = pnl.Parent as Form;
-            frm1.Close();
+                Panel pnl = this.Parent as Panel;
+                Form frm1 = pnl.Parent as Form;
+                frm1.Close();
 
 
-            frmProductList frm = new frmProductList();
-            hp.motrangcon(frm, frmTrangChu.pnltrang);
+                frmProductList frm = new frmProductList();
+                hp.motrangcon(frm, frmTrangChu.pnltrang);
+
         }
 
         public static string ma = "";
@@ -60,6 +61,7 @@ namespace GUI.UserControls
         public static int tonkho;
         public static string anh = "";
         public static BindingList<ThemSanPham> lstsp = new BindingList<ThemSanPham>();
+        public static BindingList<ThemSanPham> lstspb = new BindingList<ThemSanPham>();
 
         private void gunaMua_Click(object sender, EventArgs e)
         {
@@ -71,30 +73,139 @@ namespace GUI.UserControls
             tonkho = 1;
             anh = a;
 
-            if(lstsp.Any(n=>n.ma == ma))
+            if (frmBanSanPham.laygiatri == true)
             {
-                MessageBox.Show("Vui lòng kiểm tra trong phần giỏ hàng");
-                var item = lstsp.SingleOrDefault(x=>x.ma == ma);
-                
-                if(item.soluong == soluongton-1)
+                if (lstspb.Any(n => n.ma == ma))
                 {
-                    MessageBox.Show("Hiện tại số lượng sản phẩm tại cửa hàng không còn đủ");
-                    return;
+                    MessageBox.Show("Đã thêm vào Đơn Hàng");
+                    var item = lstspb.SingleOrDefault(x => x.ma == ma);
+
+                    if (item.soluong == soluongton - 1)
+                    {
+                        MessageBox.Show("Hiện tại số lượng sản phẩm tại cửa hàng không còn đủ");
+                        return;
+                    }
+                    else
+                    {
+                        item.soluong++;
+                    }
                 }
                 else
                 {
-                    item.soluong++;
+                    MessageBox.Show("Vui lòng kiểm tra trong phần giỏ hàng");
+
+                    ThemSanPham sp = new ThemSanPham(tensp, loai, hang, gia, tonkho, anh, ma);
+                    lstspb.Add(sp);
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng kiểm tra trong phần giỏ hàng");
+                if (lstsp.Any(n => n.ma == ma))
+                {
+                    MessageBox.Show("Vui lòng kiểm tra trong phần giỏ hàng");
+                    var item = lstsp.SingleOrDefault(x => x.ma == ma);
 
-                ThemSanPham sp = new ThemSanPham(tensp, loai, hang, gia, tonkho, anh, ma);
-                lstsp.Add(sp);
+                    if (item.soluong == soluongton - 1)
+                    {
+                        MessageBox.Show("Hiện tại số lượng sản phẩm tại cửa hàng không còn đủ");
+                        return;
+                    }
+                    else
+                    {
+                        item.soluong++;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng kiểm tra trong phần giỏ hàng");
+
+                    ThemSanPham sp = new ThemSanPham(tensp, loai, hang, gia, tonkho, anh, ma);
+                    lstsp.Add(sp);
+                }
             }
+        }
 
-            
+        private void lblGiaBan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTenHang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTenLoai_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTenSanPham_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureDetailSP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTonkho_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void detailProduct_Load(object sender, EventArgs e)
+        {
+            if (frmBanSanPham.laygiatri == true)
+            {
+                gunathoat.Visible = false;
+            }
         }
     }
 }

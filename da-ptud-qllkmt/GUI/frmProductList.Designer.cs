@@ -96,6 +96,7 @@
             this.ClientSize = new System.Drawing.Size(1183, 544);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "frmProductList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProductList";
             this.Load += new System.EventHandler(this.frmProductList_Load);
             this.tableLayoutPanel2.ResumeLayout(false);

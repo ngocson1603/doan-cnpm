@@ -39,7 +39,7 @@ namespace GUI
         {
             Refresh();
             dgv_HoaDon.DataSource = bllhoadon.LoadHoaDonNV(int.Parse(frmTrangChuNhanVien.manv));
-            loaddata(frmQuanLySP.lstsp);
+            loaddata(UserControls.detailProduct.lstspb);
             if (dgv_Chitiethoadon.Rows.Count >= 0)
             {
                 dgv_Chitiethoadon.Columns[5].Visible = false;
@@ -84,8 +84,8 @@ namespace GUI
 
         private void btn_ThemHD_Click(object sender, EventArgs e)
         {
-            
-            loaddata(frmQuanLySP.lstsp);
+
+            loaddata(UserControls.detailProduct.lstspb);
             int a = 0;
             if (comboBox1.Text == a.ToString())
             {
@@ -119,15 +119,15 @@ namespace GUI
                         
                         if (bllgio.postGioHangCTHD(cthd))
                         {
-                            for (int i = 0; i < int.Parse(dgv_Chitiethoadon.Rows[a].Cells[4].Value.ToString()); i++)
-                            {
-                                SeriHD sr = new SeriHD()
-                                {
-                                    Seri = bllsr.loadseritheoma(int.Parse(dgv_Chitiethoadon.Rows[a].Cells[6].Value.ToString())),
-                                    MaHoaDon = int.Parse(txt_MaHoaDon.Text),
-                                };
-                                bllsr.postSP(sr);
-                            }
+                            //for (int i = 0; i < int.Parse(dgv_Chitiethoadon.Rows[a].Cells[4].Value.ToString()); i++)
+                            //{
+                            //    SeriHD sr = new SeriHD()
+                            //    {
+                            //        Seri = bllsr.loadseritheoma(int.Parse(dgv_Chitiethoadon.Rows[a].Cells[6].Value.ToString())),
+                            //        MaHoaDon = int.Parse(txt_MaHoaDon.Text),
+                            //    };
+                            //    bllsr.postSP(sr);
+                            //}
                         }
                         else
                         {
@@ -273,34 +273,37 @@ namespace GUI
             btn_Xuat.Enabled = false;
             toolStripButton1.Enabled = false;
         }
-
+        public static bool laygiatri = false;
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            Form fsf = Application.OpenForms["frmQuanLySP"];
+            laygiatri = true;
+            frmProductList frm = new frmProductList();
+            frm.ShowDialog();
+            //Form fsf = Application.OpenForms["frmQuanLySP"];
 
-            if (fsf != null)
-            {
-                return;
-            }
-            else
-            {
-                frmQuanLySP frm = new frmQuanLySP();
-                frm.Show();
-                frm.TopMost = true;
-                frm.toolStripButton1.Visible = true;
-                frm.txt_GiaBan.Enabled = false;
-                frm.txt_HangSX.Enabled = false;
-                frm.txt_Image.Enabled = false;
-                frm.txt_LoaiSP.Enabled = false;
-                frm.txt_MaSP.Enabled = false;
-                frm.txt_TenSP.Enabled = false;
-                frm.txt_TonKho.Enabled = false;
-                frm.txtHSD.Enabled = false;
-                frm.btn_Sua.Visible = false;
-                frm.btn_Them.Visible = false;
-                frm.btn_Xoa.Visible = false;
-                frm.btn.Enabled = false;
-            }
+            //if (fsf != null)
+            //{
+            //    return;
+            //}
+            //else
+            //{
+            //    frmQuanLySP frm = new frmQuanLySP();
+            //    frm.Show();
+            //    frm.TopMost = true;
+            //    frm.toolStripButton1.Visible = true;
+            //    frm.txt_GiaBan.Enabled = false;
+            //    frm.txt_HangSX.Enabled = false;
+            //    frm.txt_Image.Enabled = false;
+            //    frm.txt_LoaiSP.Enabled = false;
+            //    frm.txt_MaSP.Enabled = false;
+            //    frm.txt_TenSP.Enabled = false;
+            //    frm.txt_TonKho.Enabled = false;
+            //    frm.txtHSD.Enabled = false;
+            //    frm.btn_Sua.Visible = false;
+            //    frm.btn_Them.Visible = false;
+            //    frm.btn_Xoa.Visible = false;
+            //    frm.btn.Enabled = false;
+            //}
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
