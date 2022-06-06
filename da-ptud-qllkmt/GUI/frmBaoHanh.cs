@@ -45,7 +45,7 @@ namespace GUI
             comboBox2.DataSource = bllbh.getmabh();
             comboBox2.DisplayMember = "MaBH";
             comboBox2.ValueMember = "MaBH";
-            //comboBox2.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
 
             txtManv.Text = frmTrangChuNhanVien.manv;
             loaddata(frmBaoHanh.lstspbh);
@@ -184,7 +184,15 @@ namespace GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dataGridView3.DataSource = bllbh.getctbh(int.Parse(comboBox2.Text));
+            if (comboBox2.Text.Length == 0)
+            {
+                MessageBox.Show("vui long chon ma bao hanh");
+            }
+            else
+            {
+                dataGridView3.DataSource = bllbh.getctbh(int.Parse(comboBox2.Text));
+            }
+            
         }
     }
 }
