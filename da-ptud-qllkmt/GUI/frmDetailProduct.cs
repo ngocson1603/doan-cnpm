@@ -31,8 +31,9 @@ namespace GUI
                 string tenhang = dr.ItemArray[2].ToString();
                 int giaban = Convert.ToInt32(dr.ItemArray[3]);
                 int tonkho = Convert.ToInt32(dr.ItemArray[4]);
-                string anh = dr.ItemArray[5].ToString();
-                int ma = Convert.ToInt32(dr.ItemArray[6]);
+                int hsd = Convert.ToInt32(dr.ItemArray[5]);
+                string anh = dr.ItemArray[6].ToString();
+                int ma = Convert.ToInt32(dr.ItemArray[7]);
                 detailProducts s = new detailProducts();
                 {
                     s.TenSP = tensp;
@@ -40,6 +41,7 @@ namespace GUI
                     s.TenHang = tenhang;
                     s.GiaBan = giaban;
                     s.TonKho = tonkho;
+                    s.HSD = hsd;
                     s.Hinh = anh;
                     s.MaSP = ma;
                 };

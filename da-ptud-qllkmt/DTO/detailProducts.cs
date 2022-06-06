@@ -17,6 +17,7 @@ namespace DTO
         public int GiaBan { get; set; }
 
         public int TonKho { get; set; }
+        public int HSD { get; set; }
 
         public string Hinh { get; set; }
 
@@ -29,17 +30,19 @@ namespace DTO
             TenHang = TenHang;
             GiaBan = GiaBan;
             TonKho = TonKho;
+            HSD = HSD;
             Hinh = Hinh;
             MaSP = MaSP;
         }
 
-        public detailProducts(string tensp,string tenloai,string tenhang,int giaban,int tonkho,string hinh,int ma)
+        public detailProducts(string tensp,string tenloai,string tenhang,int giaban,int tonkho,int hsd,string hinh,int ma)
         {
             TenSP = tensp;
             TenLoai = tenloai;
             TenHang = tenhang;
             GiaBan = giaban;
             TonKho = tonkho;
+            HSD = hsd;
             Hinh = hinh;
             MaSP = ma;
         }

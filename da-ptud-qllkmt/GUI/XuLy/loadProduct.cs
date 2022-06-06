@@ -66,7 +66,7 @@ namespace GUI.XuLy
 
         public void LoadSPDetail()
         {
-            string caulenh = "select TenSanPham,TenLoaiSanPham,TenHangSanXuat,GiaBan,TonKho,Image,MaSanPham from SanPham,LoaiSanPham,HangSanXuat where SanPham.HangSanXuat = HangSanXuat.MaHangSanXuat and SanPham.LoaiSanPham = LoaiSanPham.MaLoaiSanPham and TenSanPham = N'" + UserControls.listProduct.ten + "'";
+            string caulenh = "select TenSanPham,TenLoaiSanPham,TenHangSanXuat,GiaBan,TonKho,HSD,Image,MaSanPham from SanPham,LoaiSanPham,HangSanXuat where SanPham.HangSanXuat = HangSanXuat.MaHangSanXuat and SanPham.LoaiSanPham = LoaiSanPham.MaLoaiSanPham and TenSanPham = N'" + UserControls.listProduct.ten + "'";
 
             SqlDataAdapter ds_sv = new SqlDataAdapter(caulenh, conn);
 

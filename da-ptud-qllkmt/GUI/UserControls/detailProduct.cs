@@ -34,6 +34,7 @@ namespace GUI.UserControls
             lblTenHang.Text = s.TenHang.ToString();
             lblGiaBan.Text = s.GiaBan.ToString();
             lblTonkho.Text = s.TonKho.ToString();
+            lblHSD.Text = s.HSD.ToString();
             soluongton = s.TonKho;
             string direct = hp.Directory() + s.Hinh;
             a = s.Hinh;
