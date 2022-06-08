@@ -20,6 +20,10 @@ namespace BLL
         {
             return dalhoadon.GetDanhSachHD();
         }
+        public int Loadmakhongluu()
+        {
+            return dalhoadon.loadmakhongluu();
+        }
         public List<View_HoaDon> LoadHoaDonNV(int ma)
         {
             return dalhoadon.GetWatchListHDNV(ma);

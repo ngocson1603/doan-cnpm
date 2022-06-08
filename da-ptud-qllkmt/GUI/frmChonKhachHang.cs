@@ -25,7 +25,7 @@ namespace GUI
 
         private void frmChonKhachHang_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bllkh.loaddanhsachKhachHang();
+            dataGridView1.DataSource = bllkh.LoadDanhSach();
         }
 
         private void txt_timkiem_TextChanged(object sender, EventArgs e)
@@ -39,11 +39,11 @@ namespace GUI
             }
             else if (txt_timkiem.Text.Length == 0)
             {
-                dataGridView1.DataSource = bllkh.loaddanhsachKhachHang();
+                dataGridView1.DataSource = bllkh.LoadDanhSach();
             }
             else
             {
-                dataGridView1.DataSource = bllkh.loaddanhsachKhachHang();
+                dataGridView1.DataSource = bllkh.LoadDanhSach();
             }
         }
 

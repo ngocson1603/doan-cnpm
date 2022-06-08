@@ -21,7 +21,11 @@ namespace DAL
             return qllk.HoaDons.Select(t => t).ToList<HoaDon>();
         }
 
-
+        public int loadmakhongluu()
+        {
+            var makh = (from p in qllk.KhachHangs where p.Gmail == null select p.MaKH).FirstOrDefault();
+            return makh;
+        }
 
         public List<View_HoaDon> GetDanhSachHD()
         {

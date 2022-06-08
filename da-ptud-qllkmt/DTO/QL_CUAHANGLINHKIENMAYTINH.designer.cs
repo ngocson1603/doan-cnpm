@@ -90,7 +90,7 @@ namespace DTO
     #endregion
 		
 		public QL_CUAHANGLINHKIENMAYTINHDataContext() : 
-				base(global::DTO.Properties.Settings.Default.QL_CUAHANGLINHKIENMAYTINHConnectionString, mappingSource)
+				base(global::DTO.Properties.Settings.Default.QL_CUAHANGLINHKIENMAYTINH1ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

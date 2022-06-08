@@ -16,10 +16,10 @@ namespace BLL
 
         }
 
-        //public List<KhachHang> LoadDanhSachKhachHang()
-        //{
-        //    return dalkhachhang.LoadKhachHang();
-        //}
+        public List<KhachHang> LoadDanhSach()
+        {
+            return dalkhachhang.LoadKhachHang();
+        }
 
         public List<KhachHang> loaddanhsachKhachHang()
         {

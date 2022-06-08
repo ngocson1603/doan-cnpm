@@ -47,13 +47,17 @@ namespace GUI
             {
                 dgv_Chitiethoadon.Columns[5].Visible = false;
             }
-            txt_MaNV.Text = frmTrangChuNhanVien.manv;
-            comboBox1.DataSource = bllkh.loadmakh();
-            comboBox1.DisplayMember = "MaKH";
-            comboBox1.ValueMember = "MaKH";
-            comboBox1.SelectedIndex = 0;
+            if (frmKhachHang.check == false)
+            {
+                txt_MaNV.Text = frmTrangChuNhanVien.manv;
+            }
+            else
+            {
+                string makhchon = frmChonKhachHang.ma.ToString();
+                txt_MaKH.Text = makhchon;
+            }
 
-            comboBox1.Text = frmChonKhachHang.ma.ToString();
+            
 
             guna2Button3.Enabled = true;
         }
@@ -64,7 +68,7 @@ namespace GUI
             {
                 DataGridViewRow row = this.dgv_HoaDon.Rows[e.RowIndex];
                 txt_MaHoaDon.Text = row.Cells[0].Value.ToString();
-                comboBox1.Text = row.Cells[1].Value.ToString();
+                txt_MaKH.Text = row.Cells[1].Value.ToString();
 
                 //txt_TongTien.Text = row.Cells[3].Value.ToString();
                 dateTimePicker1.Text = dgv_HoaDon.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -90,14 +94,14 @@ namespace GUI
 
             loaddata(UserControls.detailProduct.lstspb);
             int a = 0;
-            if (comboBox1.Text == a.ToString())
+            if (txt_MaKH.Text == a.ToString())
             {
                 MessageBox.Show("Vui lòng chọn khách hàng");
                 return;
             }
             QuanLyHoaDon cthdsp = new QuanLyHoaDon()
                 {
-                    MaKH = int.Parse(comboBox1.Text),
+                    MaKH = int.Parse(txt_MaKH.Text),
                     NgayLapHoaDon = dateTimePicker1.Value,
                     MaNhanVien = int.Parse(txt_MaNV.Text)
                 };
@@ -140,8 +144,9 @@ namespace GUI
                         a++;
                     }
                     MessageBox.Show("Mua hàng thành công");
+                    frmQuanLySP.lstsp.Clear();
                 }
-            frmQuanLySP.lstsp.Clear();
+            
         }
 
         private void btn_XoaHD_Click(object sender, EventArgs e)
@@ -167,7 +172,7 @@ namespace GUI
             {
 
                 //MaHoaDon = int.Parse(txt_MaNV.Text),
-                MaKH = int.Parse(comboBox1.Text),
+                MaKH = int.Parse(txt_MaKH.Text),
                 NgayLapHoaDon = dateTimePicker1.Value,
                 MaNhanVien = int.Parse(txt_MaNV.Text) 
             };
@@ -215,10 +220,6 @@ namespace GUI
             dgv_Chitiethoadon.Columns[5].ReadOnly = true;
             dgv_Chitiethoadon.Columns[6].ReadOnly = true;
         }
-        public void loadkh(BindingList<ThemSanPham> loadsp)
-        {
-            comboBox1.DataSource = loadsp;
-        }
         private void button1_Click_1(object sender, EventArgs e)
         {
             
@@ -228,11 +229,19 @@ namespace GUI
 
         private void btn_Xuat_Click(object sender, EventArgs e)
         {
-            ten = blldn.loadtentheomakh(comboBox1.Text);
+            if (frmKhachHang.check == false)
+            {
+                ten = frmKhachHang.tenkhachhangkhongluu;
+            }
+            else
+            {
+                ten = blldn.loadtentheomakh(txt_MaKH.Text);
+            }
+            
             tennv = blldn.loadtentheoma(txt_MaNV.Text);
 
-            dataExcel.DataSource = bllgio.loadBieuMauGioHangAPI(int.Parse(comboBox1.Text),int.Parse(txt_MaHoaDon.Text));
-            taikhoan = comboBox1.Text;
+            dataExcel.DataSource = bllgio.loadBieuMauGioHangAPI(int.Parse(txt_MaKH.Text), int.Parse(txt_MaHoaDon.Text));
+            taikhoan = txt_MaKH.Text;
             mahd = int.Parse(dgv_HoaDon.CurrentRow.Cells[0].Value.ToString());
             ExcelExportNV ex = new ExcelExportNV();
             if (dgv_HoaDon.Rows.Count == 0)
@@ -311,11 +320,11 @@ namespace GUI
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            ten = blldn.loadtentheomakh(comboBox1.Text);
+            ten = blldn.loadtentheomakh(txt_MaKH.Text);
             tennv = blldn.loadtentheoma(txt_MaNV.Text);
 
             dataExcel.DataSource = bllbh.loadbieumau(int.Parse(txt_MaHoaDon.Text));
-            taikhoan = comboBox1.Text;
+            taikhoan = txt_MaKH.Text;
             mahd = int.Parse(dgv_HoaDon.CurrentRow.Cells[0].Value.ToString());
             ExcelExportBH ex = new ExcelExportBH();
             if (dgv_HoaDon.Rows.Count == 0)
@@ -379,6 +388,7 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            frmKhachHang.check = true;
             frmChonKhachHang frm = new frmChonKhachHang(this);
             frm.ShowDialog();
         }

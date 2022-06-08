@@ -484,6 +484,7 @@ SET IDENTITY_INSERT [KhachHang] ON
 INSERT [dbo].[KhachHang] ([MaKH],[Gmail], [Pass], [TenKhachHang], [Ngaysinh], [GioiTinh], [DiaChi], [SDT]) VALUES (1,'sonlaso1119@gmail.com','123',N'ĐỖ GIA HUY','25/1/2001',N'Nam',N'BÌNH TÂN TPHCM',0903714326)
 INSERT [dbo].[KhachHang] ([MaKH],[Gmail], [Pass], [TenKhachHang], [Ngaysinh], [GioiTinh], [DiaChi], [SDT]) VALUES (2,'sonlaso11119@gmail.com','123',N'NGUYỄN NGỌC SƠN','16/3/2001',N'Nam',N'LONG AN ',0906533337)
 INSERT [dbo].[KhachHang] ([MaKH],[Gmail], [Pass], [TenKhachHang], [Ngaysinh], [GioiTinh], [DiaChi], [SDT]) VALUES (3,'sonlaso111119@gmail.com','123',N'NGUYỄN MINH TRUNG HIẾU','12/6/2001',N'Nam',N'BÌNH DƯƠNG ',0902114326)
+INSERT [dbo].[KhachHang] ([MaKH]) VALUES (10000000)
 SET IDENTITY_INSERT [KhachHang] OFF
 
 SET IDENTITY_INSERT [HoaDon] ON
