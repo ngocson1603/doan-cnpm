@@ -92,5 +92,11 @@ namespace GUI
             panel2.Controls.Clear();
             hp.motrangcon(new frmBaoHanh(), panel2);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            hp.motrangcon(new frmDonDatHang(), panel2);
+        }
     }
 }

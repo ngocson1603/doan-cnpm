@@ -20,6 +20,10 @@ namespace BLL
             return dalsanpham.GetWatchListSanPham();
         }
 
+        public List<SanPham> GetSLTheoDK()
+        {
+            return dalsanpham.GetSLTheoDK();
+        }
 
         // them xoa sua
 

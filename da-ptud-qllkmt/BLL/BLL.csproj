@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLLBaoHanh.cs" />
+    <Compile Include="BLLCTDonDatHang.cs" />
     <Compile Include="BLLDangKy.cs" />
     <Compile Include="BLLDangNhap.cs" />
+    <Compile Include="BLLDonDatHang.cs" />
     <Compile Include="BLLGioHang.cs" />
     <Compile Include="BLLHoaDon.cs" />
     <Compile Include="BLLKhachHang.cs" />

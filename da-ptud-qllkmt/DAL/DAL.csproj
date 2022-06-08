@@ -67,8 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DALBaoHanh.cs" />
+    <Compile Include="DALCTDonDatHang.cs" />
     <Compile Include="DALDangKy.cs" />
     <Compile Include="DALDangNhap.cs" />
+    <Compile Include="DALDonDatHang.cs" />
     <Compile Include="DALGioHang.cs" />
     <Compile Include="DALHoaDon.cs" />
     <Compile Include="DALKhachHang.cs" />

@@ -148,6 +148,24 @@ create table [dbo].[CTBaoHanh](
 
 	CONSTRAINT PK_ddhct PRIMARY KEY (MaBH,MaSanPham)
 )
+create table [dbo].[DonDatHang](
+	MaDDH int IDENTITY(1,1), 
+	NgayLap date,
+	MaNhanVien int,
+	MaNhaPhanPhoi int,
+
+	CONSTRAINT PK_ddhdh PRIMARY KEY (MaDDH)
+)
+
+create table [dbo].[CTDonDatHang](
+	MaDDH int, 
+	MaSanPham int,
+	SoLuong int,
+	DonGia int,
+	ThanhTien int
+
+	CONSTRAINT PK_ctddhdh PRIMARY KEY (MaDDH,MaSanPham)
+)
 
 CREATE VIEW View_KH AS
 SELECT        MaKH, Gmail, Pass, TenKhachHang, Ngaysinh, GioiTinh, DiaChi, SDT
@@ -257,6 +275,15 @@ FROM            dbo.ChiTietHoaDon INNER JOIN
                          dbo.SanPham ON dbo.ChiTietHoaDon.MaSanPham = dbo.SanPham.MaSanPham INNER JOIN
                          dbo.SeriHD ON dbo.HoaDon.MaHoaDon = dbo.SeriHD.MaHoaDon
 --KHOÁ NGOẠI
+ALTER TABLE [dbo].[CTDonDatHang]
+ADD CONSTRAINT FK_ctddh_sp FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
+ALTER TABLE [dbo].[CTDonDatHang]
+ADD CONSTRAINT FK_ctddh_ddh FOREIGN KEY(MaDDH) REFERENCES [dbo].[DonDatHang](MaDDH)
+ALTER TABLE [dbo].[DonDatHang]
+ADD CONSTRAINT FK_ddh_nv FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
+ALTER TABLE [dbo].[DonDatHang]
+ADD CONSTRAINT FK_ddh_npp FOREIGN KEY(MaNhaPhanPhoi) REFERENCES [dbo].[NhaPhanPhoi](MaNhaPhanPhoi)
+
 ALTER TABLE [dbo].[BaoHanh]
 ADD CONSTRAINT FK_bh FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
 ALTER TABLE [dbo].[BaoHanh]

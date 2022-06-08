@@ -23,6 +23,13 @@ namespace DAL
 
         }
 
+        #region đonathang
+        public List<SanPham> GetSLTheoDK()
+        {
+            return qllk.SanPhams.Where(t => t.TonKho < 10).ToList();
+        }
+        #endregion
+
         public List<View_SanPham> GetWatchListSanPham()
         {
             var response = _apiService.GetResponse("api/SanPham/");

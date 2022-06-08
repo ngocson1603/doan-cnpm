@@ -75,6 +75,7 @@ namespace DAL
             var tensp = from lk in qllk.SanPhams where lk.MaSanPham == masp select lk.GiaBan;
             return tensp.ToString();
         }
+
         public int loadMaCuoiCung()
         {
             return qllk.HoaDons.OrderByDescending(t => t.MaHoaDon).First().MaHoaDon;

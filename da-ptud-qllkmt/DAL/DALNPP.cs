@@ -47,5 +47,11 @@ namespace DAL
                 return true;
         }
 
+
+        public List<NhaPhanPhoi> GetDLNhaPhanPhoi()
+        {
+            return qllk.NhaPhanPhois.Select(t => t).ToList();
+        }
+
     }
 }
