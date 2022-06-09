@@ -36,7 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -51,12 +50,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -80,7 +78,7 @@
             this.dateTimePicker1.CustomFormat = "MM/dd/yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(135, 23);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(157, 22);
             this.dateTimePicker1.TabIndex = 1;
@@ -89,7 +87,7 @@
             // 
             this.txtManv.Enabled = false;
             this.txtManv.Location = new System.Drawing.Point(135, 74);
-            this.txtManv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtManv.Margin = new System.Windows.Forms.Padding(4);
             this.txtManv.Name = "txtManv";
             this.txtManv.Size = new System.Drawing.Size(157, 22);
             this.txtManv.TabIndex = 2;
@@ -98,7 +96,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(135, 123);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(157, 24);
             this.comboBox1.TabIndex = 3;
@@ -133,17 +131,6 @@
             this.label4.Size = new System.Drawing.Size(83, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Mã hóa đơn";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(668, 336);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 41);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Xem sản phẩm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // toolStrip1
             // 
@@ -212,9 +199,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(16, 86);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(644, 242);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
@@ -224,7 +211,7 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(437, 25);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(157, 24);
             this.comboBox2.TabIndex = 13;
@@ -244,7 +231,7 @@
             // 
             this.txtMaSP.Enabled = false;
             this.txtMaSP.Location = new System.Drawing.Point(135, 172);
-            this.txtMaSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.Size = new System.Drawing.Size(157, 22);
             this.txtMaSP.TabIndex = 9;
@@ -262,7 +249,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(340, 97);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(255, 99);
             this.richTextBox1.TabIndex = 8;
@@ -282,7 +269,7 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(668, 86);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(559, 242);
             this.dataGridView2.TabIndex = 11;
@@ -294,32 +281,45 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
             this.Column3,
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(668, 388);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(559, 260);
             this.dataGridView1.TabIndex = 12;
             // 
-            // Column1
+            // dataGridView3
             // 
-            this.Column1.DataPropertyName = "tensp";
-            this.Column1.HeaderText = "Ten San Pham";
-            this.Column1.Name = "Column1";
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
+            this.Column6});
+            this.dataGridView3.Location = new System.Drawing.Point(16, 388);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(644, 260);
+            this.dataGridView3.TabIndex = 13;
             // 
-            // Column2
+            // Column5
             // 
-            this.Column2.DataPropertyName = "soluong";
-            this.Column2.HeaderText = "So Luong";
-            this.Column2.Name = "Column2";
+            this.Column5.DataPropertyName = "Seri";
+            this.Column5.HeaderText = "So Seri";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "MaHoaDon";
+            this.Column6.HeaderText = "Ma Hoa Don";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "ma";
-            this.Column3.HeaderText = "Ma";
+            this.Column3.HeaderText = "So Seri";
             this.Column3.Name = "Column3";
             // 
             // Column4
@@ -328,42 +328,19 @@
             this.Column4.HeaderText = "Ly Do";
             this.Column4.Name = "Column4";
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(16, 388);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(644, 260);
-            this.dataGridView3.TabIndex = 13;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(16, 336);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 44);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Xem đơn bảo hàng";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // frmBaoHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1243, 662);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmBaoHanh";
             this.Text = "frmBaoHanh";
             this.Load += new System.EventHandler(this.frmBaoHanh_Load);
@@ -388,7 +365,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
@@ -401,13 +377,12 @@
         private System.Windows.Forms.TextBox txtMaSP;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

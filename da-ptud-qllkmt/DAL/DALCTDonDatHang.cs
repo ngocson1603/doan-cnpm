@@ -23,18 +23,24 @@ namespace DAL
             return qllk.CTDonDatHangs.Where(t => t.MaDDH == maddh).ToList();
         }
  
-        public bool ThemCTDonDatHang(CTDonDatHang ctddh)
+        public bool KiemTraTonTai(int maDDH, int maSP)
+        {
+            return qllk.CTDonDatHangs.Any(t => t.MaDDH == maDDH && t.MaSanPham == maSP);
+        }
+
+        public int ThemCTDonDatHang(CTDonDatHang ctddh)
         {
             try
             {
+                if (KiemTraTonTai(ctddh.MaDDH, ctddh.MaSanPham))
+                    return -1;
                 qllk.CTDonDatHangs.InsertOnSubmit(ctddh);
                 qllk.SubmitChanges();
-                return true;
+                return 1;
             }
             catch (Exception)
             {
-                return false;
-
+                return 0;
                 throw;
             }
         }

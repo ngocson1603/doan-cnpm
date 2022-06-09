@@ -11,12 +11,26 @@ namespace BLL
     public class BLLBaoHanh
     {
         DALBaoHanh dalbh = new DALBaoHanh();
+        DALSanPham dalSP = new DALSanPham();
+
         public BLLBaoHanh() { }
 
-        public List<View_CTHDSP> getlist(int ma)
+        public List<View_CTHDSP> getlist(int ma, double soThangSuDung)
         {
-            return dalbh.getlistcthd(ma);
+            List<View_CTHDSP> lst = dalbh.getlistcthd(ma);
+            List<View_CTHDSP> lstCC = new List<View_CTHDSP>();
+            foreach (View_CTHDSP item in lst)
+            {
+                SanPham sp = dalSP.LayThongTinSanPhamTheoMa(item.MaSanPham);
+                if ((double)sp.HSD < soThangSuDung)
+                    continue;
+                else
+                    lstCC.Add(item);
+            }
+
+            return lstCC;
         }
+
         public List<HoaDon> getmahd()
         {
             return dalbh.getmahd();

@@ -12,7 +12,10 @@ namespace DAL
         private ApiService _apiService = new ApiService();
         QL_CUAHANGLINHKIENMAYTINHDataContext qllk = new QL_CUAHANGLINHKIENMAYTINHDataContext();
         public DALSeri() { }
-
+        public List<SeriHD> loadsr(int mahd)
+        {
+            return qllk.SeriHDs.Where(t=>t.MaHoaDon == mahd).Select(t => t).ToList();
+        }
         public string loadseritheomasp(int ma)
         {
             var load = qllk.SeriSPs.Where(t => t.MaSanPham == ma && t.TinhTrang == false).Select(t => t.Seri).FirstOrDefault();
@@ -34,6 +37,11 @@ namespace DAL
             {
                 return false;
             }
+        }
+
+        public SeriSP LayThongTinSeriSP(string maSeri)
+        {
+            return qllk.SeriSPs.First(t => t.Seri == maSeri);
         }
     }
 }

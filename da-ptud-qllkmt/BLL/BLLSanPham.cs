@@ -42,6 +42,14 @@ namespace BLL
         }
         
 
+        public string LayTenSanPhamTheoMa(int maSP)
+        {
+            return dalsanpham.LayTenSanPhamTheoMa(maSP);
+        }
 
+        public SanPham LayThongTinSanPhamTheoMa(int maSP)
+        {
+            return dalsanpham.LayThongTinSanPhamTheoMa(maSP);
+        }
     }
 }

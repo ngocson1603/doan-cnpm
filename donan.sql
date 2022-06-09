@@ -142,11 +142,10 @@ create table [dbo].[BaoHanh](
 
 create table [dbo].[CTBaoHanh](
 	MaBH int, 
-	MaSanPham int,
-	SoLuong int,
+	Seri nvarchar(50),
 	LyDo nvarchar(100),
 
-	CONSTRAINT PK_ddhct PRIMARY KEY (MaBH,MaSanPham)
+	CONSTRAINT PK_ddhct PRIMARY KEY (MaBH,Seri)
 )
 create table [dbo].[DonDatHang](
 	MaDDH int IDENTITY(1,1), 
@@ -264,8 +263,8 @@ FROM            dbo.BaoHanh
 
 go
 CREATE VIEW View_BaoHanhCT AS
-SELECT        MaBH, MaSanPham, SoLuong, LyDo
-FROM            dbo.CTBaoHanh
+SELECT MaBH, Seri, LyDo
+FROM     dbo.CTBaoHanh
 
 go
 CREATE VIEW View_BieuMauBaoHanh AS
@@ -291,7 +290,7 @@ ADD CONSTRAINT FK_bhhd FOREIGN KEY(MaHoaDon) REFERENCES [dbo].[HoaDon](MaHoaDon)
 ALTER TABLE [dbo].[CTBaoHanh]
 ADD CONSTRAINT FK_bhhdct FOREIGN KEY(MaBH) REFERENCES [dbo].[BaoHanh](MaBH)
 ALTER TABLE [dbo].[CTBaoHanh]
-ADD CONSTRAINT FK_bhhdctsp FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
+ADD CONSTRAINT FK_bhhdctsp FOREIGN KEY(Seri) REFERENCES [dbo].[SeriSP](Seri)
 
 ALTER TABLE [dbo].[SeriSP]
 ADD CONSTRAINT FK_seri FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)

@@ -15,7 +15,24 @@ namespace BLL
         {
         }
 
+        public List<SeriHD> loadsr(int mahd, List<View_CTHDSP> lstSP)
+        {
+            List<SeriHD> lstSR = dalsanpham.loadsr(mahd);
+            List<SeriHD> lstCC = new List<SeriHD>();
+            foreach (View_CTHDSP itemSP in lstSP)
+            {
+                foreach (SeriHD itemSR in lstSR)
+                {
+                    SeriSP seriSP = dalsanpham.LayThongTinSeriSP(itemSR.Seri);
+                    if (seriSP.MaSanPham == itemSP.MaSanPham)
+                        lstCC.Add(itemSR);
+                    else
+                        continue;
+                }
+            }
 
+            return lstCC;
+        }
         // them xoa sua
 
         public bool postSP(SeriHD cthd)

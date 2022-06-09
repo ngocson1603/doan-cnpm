@@ -310,6 +310,12 @@
     <Compile Include="frmDonDatHang.Designer.cs">
       <DependentUpon>frmDonDatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDonDatHang_v2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDonDatHang_v2.Designer.cs">
+      <DependentUpon>frmDonDatHang_v2.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGiaoDien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -447,6 +453,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDonDatHang.resx">
       <DependentUpon>frmDonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDonDatHang_v2.resx">
+      <DependentUpon>frmDonDatHang_v2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGiaoDien.resx">
       <DependentUpon>frmGiaoDien.cs</DependentUpon>

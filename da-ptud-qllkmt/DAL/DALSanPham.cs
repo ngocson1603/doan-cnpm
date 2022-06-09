@@ -71,6 +71,14 @@ namespace DAL
         }
 
 
+        public string LayTenSanPhamTheoMa(int maSP)
+        {
+            return qllk.SanPhams.Where(t => t.MaSanPham == maSP).Select(t => t.TenSanPham).First();
+        }
 
+        public SanPham LayThongTinSanPhamTheoMa(int maSP)
+        {
+            return qllk.SanPhams.Where(t => t.MaSanPham == maSP).First();
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace GUI
         BLLDonDatHang bllDonDatHang = new BLLDonDatHang();
         BLLCTDonDatHang bllCTDonDatHang = new BLLCTDonDatHang();
         int _maDonDatHang;
+
         public frmDonDatHang()
         {
             InitializeComponent();
@@ -29,16 +30,15 @@ namespace GUI
         public void loadDonDatHang()
         {
             dgvDonDatHang.DataSource = bllDonDatHang.GetDLDonDatHang();
-
         }
 
         public void loadDLCTDonDatHang()
         {
             dgvChiTietDonDatHang.DataSource = bllCTDonDatHang.GetCTDonDatHang();
         }
+
         private void btnTaoDonDatHang_Click(object sender, EventArgs e)
         {
-
             DonDatHang ddh = new DonDatHang();
             try
             {
@@ -62,7 +62,7 @@ namespace GUI
                 MessageBox.Show("Có lỗi trong quá trình tạo đơn đặt hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
-            
+
         }
 
         private void frmDonDatHang_Load(object sender, EventArgs e)
@@ -104,6 +104,7 @@ namespace GUI
             int sl = int.Parse(txtSoLuong.Text);
             int dg = int.Parse(txtDonGia.Text);
             int? tt;
+
             CTDonDatHang ctddh = new CTDonDatHang();
             ctddh.MaDDH = _maDonDatHang;
             ctddh.MaSanPham = int.Parse(cbbSanPham.SelectedValue.ToString());
@@ -112,18 +113,22 @@ namespace GUI
             tt = sl * dg;
             txtThanhTien.Text = tt.ToString();
             ctddh.ThanhTien = int.Parse(txtThanhTien.Text);
-            if (bllCTDonDatHang.ThemCTDonDatHang(ctddh))
+            int kq = bllCTDonDatHang.ThemCTDonDatHang(ctddh);
+            if (kq == 1)
             {
                 MessageBox.Show("Thêm chi tiết đon đặt hàng thành công");
-
-
                 loadDLCTDonDatHang();
                 txtThanhTien.Text = tongtien(dgvChiTietDonDatHang);
             }
-            else
+            else if (kq == 0)
             {
                 MessageBox.Show("Thêm không thành công");
-            }           
+            }
+            else
+            {
+                MessageBox.Show("Mat hang nay da ton tai trong don dat hang");
+                return;
+            }
         }
 
         private void btnHoanTat_Click(object sender, EventArgs e)

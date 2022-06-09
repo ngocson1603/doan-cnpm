@@ -12,6 +12,7 @@ namespace DAL
     {
         private ApiService _apiService = new ApiService();
         QL_CUAHANGLINHKIENMAYTINHDataContext qllk = new QL_CUAHANGLINHKIENMAYTINHDataContext();
+
         public DALBaoHanh()
         {
 

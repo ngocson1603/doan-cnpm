@@ -535,3 +535,5 @@ C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.UserControls.l
 C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.exe.licenses
 D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.frmDonDatHang.resources
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.frmDonDatHang.resources
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.frmDonDatHang_v2.resources

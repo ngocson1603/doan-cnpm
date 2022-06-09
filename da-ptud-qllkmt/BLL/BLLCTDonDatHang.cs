@@ -21,7 +21,7 @@ namespace BLL
             {
                 return dalCTDonDatHang.GetDLCTDonDatHangTheoMa(maddh);
             }
-            public bool ThemCTDonDatHang(CTDonDatHang ctddh)
+            public int ThemCTDonDatHang(CTDonDatHang ctddh)
             {
                 return dalCTDonDatHang.ThemCTDonDatHang(ctddh);
             }

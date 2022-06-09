@@ -44,6 +44,10 @@ namespace BLL
         {
             return dalhoadon.PutHD(cthd, ma);
         }
-    }
 
+        public HoaDon GetThongTinHoaDon(int maHD)
+        {
+            return dalhoadon.GetThongTinHoaDon(maHD);
+        }
+    }
 }

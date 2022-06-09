@@ -15,15 +15,15 @@ namespace GUI
     public partial class frmBaoHanh : Form
     {
         BLLBaoHanh bllbh = new BLLBaoHanh();
+        BLLSeri bllsr = new BLLSeri();
+        BLLHoaDon bllhd = new BLLHoaDon();
+
+        double soThangSuDung = 0;
+
         public frmBaoHanh()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dataGridView2.DataSource = bllbh.getlist(int.Parse(comboBox1.Text));
-            lstspbh.Clear();
+            dataGridView3.AutoGenerateColumns = false;
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
@@ -64,10 +64,10 @@ namespace GUI
             }
         }
         public static BindingList<ThemBH> lstspbh = new BindingList<ThemBH>();
-     
+
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-           
+
             DateTime compareTo = DateTime.Parse(bllbh.getngay(int.Parse(comboBox1.Text)));
             DateTime now = DateTime.Now;
             var diffMonths = (now.Month + now.Year * 12) - (compareTo.Month + compareTo.Year * 12);
@@ -80,38 +80,47 @@ namespace GUI
             }
             else
             {
-                string ma = txtMaSP.Text;
-                int tonkho = 1;
+                string ma = dataGridView3.CurrentRow.Cells[0].Value.ToString();
+                //int tonkho = 1;
                 string lydo = richTextBox1.Text;
-                string ten = bllbh.getten(int.Parse(ma));
+                //string ten = bllbh.getten(int.Parse(ma));
 
-                if (lstspbh.Any(n => n.ma == ma))
-                {
-                    MessageBox.Show("Đã thêm");
-                    var item = lstspbh.SingleOrDefault(x => x.ma == ma);
+                //if (lstspbh.Any(n => n.ma == ma))
+                //{
+                //    MessageBox.Show("Đã thêm");
+                //    var item = lstspbh.SingleOrDefault(x => x.ma == ma);
 
-                    if (item.soluong == int.Parse(dataGridView2.CurrentRow.Cells[3].Value.ToString()) - 1)
-                    {
-                        MessageBox.Show("Hiện tại số lượng sản phẩm của khách đã hết");
-                        return;
-                    }
-                    else
-                    {
-                        item.soluong++;
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Xong");
+                //    if (item.soluong == int.Parse(dataGridView2.CurrentRow.Cells[3].Value.ToString()) && item.ma == dataGridView2.CurrentRow.Cells[1].Value.ToString())
+                //    {
+                //        MessageBox.Show("Hiện tại số lượng sản phẩm của khách đã hết");
+                //        return;
+                //    }
+                //    else
+                //    {
+                //        item.soluong++;
+                //    }
+                //}
+                //else
+                //{
+                MessageBox.Show("Da them");
 
-                    ThemBH sp = new ThemBH(ten, tonkho, ma, lydo);
-                    lstspbh.Add(sp);
-                }
+                ThemBH sp = new ThemBH(ma, lydo);
+                lstspbh.Add(sp);
+
             }
+            dataGridView1.Refresh();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string ma = comboBox1.Text;
+            if (ma.Equals("DTO.HoaDon"))
+                return;
+
+            HoaDon hd = bllhd.GetThongTinHoaDon(int.Parse(ma));
+            soThangSuDung = DateTime.Now.Subtract(hd.NgayLapHoaDon.Value).Days / (365 / 12);
+            dataGridView2.DataSource = bllbh.getlist(int.Parse(ma), soThangSuDung);
+            dataGridView3.DataSource = bllsr.loadsr(int.Parse(ma), bllbh.getlist(int.Parse(ma), soThangSuDung));
             lstspbh.Clear();
         }
 
@@ -137,8 +146,7 @@ namespace GUI
                         ThemCTBH cthd = new ThemCTBH()
                         {
                             MaBH = macuoicung,
-                            MaSanPham = int.Parse(dataGridView1.Rows[a].Cells[1].Value.ToString()),
-                            SoLuong = int.Parse(dataGridView1.Rows[a].Cells[2].Value.ToString()),
+                            Seri = int.Parse(dataGridView1.Rows[a].Cells[1].Value.ToString()),
                             LyDo = dataGridView1.Rows[a].Cells[3].Value.ToString(),
                         };
                         a++;
@@ -179,20 +187,7 @@ namespace GUI
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (comboBox2.Text.Length == 0)
-            {
-                MessageBox.Show("vui long chon ma bao hanh");
-            }
-            else
-            {
-                dataGridView3.DataSource = bllbh.getctbh(int.Parse(comboBox2.Text));
-            }
-            
         }
     }
 }

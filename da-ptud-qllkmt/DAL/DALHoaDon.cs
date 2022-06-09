@@ -70,6 +70,9 @@ namespace DAL
                 return true;
         }
 
-        
+        public HoaDon GetThongTinHoaDon(int maHD)
+        {
+            return qllk.HoaDons.First(t => t.MaHoaDon == maHD);
+        }
     }
 }
