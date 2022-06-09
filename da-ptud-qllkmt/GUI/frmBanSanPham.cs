@@ -49,7 +49,8 @@ namespace GUI
             }
             if (frmKhachHang.check == false)
             {
-                txt_MaNV.Text = frmTrangChuNhanVien.manv;
+                int ma = 10000000;
+                txt_MaKH.Text = ma.ToString();
             }
             else
             {
@@ -57,7 +58,7 @@ namespace GUI
                 txt_MaKH.Text = makhchon;
             }
 
-            
+            txt_MaNV.Text = frmTrangChuNhanVien.manv;
 
             guna2Button3.Enabled = true;
         }
@@ -126,15 +127,15 @@ namespace GUI
                         
                         if (bllgio.postGioHangCTHD(cthd))
                         {
-                            //for (int i = 0; i < int.Parse(dgv_Chitiethoadon.Rows[a].Cells[4].Value.ToString()); i++)
-                            //{
-                            //    SeriHD sr = new SeriHD()
-                            //    {
-                            //        Seri = bllsr.loadseritheoma(int.Parse(dgv_Chitiethoadon.Rows[a].Cells[6].Value.ToString())),
-                            //        MaHoaDon = int.Parse(txt_MaHoaDon.Text),
-                            //    };
-                            //    bllsr.postSP(sr);
-                            //}
+                            for (int i = 0; i < int.Parse(dgv_Chitiethoadon.Rows[a].Cells[4].Value.ToString()); i++)
+                            {
+                                SeriHD sr = new SeriHD()
+                                {
+                                    Seri = bllsr.loadseritheoma(int.Parse(dgv_Chitiethoadon.Rows[a].Cells[6].Value.ToString())),
+                                    MaHoaDon = int.Parse(txt_MaHoaDon.Text),
+                                };
+                                bllsr.postSP(sr);
+                            }
                         }
                         else
                         {

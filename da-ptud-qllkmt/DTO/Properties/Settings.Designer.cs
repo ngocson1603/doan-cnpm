@@ -33,16 +33,5 @@ namespace DTO.Properties {
                 return ((string)(this["QL_CUAHANGLINHKIENMAYTINHConnectionString"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QL_CUAHANGLINHKIENMAYTINH1;User ID=s" +
-            "a")]
-        public string QL_CUAHANGLINHKIENMAYTINH1ConnectionString {
-            get {
-                return ((string)(this["QL_CUAHANGLINHKIENMAYTINH1ConnectionString"]));
-            }
-        }
     }
 }
