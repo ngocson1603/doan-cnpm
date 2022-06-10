@@ -20,6 +20,11 @@ namespace BLL
            return dalDonDatHang.GetDLDonDatHang();
        }
 
+       public DonDatHang GetThongTinDonDatHang(int maDDH)
+       {
+           return dalDonDatHang.GetThongTinDonDatHang(maDDH);
+       }
+
        public bool ThemDonDatHang(DonDatHang ddh)
        {
            return dalDonDatHang.ThemDonDatHang(ddh);

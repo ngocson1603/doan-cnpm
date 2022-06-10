@@ -67,5 +67,10 @@ namespace BLL
         {
             return dalphieunhap.DeleteCTPN(ma);
         }
+
+        public int GetLastPhieuNhap()
+        {
+            return dalphieunhap.GetLastPhieuNhap();
+        }
     }
 }

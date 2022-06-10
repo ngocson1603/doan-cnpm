@@ -6,37 +6,40 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAL
 {
-   public  class DALDonDatHang
+    public class DALDonDatHang
     {
-       QL_CUAHANGLINHKIENMAYTINHDataContext qllk = new QL_CUAHANGLINHKIENMAYTINHDataContext();
+        QL_CUAHANGLINHKIENMAYTINHDataContext qllk = new QL_CUAHANGLINHKIENMAYTINHDataContext();
 
-       public DALDonDatHang() { }
+        public DALDonDatHang() { }
 
-       public List<DonDatHang> GetDLDonDatHang()
-       {
-           return qllk.DonDatHangs.Select(t => t).ToList();
-       }
+        public List<DonDatHang> GetDLDonDatHang()
+        {
+            return qllk.DonDatHangs.Select(t => t).ToList();
+        }
 
+        public DonDatHang GetThongTinDonDatHang(int maDDH)
+        {
+            return qllk.DonDatHangs.First(t => t.MaDDH == maDDH);
+        }
 
+        public bool ThemDonDatHang(DonDatHang ddh)
+        {
+            try
+            {
+                qllk.DonDatHangs.InsertOnSubmit(ddh);
+                qllk.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
 
-       public bool ThemDonDatHang(DonDatHang ddh)
-       {
-           try
-           {
-               qllk.DonDatHangs.InsertOnSubmit(ddh);
-               qllk.SubmitChanges();
-               return true;
-           }
-           catch (Exception)
-           {
+                return false;
+            }
+        }
 
-               return false;
-           }
-       }
-
-       public int GetLastDonDatHang()
-       {
-           return qllk.DonDatHangs.OrderByDescending(t => t.MaDDH).First().MaDDH;
-       }
+        public int GetLastDonDatHang()
+        {
+            return qllk.DonDatHangs.OrderByDescending(t => t.MaDDH).First().MaDDH;
+        }
     }
 }

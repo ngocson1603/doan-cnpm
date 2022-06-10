@@ -112,5 +112,9 @@ namespace DAL
             return null;
         }
 
+        public int GetLastPhieuNhap()
+        {
+            return qllk.PhieuNhaps.OrderByDescending(t => t.MaPhieuNhap).First().MaPhieuNhap;
+        }
     }
 }

@@ -216,9 +216,8 @@ FROM     dbo.HoaDon
 
 go
 CREATE VIEW View_PhieuNhap AS
-SELECT        MaPhieuNhap, MaNhanVien, MaNhaPhanPhoi, TongTien, NgayNhap
-FROM            dbo.PhieuNhap
-
+SELECT MaPhieuNhap, MaNhanVien, MaNhaPhanPhoi, TongTien, NgayNhap, MaDDH
+FROM     dbo.PhieuNhap
 go
 CREATE VIEW View_CTPhieuNhap AS
 SELECT        MaPhieuNhap, MaSanPham, SoLuong, TienNhap

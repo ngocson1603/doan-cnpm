@@ -352,6 +352,12 @@
     <Compile Include="frmNhapLinhKien.Designer.cs">
       <DependentUpon>frmNhapLinhKien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNhapTheoDonDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapTheoDonDatHang.Designer.cs">
+      <DependentUpon>frmNhapTheoDonDatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNPP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -474,6 +480,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhapLinhKien.resx">
       <DependentUpon>frmNhapLinhKien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapTheoDonDatHang.resx">
+      <DependentUpon>frmNhapTheoDonDatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNPP.resx">
       <DependentUpon>frmNPP.cs</DependentUpon>

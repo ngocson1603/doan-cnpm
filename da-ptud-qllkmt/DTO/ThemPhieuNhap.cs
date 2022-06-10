@@ -13,5 +13,6 @@ namespace DTO
         public int MaNhaPhanPhoi { get; set; }
         //public int TongTien { get; set; }
         public DateTime NgayNhap { get; set; }
+        public int MaDDH { get; set; }
     }
 }

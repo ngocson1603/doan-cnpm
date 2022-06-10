@@ -40,6 +40,10 @@ namespace GUI
             cbb_npp.ValueMember = "MaNhaPhanPhoi";
 
 
+
+            // 
+            txt_maddh.Text = frmNhapTheoDonDatHang.ma.ToString();
+
         }
 
         private void btn_ThemPN_Click(object sender, EventArgs e)
@@ -70,7 +74,8 @@ namespace GUI
                 MaNhanVien = int.Parse(txt_MaNhanVien.Text),
                 MaNhaPhanPhoi = int.Parse(cbb_npp.Text),
                 //TongTien = int.Parse(txt_TongTien.Text),
-                NgayNhap = dateTimePicker1.Value
+                NgayNhap = dateTimePicker1.Value,
+                MaDDH = int.Parse(txt_maddh.Text)
             };
 
             if (bllpn.postPN(cthdsp))
@@ -166,7 +171,8 @@ namespace GUI
                 MaNhanVien = int.Parse(txt_MaNhanVien.Text),
                 MaNhaPhanPhoi = int.Parse(cbb_npp.Text),
                 //TongTien = int.Parse(txt_TongTien.Text),
-                NgayNhap = dateTimePicker1.Value
+                NgayNhap = dateTimePicker1.Value,
+                MaDDH = int.Parse(txt_maddh.Text)
             };
 
             if (bllpn.putPN(kh, int.Parse(txt_MaPhieuNhap.Text)))
@@ -183,40 +189,40 @@ namespace GUI
 
         }
 
-        private void btn_ThemCTPN_Click(object sender, EventArgs e)
-        {
-            ThemCTPN cthdsp = new ThemCTPN()
-            {
-                MaPhieuNhap = int.Parse(txt_MaCTPN.Text),
-                MaSanPham = int.Parse(cbb_MaSP.Text),
-                SoLuong =  int.Parse(txt_Soluong.Text),
-                TienNhap = int.Parse(txt_TienNhap.Text),
-            };
+        //private void btn_ThemCTPN_Click(object sender, EventArgs e)
+        //{
+        //    ThemCTPN cthdsp = new ThemCTPN()
+        //    {
+        //        MaPhieuNhap = int.Parse(txt_MaCTPN.Text),
+        //        MaSanPham = int.Parse(cbb_MaSP.Text),
+        //        SoLuong =  int.Parse(txt_Soluong.Text),
+        //        TienNhap = int.Parse(txt_TienNhap.Text),
+        //    };
 
-            if (bllpn.postCTPN(cthdsp))
-            {
-                MessageBox.Show("Thêm thành công");
-                dgv_ChiTietPhieuNhap.DataSource = bllpn.LoadCTPN();
-            }
-            else
-            {
-                MessageBox.Show("Thêm thất bại");
-            }
-        }
+        //    if (bllpn.postCTPN(cthdsp))
+        //    {
+        //        MessageBox.Show("Thêm thành công");
+        //        dgv_ChiTietPhieuNhap.DataSource = bllpn.LoadCTPN();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Thêm thất bại");
+        //    }
+        //}
 
-        private void btn_XoaCTPN_Click(object sender, EventArgs e)
-        {
-            if (bllpn.deleteCTPN(int.Parse(txt_MaCTPN.Text)))
-            {
-                MessageBox.Show("Xóa thành công");
-                dgv_ChiTietPhieuNhap.DataSource = bllpn.LoadCTPN();
-            }
-            else
-            {
-                MessageBox.Show("Xóa thất bại");
-                return;
-            }
-        }
+        //private void btn_XoaCTPN_Click(object sender, EventArgs e)
+        //{
+        //    if (bllpn.deleteCTPN(int.Parse(txt_MaCTPN.Text)))
+        //    {
+        //        MessageBox.Show("Xóa thành công");
+        //        dgv_ChiTietPhieuNhap.DataSource = bllpn.LoadCTPN();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Xóa thất bại");
+        //        return;
+        //    }
+        //}
 
 
 
@@ -293,6 +299,7 @@ namespace GUI
                 cbb_MaSP.Text = row.Cells[1].Value.ToString();
                 txt_Soluong.Text = row.Cells[2].Value.ToString();
                 txt_TienNhap.Text = row.Cells[3].Value.ToString();
+                txt_maddh.Text = row.Cells[4].Value.ToString();
             
 
                 //dgv_ChiTietPhieuNhap.DataSource = bllpn.LoadCTPhieuNhap(int.Parse(row.Cells[0].Value.ToString()));
@@ -306,9 +313,18 @@ namespace GUI
             guna2Button1.Enabled = false;
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            frmNhapTheoDonDatHang frm1 = new frmNhapTheoDonDatHang();
+            frm1.Show();
+        }
+
    
-
-
 
     }
 }
