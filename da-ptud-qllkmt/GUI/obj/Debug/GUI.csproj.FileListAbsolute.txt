@@ -538,3 +538,5 @@ D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.frmDonDatHan
 C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.frmDonDatHang.resources
 C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.frmDonDatHang_v2.resources
 C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.frmNhapTheoDonDatHang.resources
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.frmDonDatHang_v2.resources
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.frmNhapTheoDonDatHang.resources

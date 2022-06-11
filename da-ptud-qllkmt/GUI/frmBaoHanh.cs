@@ -60,7 +60,7 @@ namespace GUI
             if (e.RowIndex >= 0)
             {
                 txtMaSP.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
-                toolStripButton3.Enabled = true;
+                //toolStripButton3.Enabled = true;
             }
         }
         public static BindingList<ThemBH> lstspbh = new BindingList<ThemBH>();
@@ -109,6 +109,7 @@ namespace GUI
 
             }
             dataGridView1.Refresh();
+            toolStripButton3.Enabled = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -146,21 +147,23 @@ namespace GUI
                         ThemCTBH cthd = new ThemCTBH()
                         {
                             MaBH = macuoicung,
-                            Seri = int.Parse(dataGridView1.Rows[a].Cells[1].Value.ToString()),
-                            LyDo = dataGridView1.Rows[a].Cells[3].Value.ToString(),
+                            Seri = dataGridView1.Rows[a].Cells[0].Value.ToString(),
+                            LyDo = dataGridView1.Rows[a].Cells[1].Value.ToString(),
                         };
                         a++;
                         if (bllbh.thembhct(cthd))
                         {
-                            lstspbh.Clear();
+                            
                         }
                         else
                         {
                             MessageBox.Show("Thêm không thành công");
                             break;
                         }
+                        
                     }
                     MessageBox.Show("Thêm thành công");
+                    lstspbh.Clear();
                 }
             }
             comboBox2.DataSource = bllbh.getmabh();
@@ -188,6 +191,15 @@ namespace GUI
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dataGridView2.CurrentCell = dataGridView2[1, 0];
+                toolStripButton3.Enabled = true;
+            }
         }
     }
 }

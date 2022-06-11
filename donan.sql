@@ -38,6 +38,7 @@ CREATE TABLE [dbo].[PhieuNhap](
 	[MaNhaPhanPhoi] int,
 	[TongTien] int,
 	[NgayNhap] [date],
+	MaDDH int
 	CONSTRAINT PK_PN PRIMARY KEY(MaPhieuNhap))
 
 CREATE TABLE [dbo].[ChucVu](
@@ -315,6 +316,8 @@ ALTER TABLE [dbo].[PhieuNhap]
 ADD CONSTRAINT FK_PN_NCC FOREIGN KEY(MaNhaPhanPhoi) REFERENCES [dbo].[NhaPhanPhoi](MaNhaPhanPhoi)
 ALTER TABLE [dbo].[PhieuNhap]
 ADD CONSTRAINT FK_PN_NV FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
+ALTER TABLE [dbo].[PhieuNhap]
+ADD CONSTRAINT FK_PN_ddh FOREIGN KEY(MaDDH) REFERENCES [dbo].[DonDatHang](MaDDH)
 ALTER TABLE [dbo].[NhanVien]
 ADD CONSTRAINT FK_NV_CV FOREIGN KEY(ChucVu) REFERENCES [dbo].[ChucVu](MaChucVu)
 ALTER TABLE [dbo].[ChiTietPhieuNhap]

@@ -9,7 +9,7 @@ namespace DTO
     public class ThemCTBH
     {
         public int MaBH { get; set; }
-        public int Seri { get; set; }
+        public string Seri { get; set; }
         public string LyDo { get; set; }
     }
 }
