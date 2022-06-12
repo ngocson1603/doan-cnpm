@@ -83,6 +83,32 @@ namespace GUI
 
         private void btnLapPhieuNhap_Click(object sender, EventArgs e)
         {
+           
+        }
+        public Image GetImg(string direct, int w, int h)
+        {
+            Image i = Image.FromFile(direct);
+            return (Image)(new Bitmap(i, new Size(w, h)));
+        }
+        private void dgv_DSSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string direct = hp.Directory() + dgv_DSSanPham.CurrentRow.Cells[7].Value.ToString();
+            pictureBox1.Image = GetImg(direct, pictureBox1.Width, pictureBox1.Height);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ma = int.Parse(dgv_CTDDH.CurrentRow.Cells[0].Value.ToString());
+            MessageBox.Show("Đã thêm");
+
+            frmTrangChuNhanVien.pnltrang.Controls.Clear();
+            hp.motrangcon(new frmNhapLinhKien(), frmTrangChuNhanVien.pnltrang);
+
+            this.Close();
+        }
+
+        private void btn_LapPN_Click(object sender, EventArgs e)
+        {
             ThemPhieuNhap cthdsp = new ThemPhieuNhap()
             {
                 MaNhanVien = int.Parse(txt_MaNhanVien.Text),
@@ -116,27 +142,6 @@ namespace GUI
 
             MessageBox.Show("Nhập hàng thành công");
             dgv_DSSanPham.DataSource = bllsanpham.LoadSanPham();
-        }
-        public Image GetImg(string direct, int w, int h)
-        {
-            Image i = Image.FromFile(direct);
-            return (Image)(new Bitmap(i, new Size(w, h)));
-        }
-        private void dgv_DSSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string direct = hp.Directory() + dgv_DSSanPham.CurrentRow.Cells[7].Value.ToString();
-            pictureBox1.Image = GetImg(direct, pictureBox1.Width, pictureBox1.Height);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ma = int.Parse(dgv_CTDDH.CurrentRow.Cells[0].Value.ToString());
-            MessageBox.Show("Đã thêm");
-
-            frmTrangChuNhanVien.pnltrang.Controls.Clear();
-            hp.motrangcon(new frmNhapLinhKien(), frmTrangChuNhanVien.pnltrang);
-
-            this.Close();
         }
     }
 }

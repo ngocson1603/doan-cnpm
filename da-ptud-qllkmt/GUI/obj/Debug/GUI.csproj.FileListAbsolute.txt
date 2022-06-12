@@ -550,3 +550,13 @@ D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\AForge.Video.xml
 D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\AForge.Video.DirectShow.xml
 D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\zxing.xml
 D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\zxing.presentation.xml
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\AForge.dll
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\AForge.Video.dll
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\zxing.dll
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\zxing.presentation.dll
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\AForge.xml
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\AForge.Video.xml
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\zxing.xml
+C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\zxing.presentation.xml

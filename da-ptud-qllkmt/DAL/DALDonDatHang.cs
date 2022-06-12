@@ -9,12 +9,14 @@ namespace DAL
     public class DALDonDatHang
     {
         QL_CUAHANGLINHKIENMAYTINHDataContext qllk = new QL_CUAHANGLINHKIENMAYTINHDataContext();
+        DALPhieuNhap dalPN = new DALPhieuNhap();
 
         public DALDonDatHang() { }
 
         public List<DonDatHang> GetDLDonDatHang()
         {
-            return qllk.DonDatHangs.Select(t => t).ToList();
+            List<View_PhieuNhap> lstPN = dalPN.GetDanhSachPN();
+            return qllk.DonDatHangs.Where(t => !lstPN.Select(y => y.MaDDH).Contains(t.MaDDH)).ToList();
         }
 
         public DonDatHang GetThongTinDonDatHang(int maDDH)

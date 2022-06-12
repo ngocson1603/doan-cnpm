@@ -30,6 +30,7 @@
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.dgv_CTDDH = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,16 +48,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_MaNhanVien = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnLapPhieuNhap = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgv_DSSanPham = new System.Windows.Forms.DataGridView();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_LapPN = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CTDDH)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSanPham)).BeginInit();
+            this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,8 +74,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.toolStrip2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.btnLapPhieuNhap);
             this.groupBox1.Controls.Add(this.dgv_CTDDH);
             this.groupBox1.Controls.Add(this.cbb_MaDDH);
             this.groupBox1.Controls.Add(this.label1);
@@ -82,6 +85,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đơn đặt hàng";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(391, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 29);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Chọn";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgv_CTDDH
             // 
@@ -140,7 +153,7 @@
             // cbb_MaDDH
             // 
             this.cbb_MaDDH.FormattingEnabled = true;
-            this.cbb_MaDDH.Location = new System.Drawing.Point(149, 42);
+            this.cbb_MaDDH.Location = new System.Drawing.Point(149, 53);
             this.cbb_MaDDH.Name = "cbb_MaDDH";
             this.cbb_MaDDH.Size = new System.Drawing.Size(198, 24);
             this.cbb_MaDDH.TabIndex = 1;
@@ -149,7 +162,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 45);
+            this.label1.Location = new System.Drawing.Point(28, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 17);
             this.label1.TabIndex = 0;
@@ -157,6 +170,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.txtTongThanhTien);
             this.groupBox2.Controls.Add(this.cbb_npp);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
@@ -243,16 +257,6 @@
             this.label4.TabIndex = 82;
             this.label4.Text = "Mã Nhân Viên";
             // 
-            // btnLapPhieuNhap
-            // 
-            this.btnLapPhieuNhap.Location = new System.Drawing.Point(385, 42);
-            this.btnLapPhieuNhap.Name = "btnLapPhieuNhap";
-            this.btnLapPhieuNhap.Size = new System.Drawing.Size(75, 23);
-            this.btnLapPhieuNhap.TabIndex = 3;
-            this.btnLapPhieuNhap.Text = "Lap phieu nhap";
-            this.btnLapPhieuNhap.UseVisualStyleBackColor = true;
-            this.btnLapPhieuNhap.Click += new System.EventHandler(this.btnLapPhieuNhap_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgv_DSSanPham);
@@ -273,6 +277,17 @@
             this.dgv_DSSanPham.TabIndex = 0;
             this.dgv_DSSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSSanPham_CellClick);
             // 
+            // toolStrip2
+            // 
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_LapPN});
+            this.toolStrip2.Location = new System.Drawing.Point(3, 18);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(1012, 27);
+            this.toolStrip2.TabIndex = 5;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(826, 396);
@@ -281,20 +296,29 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // panel1
             // 
-            this.button1.Location = new System.Drawing.Point(479, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Chọn";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panel1.BackgroundImage = global::GUI.Properties.Resources.clipboard_paper_file_correct_done_list_document_icon_219488__1_;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(25, 155);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(225, 189);
+            this.panel1.TabIndex = 89;
+            // 
+            // btn_LapPN
+            // 
+            this.btn_LapPN.Image = global::GUI.Properties.Resources.addcthd;
+            this.btn_LapPN.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_LapPN.Name = "btn_LapPN";
+            this.btn_LapPN.Size = new System.Drawing.Size(97, 24);
+            this.btn_LapPN.Text = "Lập Phiếu";
+            this.btn_LapPN.Click += new System.EventHandler(this.btn_LapPN_Click);
             // 
             // frmNhapTheoDonDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.ClientSize = new System.Drawing.Size(1350, 703);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
@@ -311,6 +335,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSanPham)).EndInit();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -338,11 +364,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.TextBox txtTongThanhTien;
-        private System.Windows.Forms.Button btnLapPhieuNhap;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgv_DSSanPham;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton btn_LapPN;
+        private System.Windows.Forms.Panel panel1;
 
     }
 }

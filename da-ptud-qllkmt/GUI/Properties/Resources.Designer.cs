@@ -193,6 +193,26 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clipboard_paper_file_correct_done_list_document_icon_219488 {
+            get {
+                object obj = ResourceManager.GetObject("clipboard_paper_file_correct_done_list_document_icon_219488", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clipboard_paper_file_correct_done_list_document_icon_219488__1_ {
+            get {
+                object obj = ResourceManager.GetObject("clipboard_paper_file_correct_done_list_document_icon_219488 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dangxuat {
             get {
                 object obj = ResourceManager.GetObject("dangxuat", resourceCulture);

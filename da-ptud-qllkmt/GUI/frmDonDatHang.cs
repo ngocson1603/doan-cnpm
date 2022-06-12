@@ -37,6 +37,13 @@ namespace GUI
             dgvChiTietDonDatHang.DataSource = bllCTDonDatHang.GetCTDonDatHang();
         }
 
+        public void loadDLCTDonDatHangTheoMa()
+        {
+            dgvChiTietDonDatHang.DataSource = null;
+            dgvChiTietDonDatHang.ClearSelection();
+            dgvChiTietDonDatHang.DataSource = bllCTDonDatHang.GetDLCTDonDatHangTheoMa(_maDonDatHang);
+        }
+
         private void btnTaoDonDatHang_Click(object sender, EventArgs e)
         {
             DonDatHang ddh = new DonDatHang();
@@ -117,7 +124,7 @@ namespace GUI
             if (kq == 1)
             {
                 MessageBox.Show("Thêm chi tiết đon đặt hàng thành công");
-                loadDLCTDonDatHang();
+                loadDLCTDonDatHangTheoMa();
                 txtThanhTien.Text = tongtien(dgvChiTietDonDatHang);
             }
             else if (kq == 0)
@@ -142,12 +149,14 @@ namespace GUI
             else
             {
                 MessageBox.Show("Hoàn tất đơn đặt hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                dgvChiTietDonDatHang.DataSource = dgvDonDatHang.DataSource = null;
+                dgvDonDatHang.ClearSelection();
+                dgvChiTietDonDatHang.ClearSelection();
+                grbChiTietDonDatHang.Enabled = grbThongTin.Enabled = false;
+                grbDonDatHang.Enabled = true;
+                txtDonGia.Text = txtSoLuong.Text = txtThanhTien.Text = "";
+                cbbSanPham.SelectedIndex = cbbNhanVienLap.SelectedIndex = cbbNhaPhanPhoi.SelectedIndex = 0;
             }
         }
-
-
-
-
     }
 }
