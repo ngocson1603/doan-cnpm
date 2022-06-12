@@ -158,6 +158,7 @@ namespace GUI
 
             MessageBox.Show("Nhập hàng thành công");
             dgv_DSSanPham.DataSource = bllsanpham.LoadSanPham();
+            
         }
     }
 }

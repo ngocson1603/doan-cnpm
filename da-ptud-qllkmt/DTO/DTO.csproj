@@ -81,6 +81,7 @@
     <Compile Include="TinhTrang.cs" />
     <Compile Include="View_BieuMauBaoHanh.cs" />
     <Compile Include="View_BieuMauGio.cs" />
+    <Compile Include="View_BieuMauNhapHang.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -116,5 +116,13 @@ namespace DAL
         {
             return qllk.PhieuNhaps.OrderByDescending(t => t.MaPhieuNhap).First().MaPhieuNhap;
         }
+
+
+
+
+        public List<View_BieuMauNhapHang> LoadBieuMauNhap(int ma)
+        {
+            return qllk.View_BieuMauNhapHangs.Where(t=>t.MaPhieuNhap==ma).Select(t => t).ToList<View_BieuMauNhapHang>();
+        }
     }
 }

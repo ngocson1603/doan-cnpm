@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapLinhKien));
             this.txt_TienNhap = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_MaCTPN = new System.Windows.Forms.TextBox();
@@ -39,6 +40,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbb_MaSP = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_maddh = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.cbb_npp = new System.Windows.Forms.ComboBox();
@@ -69,8 +72,8 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_maddh = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.btn_Xuat = new System.Windows.Forms.ToolStripButton();
+            this.dataExcel = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PhieuNhap)).BeginInit();
@@ -78,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ChiTietPhieuNhap)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Chitiethoadon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExcel)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_TienNhap
@@ -142,6 +146,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.dataExcel);
             this.groupBox2.Controls.Add(this.cbb_MaSP);
             this.groupBox2.Controls.Add(this.txt_TienNhap);
             this.groupBox2.Controls.Add(this.label10);
@@ -195,6 +200,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phiếu Nhập";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txt_maddh
+            // 
+            this.txt_maddh.Location = new System.Drawing.Point(165, 152);
+            this.txt_maddh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_maddh.Name = "txt_maddh";
+            this.txt_maddh.Size = new System.Drawing.Size(136, 22);
+            this.txt_maddh.TabIndex = 107;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(13, 155);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 17);
+            this.label11.TabIndex = 106;
+            this.label11.Text = "Mã DDH";
             // 
             // guna2Button1
             // 
@@ -357,7 +379,8 @@
             this.btn_ThemPN,
             this.btn_XoaPN,
             this.btn_SuaPN,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.btn_Xuat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1201, 27);
@@ -516,22 +539,24 @@
             this.Column7.HeaderText = "Mã SP";
             this.Column7.Name = "Column7";
             // 
-            // txt_maddh
+            // btn_Xuat
             // 
-            this.txt_maddh.Location = new System.Drawing.Point(165, 152);
-            this.txt_maddh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_maddh.Name = "txt_maddh";
-            this.txt_maddh.Size = new System.Drawing.Size(136, 22);
-            this.txt_maddh.TabIndex = 107;
+            this.btn_Xuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xuat.Image")));
+            this.btn_Xuat.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Xuat.Name = "btn_Xuat";
+            this.btn_Xuat.Size = new System.Drawing.Size(101, 24);
+            this.btn_Xuat.Text = "Xuất Excel";
+            this.btn_Xuat.Click += new System.EventHandler(this.btn_Xuat_Click);
             // 
-            // label11
+            // dataExcel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 155);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 17);
-            this.label11.TabIndex = 106;
-            this.label11.Text = "Mã DDH";
+            this.dataExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataExcel.Location = new System.Drawing.Point(445, 20);
+            this.dataExcel.Name = "dataExcel";
+            this.dataExcel.RowTemplate.Height = 24;
+            this.dataExcel.Size = new System.Drawing.Size(21, 15);
+            this.dataExcel.TabIndex = 81;
+            this.dataExcel.Visible = false;
             // 
             // frmNhapLinhKien
             // 
@@ -556,6 +581,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Chitiethoadon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExcel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -605,6 +631,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.TextBox txt_maddh;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ToolStripButton btn_Xuat;
+        private System.Windows.Forms.DataGridView dataExcel;
 
     }
 }

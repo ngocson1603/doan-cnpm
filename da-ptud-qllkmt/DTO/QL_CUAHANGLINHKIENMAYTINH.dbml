@@ -372,4 +372,14 @@
       <Column Name="MaDDH" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.View_BieuMauNhapHang" Member="View_BieuMauNhapHangs">
+    <Type Name="View_BieuMauNhapHang">
+      <Column Name="MaPhieuNhap" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaSanPham" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TienNhap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayNhap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

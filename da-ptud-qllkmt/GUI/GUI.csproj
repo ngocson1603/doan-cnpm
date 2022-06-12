@@ -446,6 +446,7 @@
     <Compile Include="XuLy\ExcelExport.cs" />
     <Compile Include="XuLy\ExcelExportBH.cs" />
     <Compile Include="XuLy\ExcelExportNV.cs" />
+    <Compile Include="XuLy\ExcelExportPN.cs" />
     <Compile Include="XuLy\FileCommon.cs" />
     <Compile Include="XuLy\Global.cs" />
     <Compile Include="XuLy\ID3Learn.cs" />
