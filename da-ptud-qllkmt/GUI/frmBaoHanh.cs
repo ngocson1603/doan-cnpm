@@ -35,6 +35,7 @@ namespace GUI
             dataGridView1.DataSource = loadsp;
 
         }
+
         private void frmBaoHanh_Load(object sender, EventArgs e)
         {
             comboBox1.DataSource = bllbh.getmahd();
@@ -107,6 +108,8 @@ namespace GUI
                 ThemBH sp = new ThemBH(ma, lydo);
                 lstspbh.Add(sp);
 
+                dataGridView3.Rows.RemoveAt(dataGridView3.CurrentCell.RowIndex);
+
             }
             dataGridView1.Refresh();
             toolStripButton3.Enabled = false;
@@ -122,6 +125,14 @@ namespace GUI
             soThangSuDung = DateTime.Now.Subtract(hd.NgayLapHoaDon.Value).Days / (365 / 12);
             dataGridView2.DataSource = bllbh.getlist(int.Parse(ma), soThangSuDung);
             dataGridView3.DataSource = bllsr.loadsr(int.Parse(ma), bllbh.getlist(int.Parse(ma), soThangSuDung));
+
+
+
+            List<SeriHD> lst = bllsr.loadsr(int.Parse(ma), bllbh.getlist(int.Parse(ma), soThangSuDung));
+            dataGridView3.DataSource = bllsr.ListToDataTable(lst);
+
+            //dataGridView3.DataSource = bllsr.loadsr(int.Parse(ma), bllbh.getlist(int.Parse(ma), soThangSuDung));
+
             lstspbh.Clear();
         }
 

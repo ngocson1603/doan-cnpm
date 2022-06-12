@@ -116,22 +116,38 @@ namespace GUI
                 NgayNhap = dateTimePicker1.Value,
                 MaDDH = int.Parse(cbb_MaDDH.Text)
             };
-
+            int a = 0;
             if (bllpn.postPN(cthdsp))
             {
                 int maPN = bllpn.GetLastPhieuNhap();
-                foreach (var item in TaoChiTietPhieuNhap(maPN))
+                //foreach (var item in TaoChiTietPhieuNhap(maPN))
+                //{
+                //    ThemCTPN cthd = new ThemCTPN()
+                //    {
+                //        MaPhieuNhap = item.MaPhieuNhap,
+                //        MaSanPham = item.MaSanPham,
+                //        SoLuong = (int)item.SoLuong,
+                //        TienNhap = (int)item.TienNhap
+
+                //    };
+                //    if (bllpn.postCTPN(cthd))
+                //        continue;
+
+                for (int x = 0; x < dgv_CTDDH.Rows.Count; x++)
                 {
                     ThemCTPN cthd = new ThemCTPN()
                     {
-                        MaPhieuNhap = item.MaPhieuNhap,
-                        MaSanPham = item.MaSanPham,
-                        SoLuong = (int)item.SoLuong,
-                        TienNhap = (int)item.TienNhap
+                        MaPhieuNhap = maPN,
+                        MaSanPham = int.Parse(dgv_CTDDH.Rows[a].Cells[1].Value.ToString()),
+                        SoLuong = int.Parse(dgv_CTDDH.Rows[a].Cells[2].Value.ToString()),
+                        TienNhap = int.Parse(dgv_CTDDH.Rows[a].Cells[3].Value.ToString())
 
                     };
+                    a++;
                     if (bllpn.postCTPN(cthd))
-                        continue;
+                    {
+
+                    }
                     else
                     {
                         MessageBox.Show("Nhập hàng không thành công");
