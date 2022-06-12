@@ -35,6 +35,10 @@ namespace BLL
         {
             return dalbh.getmahd();
         }
+        public int? getMaTheoSeri(string ma)
+        {
+            return dalbh.loadMaSPTheoSoSeri(ma);
+        }
         public List<View_BaoHanh> getmabh()
         {
             return dalbh.GetWatchListBH();

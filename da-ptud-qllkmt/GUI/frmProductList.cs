@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AForge.Video;
+using AForge.Video.DirectShow;
+using ZXing;
 using DTO;
 
 namespace GUI
@@ -16,6 +19,8 @@ namespace GUI
         XuLy.loadProduct lsp = new XuLy.loadProduct();
         List<productList> dsSP = new List<productList>();
         public static string ten;
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice captureDevice;
         public frmProductList()
         {
             InitializeComponent();
@@ -82,13 +87,71 @@ namespace GUI
 
         private void frmProductList_Load(object sender, EventArgs e)
         {
+            
             initdb();
             AddProDuct(dsSP);
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterInfo in filterInfoCollection)
+                comboBox1.Items.Add(filterInfo.Name);
+            comboBox1.SelectedIndex = 0;
+
+            captureDevice = new VideoCaptureDevice(filterInfoCollection[comboBox1.SelectedIndex].MonikerString);
+            captureDevice.NewFrame += captureDevice_NewFrame;
+            captureDevice.Start();
+            timer1.Start();
         }
 
         private void frmProductList_FormClosed(object sender, FormClosedEventArgs e)
         {
             frmBanSanPham.dgv.Refresh();
+        }
+        void captureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            pictureBox1.Dispose();
+            if (pictureBox1.Image != null)
+            {
+                BarcodeReader barcodeReader = new BarcodeReader();
+                var result = barcodeReader.DecodeMultiple((Bitmap)pictureBox1.Image);
+                try
+                {
+                    //string decoded = result.ToString().Trim();
+                    //if (!listBox1.Items.Contains(decoded))
+                    //{
+                    //    listBox1.ResetText();
+                    //    listBox1.Items.Insert(0, decoded);
+                    //}
+
+                    if (result != null)
+                    {
+                        foreach (Result results in result)
+                        {
+                            txtTimKiem.Text = results.ToString();
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message + "");
+                }
+                //if (result != null)
+                //{
+                //    txtQR.Text = result.ToString();
+                //    timer1.Stop();
+                //    if (captureDevice.IsRunning)
+                //        captureDevice.Stop();
+                //}
+            }
+        }
+
+        private void frmProductList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (captureDevice.IsRunning)
+                captureDevice.Stop();
         }
     }
 }

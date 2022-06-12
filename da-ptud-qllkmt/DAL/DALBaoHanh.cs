@@ -38,6 +38,10 @@ namespace DAL
         {
             return qllk.BaoHanhs.OrderByDescending(t => t.MaBH).First().MaBH;
         }
+        public int? loadMaSPTheoSoSeri(string ma)
+        {
+            return qllk.SeriSPs.Where(t => t.Seri == ma).Select(t => t.MaSanPham).FirstOrDefault();
+        }
         public string getngayhd(int ma)
         {
             var ngay = (from lk in qllk.HoaDons where lk.MaHoaDon == ma select lk.NgayLapHoaDon).FirstOrDefault();

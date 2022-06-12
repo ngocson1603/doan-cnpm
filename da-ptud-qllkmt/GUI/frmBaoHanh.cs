@@ -198,6 +198,9 @@ namespace GUI
             if (e.RowIndex >= 0)
             {
                 dataGridView2.CurrentCell = dataGridView2[1, 0];
+                string ma = dataGridView3.CurrentRow.Cells[0].Value.ToString();
+                int? seritheoma = bllbh.getMaTheoSeri(ma);
+                txtMaSP.Text = seritheoma.ToString();
                 toolStripButton3.Enabled = true;
             }
         }
