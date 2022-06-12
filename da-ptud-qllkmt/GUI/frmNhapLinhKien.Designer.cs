@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapLinhKien));
             this.txt_TienNhap = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_MaCTPN = new System.Windows.Forms.TextBox();
@@ -38,6 +37,7 @@
             this.txt_Soluong = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataExcel = new System.Windows.Forms.DataGridView();
             this.cbb_MaSP = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_maddh = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@
             this.btn_XoaPN = new System.Windows.Forms.ToolStripButton();
             this.btn_SuaPN = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btn_Xuat = new System.Windows.Forms.ToolStripButton();
             this.dgv_ChiTietPhieuNhap = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -72,16 +73,15 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_Xuat = new System.Windows.Forms.ToolStripButton();
-            this.dataExcel = new System.Windows.Forms.DataGridView();
+            this.btn_LoadLai = new System.Windows.Forms.ToolStripButton();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExcel)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PhieuNhap)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ChiTietPhieuNhap)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Chitiethoadon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExcel)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_TienNhap
@@ -165,6 +165,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi Tiết Phiếu Nhập";
             // 
+            // dataExcel
+            // 
+            this.dataExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataExcel.Location = new System.Drawing.Point(456, 22);
+            this.dataExcel.Name = "dataExcel";
+            this.dataExcel.RowTemplate.Height = 24;
+            this.dataExcel.Size = new System.Drawing.Size(10, 13);
+            this.dataExcel.TabIndex = 81;
+            this.dataExcel.Visible = false;
+            // 
             // cbb_MaSP
             // 
             this.cbb_MaSP.FormattingEnabled = true;
@@ -222,7 +232,7 @@
             // 
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 23;
+            this.guna2Button1.BorderRadius = 25;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -231,13 +241,13 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = global::GUI.Properties.Resources.sell;
-            this.guna2Button1.Location = new System.Drawing.Point(552, 125);
+            this.guna2Button1.Location = new System.Drawing.Point(489, 117);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.BorderRadius = 26;
             this.guna2Button1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2Button1.ShadowDecoration.Enabled = true;
-            this.guna2Button1.Size = new System.Drawing.Size(139, 49);
+            this.guna2Button1.Size = new System.Drawing.Size(138, 53);
             this.guna2Button1.TabIndex = 105;
             this.guna2Button1.Text = "Hủy Sản Phẩm";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -254,7 +264,7 @@
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.Image = global::GUI.Properties.Resources.sell;
-            this.guna2Button3.Location = new System.Drawing.Point(393, 125);
+            this.guna2Button3.Location = new System.Drawing.Point(324, 121);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.BorderRadius = 26;
@@ -380,7 +390,8 @@
             this.btn_XoaPN,
             this.btn_SuaPN,
             this.toolStripButton1,
-            this.btn_Xuat});
+            this.btn_Xuat,
+            this.btn_LoadLai});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1201, 27);
@@ -422,6 +433,15 @@
             this.toolStripButton1.Size = new System.Drawing.Size(222, 24);
             this.toolStripButton1.Text = "Nhập dựa trên đơn đặt hàng";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // btn_Xuat
+            // 
+            this.btn_Xuat.Image = global::GUI.Properties.Resources.clipboard_paper_file_correct_done_list_document_icon_219488;
+            this.btn_Xuat.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Xuat.Name = "btn_Xuat";
+            this.btn_Xuat.Size = new System.Drawing.Size(101, 24);
+            this.btn_Xuat.Text = "Xuất Excel";
+            this.btn_Xuat.Click += new System.EventHandler(this.btn_Xuat_Click);
             // 
             // dgv_ChiTietPhieuNhap
             // 
@@ -539,24 +559,14 @@
             this.Column7.HeaderText = "Mã SP";
             this.Column7.Name = "Column7";
             // 
-            // btn_Xuat
+            // btn_LoadLai
             // 
-            this.btn_Xuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xuat.Image")));
-            this.btn_Xuat.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Xuat.Name = "btn_Xuat";
-            this.btn_Xuat.Size = new System.Drawing.Size(101, 24);
-            this.btn_Xuat.Text = "Xuất Excel";
-            this.btn_Xuat.Click += new System.EventHandler(this.btn_Xuat_Click);
-            // 
-            // dataExcel
-            // 
-            this.dataExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataExcel.Location = new System.Drawing.Point(445, 20);
-            this.dataExcel.Name = "dataExcel";
-            this.dataExcel.RowTemplate.Height = 24;
-            this.dataExcel.Size = new System.Drawing.Size(21, 15);
-            this.dataExcel.TabIndex = 81;
-            this.dataExcel.Visible = false;
+            this.btn_LoadLai.Image = global::GUI.Properties.Resources.capnhat;
+            this.btn_LoadLai.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_LoadLai.Name = "btn_LoadLai";
+            this.btn_LoadLai.Size = new System.Drawing.Size(77, 24);
+            this.btn_LoadLai.Text = "Refesh";
+            this.btn_LoadLai.Click += new System.EventHandler(this.btn_LoadLai_Click);
             // 
             // frmNhapLinhKien
             // 
@@ -572,6 +582,7 @@
             this.Load += new System.EventHandler(this.frmNhapLinhKien_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExcel)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PhieuNhap)).EndInit();
@@ -581,7 +592,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Chitiethoadon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataExcel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,7 +617,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_MaNhanVien;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgv_PhieuNhap;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btn_ThemPN;
@@ -633,6 +642,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ToolStripButton btn_Xuat;
         private System.Windows.Forms.DataGridView dataExcel;
+        public System.Windows.Forms.DataGridView dgv_PhieuNhap;
+        private System.Windows.Forms.ToolStripButton btn_LoadLai;
 
     }
 }

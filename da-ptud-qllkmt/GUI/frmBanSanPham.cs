@@ -145,7 +145,7 @@ namespace GUI
                         a++;
                     }
                     MessageBox.Show("Mua hàng thành công");
-                    frmQuanLySP.lstsp.Clear();
+                    UserControls.detailProduct.lstspb.Clear();
                 }
             
         }

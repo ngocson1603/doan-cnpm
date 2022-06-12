@@ -273,6 +273,23 @@ FROM            dbo.ChiTietHoaDon INNER JOIN
                          dbo.HoaDon ON dbo.ChiTietHoaDon.MaHoaDon = dbo.HoaDon.MaHoaDon INNER JOIN
                          dbo.SanPham ON dbo.ChiTietHoaDon.MaSanPham = dbo.SanPham.MaSanPham INNER JOIN
                          dbo.SeriHD ON dbo.HoaDon.MaHoaDon = dbo.SeriHD.MaHoaDon
+
+
+go
+CREATE VIEW View_BieuMauNhapHang AS
+SELECT dbo.ChiTietPhieuNhap.MaPhieuNhap, dbo.ChiTietPhieuNhap.MaSanPham, dbo.ChiTietPhieuNhap.SoLuong, dbo.ChiTietPhieuNhap.TienNhap, dbo.PhieuNhap.NgayNhap, dbo.PhieuNhap.TongTien
+FROM     dbo.ChiTietPhieuNhap INNER JOIN
+                  dbo.PhieuNhap ON dbo.ChiTietPhieuNhap.MaPhieuNhap = dbo.PhieuNhap.MaPhieuNhap
+
+
+go
+CREATE VIEW View_BieuMauBH AS
+SELECT dbo.SanPham.TenSanPham, dbo.BaoHanh.NgayLap, dbo.CTBaoHanh.Seri, dbo.CTBaoHanh.LyDo, dbo.BaoHanh.MaBH
+FROM     dbo.ChiTietHoaDon INNER JOIN
+                  dbo.SanPham ON dbo.ChiTietHoaDon.MaSanPham = dbo.SanPham.MaSanPham INNER JOIN
+                  dbo.HoaDon ON dbo.ChiTietHoaDon.MaHoaDon = dbo.HoaDon.MaHoaDon INNER JOIN
+                  dbo.BaoHanh INNER JOIN
+                  dbo.CTBaoHanh ON dbo.BaoHanh.MaBH = dbo.CTBaoHanh.MaBH ON dbo.HoaDon.MaHoaDon = dbo.BaoHanh.MaHoaDon
 --KHOÁ NGOẠI
 ALTER TABLE [dbo].[CTDonDatHang]
 ADD CONSTRAINT FK_ctddh_sp FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
@@ -529,3 +546,14 @@ INSERT [dbo].[SeriSP] ([Seri], [MaSanPham], [TinhTrang]) VALUES ('H12',1,0)
 INSERT [dbo].[SeriSP] ([Seri], [MaSanPham], [TinhTrang]) VALUES ('H13',1,0)
 INSERT [dbo].[SeriSP] ([Seri], [MaSanPham], [TinhTrang]) VALUES ('H14',1,0)
 INSERT [dbo].[SeriSP] ([Seri], [MaSanPham], [TinhTrang]) VALUES ('H15',1,0)
+
+
+
+
+insert into SeriSP
+				values('H17',2,0),
+				('H18',2,0),
+				('H19',2,0),
+				('H20',3,0),('H21',3,0),('H22',3,0),('H23',3,0),('H24',3,0),('H25',3,0),('H26',3,0),('H27',3,0),('H28',3,0),('H29',3,0),('H30',3,0),('H31',3,0),
+				('H32',4,0),('H33',4,0),('H34',4,0),('H35',4,0),('H36',4,0),('H37',4,0),('H38',4,0),('H39',4,0),('H40',4,0),('H41',4,0),('H42',4,0),('H43',4,0),
+				('H44',5,0),('H45',5,0),('H46',5,0),('H47',5,0)

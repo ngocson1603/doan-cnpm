@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
+using GUI.XuLy;
 
 namespace GUI
 {
@@ -17,6 +18,7 @@ namespace GUI
         BLLBaoHanh bllbh = new BLLBaoHanh();
         BLLSeri bllsr = new BLLSeri();
         BLLHoaDon bllhd = new BLLHoaDon();
+        BLLDangNhap blldn = new BLLDangNhap();
 
         double soThangSuDung = 0;
 
@@ -214,6 +216,57 @@ namespace GUI
                 txtMaSP.Text = seritheoma.ToString();
                 toolStripButton3.Enabled = true;
             }
+        }
+        public static int mabh;
+        public static int manv;
+        public static int mahd;
+        public static string tennv;
+        private void btn_Xuat_ButtonClick(object sender, EventArgs e)
+        {
+            //if (dgv_ChiTietPhieuNhap.Rows.Count == 0)
+            //{
+            //    MessageBox.Show("khong co du lieu de xuat");
+            //    return;
+            //}
+            manv = int.Parse(txtManv.Text);
+
+            tennv = blldn.loadtentheoma(txtManv.Text);
+
+            mabh = int.Parse(comboBox2.Text);
+
+            dataExcel.DataSource = bllbh.getmabaohanh(int.Parse(comboBox2.Text));
+           
+
+            ExcelExportBaoHanh ex = new ExcelExportBaoHanh();
+
+            List<View_BieuMauBH> pListKhoa = new List<View_BieuMauBH>();
+
+            foreach (DataGridViewRow item in dataExcel.Rows)
+            {
+                View_BieuMauBH i = new View_BieuMauBH();
+                i.TenSanPham = item.Cells[0].Value.ToString();
+                i.Seri = item.Cells[2].Value.ToString();
+                i.LyDo = item.Cells[3].Value.ToString();
+                i.NgayLap = DateTime.Parse(item.Cells[1].Value.ToString());
+
+
+                pListKhoa.Add(i);
+            }
+
+
+            string path = string.Empty;
+
+            ex.ExportKhoa(pListKhoa, ref path, false);
+
+            DialogResult r = MessageBox.Show("ban co muon mo file khong", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (!string.IsNullOrEmpty(path) && r == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start(path);
+            }
+
+            btn_Xuat.Enabled = false;
+            toolStripButton1.Enabled = false;
         }
     }
 }

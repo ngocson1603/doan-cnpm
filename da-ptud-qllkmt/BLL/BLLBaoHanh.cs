@@ -43,6 +43,10 @@ namespace BLL
         {
             return dalbh.GetWatchListBH();
         }
+        public List<View_BieuMauBH> getmabaohanh(int ma)
+        {
+            return dalbh.getbieumaubh(ma);
+        }
         public List<View_BaoHanhCT> getctbh(int ma)
         {
             return dalbh.GetWatchListCT(ma);

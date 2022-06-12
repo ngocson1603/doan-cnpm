@@ -160,5 +160,10 @@ namespace GUI
             dgv_DSSanPham.DataSource = bllsanpham.LoadSanPham();
             
         }
+
+        private void frmNhapTheoDonDatHang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //frmNhapLinhKien.dgv.Refresh();
+        }
     }
 }

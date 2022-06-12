@@ -430,6 +430,14 @@ namespace DTO
 				return this.GetTable<View_BieuMauNhapHang>();
 			}
 		}
+		
+		public System.Data.Linq.Table<View_BieuMauBH> View_BieuMauBHs
+		{
+			get
+			{
+				return this.GetTable<View_BieuMauBH>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChiTietHoaDon")]
@@ -6636,6 +6644,105 @@ namespace DTO
 				if ((this._TongTien != value))
 				{
 					this._TongTien = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_BieuMauBH")]
+	public partial class View_BieuMauBH
+	{
+		
+		private string _TenSanPham;
+		
+		private System.Nullable<System.DateTime> _NgayLap;
+		
+		private string _Seri;
+		
+		private string _LyDo;
+		
+		private int _MaBH;
+		
+		public View_BieuMauBH()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSanPham", DbType="NVarChar(200)")]
+		public string TenSanPham
+		{
+			get
+			{
+				return this._TenSanPham;
+			}
+			set
+			{
+				if ((this._TenSanPham != value))
+				{
+					this._TenSanPham = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLap", DbType="Date")]
+		public System.Nullable<System.DateTime> NgayLap
+		{
+			get
+			{
+				return this._NgayLap;
+			}
+			set
+			{
+				if ((this._NgayLap != value))
+				{
+					this._NgayLap = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Seri", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Seri
+		{
+			get
+			{
+				return this._Seri;
+			}
+			set
+			{
+				if ((this._Seri != value))
+				{
+					this._Seri = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LyDo", DbType="NVarChar(100)")]
+		public string LyDo
+		{
+			get
+			{
+				return this._LyDo;
+			}
+			set
+			{
+				if ((this._LyDo != value))
+				{
+					this._LyDo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaBH", DbType="Int NOT NULL")]
+		public int MaBH
+		{
+			get
+			{
+				return this._MaBH;
+			}
+			set
+			{
+				if ((this._MaBH != value))
+				{
+					this._MaBH = value;
 				}
 			}
 		}

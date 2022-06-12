@@ -33,6 +33,12 @@
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btn_LapPN = new System.Windows.Forms.ToolStripButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.dgv_CTDDH = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbb_MaDDH = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -49,20 +55,14 @@
             this.dgv_DSSanPham = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_CTDDH = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_CTDDH)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_CTDDH)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -111,7 +111,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(391, 54);
+            this.button1.Location = new System.Drawing.Point(384, 50);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 29);
             this.button1.TabIndex = 4;
@@ -119,12 +119,69 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dgv_CTDDH
+            // 
+            this.dgv_CTDDH.AllowUserToAddRows = false;
+            this.dgv_CTDDH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_CTDDH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_CTDDH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_CTDDH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column5,
+            this.Column3,
+            this.Column4});
+            this.dgv_CTDDH.Location = new System.Drawing.Point(6, 89);
+            this.dgv_CTDDH.MultiSelect = false;
+            this.dgv_CTDDH.Name = "dgv_CTDDH";
+            this.dgv_CTDDH.RowTemplate.Height = 24;
+            this.dgv_CTDDH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_CTDDH.Size = new System.Drawing.Size(950, 255);
+            this.dgv_CTDDH.TabIndex = 2;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaDDH";
+            this.Column1.HeaderText = "Mã DDH";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "MaSanPham";
+            this.Column2.HeaderText = "Mã SP";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "SoLuong";
+            this.Column5.HeaderText = "Số lượng";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "DonGia";
+            this.Column3.HeaderText = "Đơn giá";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "ThanhTien";
+            this.Column4.HeaderText = "Thành tiền";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // cbb_MaDDH
             // 
             this.cbb_MaDDH.FormattingEnabled = true;
             this.cbb_MaDDH.Location = new System.Drawing.Point(149, 53);
             this.cbb_MaDDH.Name = "cbb_MaDDH";
-            this.cbb_MaDDH.Size = new System.Drawing.Size(198, 24);
+            this.cbb_MaDDH.Size = new System.Drawing.Size(210, 24);
             this.cbb_MaDDH.TabIndex = 1;
             this.cbb_MaDDH.SelectedIndexChanged += new System.EventHandler(this.cbb_MaDDH_SelectedIndexChanged);
             // 
@@ -288,63 +345,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1448, 653);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "ThanhTien";
-            this.Column4.HeaderText = "Thành tiền";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "DonGia";
-            this.Column3.HeaderText = "Đơn giá";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "SoLuong";
-            this.Column5.HeaderText = "Số lượng";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "MaSanPham";
-            this.Column2.HeaderText = "Mã SP";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaDDH";
-            this.Column1.HeaderText = "Mã DDH";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // dgv_CTDDH
-            // 
-            this.dgv_CTDDH.AllowUserToAddRows = false;
-            this.dgv_CTDDH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_CTDDH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_CTDDH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_CTDDH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column5,
-            this.Column3,
-            this.Column4});
-            this.dgv_CTDDH.Location = new System.Drawing.Point(6, 89);
-            this.dgv_CTDDH.MultiSelect = false;
-            this.dgv_CTDDH.Name = "dgv_CTDDH";
-            this.dgv_CTDDH.RowTemplate.Height = 24;
-            this.dgv_CTDDH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_CTDDH.Size = new System.Drawing.Size(950, 255);
-            this.dgv_CTDDH.TabIndex = 2;
-            // 
             // frmNhapTheoDonDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -355,18 +355,19 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmNhapTheoDonDatHang";
             this.Text = "frmNhapTheoDonDatHang";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNhapTheoDonDatHang_FormClosing);
             this.Load += new System.EventHandler(this.frmNhapTheoDonDatHang_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_CTDDH)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_CTDDH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

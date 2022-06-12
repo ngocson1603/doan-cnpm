@@ -23,12 +23,14 @@ namespace GUI
         {
             InitializeComponent();
         }
-
+        public static DataGridView dgv;
         private void frmNhapLinhKien_Load(object sender, EventArgs e)
         {
             //dgv_PhieuNhap.DataSource = bllpn.LoadPN();
             //dgv_ChiTietPhieuNhap.DataSource = bllpn.LoadCTPN();
             dgv_PhieuNhap.DataSource = bllpn.LoadPhieuNhapNV(int.Parse(frmTrangChuNhanVien.manv));
+ 
+            //dgv.Refresh();
             loaddata(frmQuanLySP.lstnhap);
             if (dgv_Chitiethoadon.Rows.Count >= 0)
             {
@@ -301,7 +303,7 @@ namespace GUI
                 cbb_MaSP.Text = row.Cells[1].Value.ToString();
                 txt_Soluong.Text = row.Cells[2].Value.ToString();
                 txt_TienNhap.Text = row.Cells[3].Value.ToString();
-                txt_maddh.Text = row.Cells[4].Value.ToString();
+                //txt_maddh.Text = row.Cells[4].Value.ToString();
             
 
                 //dgv_ChiTietPhieuNhap.DataSource = bllpn.LoadCTPhieuNhap(int.Parse(row.Cells[0].Value.ToString()));
@@ -382,6 +384,13 @@ namespace GUI
 
             btn_Xuat.Enabled = false;
             toolStripButton1.Enabled = false;
+        }
+
+        private void btn_LoadLai_Click(object sender, EventArgs e)
+        {
+            //dgv_PhieuNhap.Refresh();
+            dgv_PhieuNhap.DataSource = bllpn.LoadPhieuNhapNV(int.Parse(frmTrangChuNhanVien.manv));
+
         }
 
    
