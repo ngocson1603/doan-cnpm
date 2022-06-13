@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_CUAHANGLINHKIENMAYTINH" Class="QL_CUAHANGLINHKIENMAYTINHDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-D97AHVVU\SQLEXPRESS;Initial Catalog=QL_CUAHANGLINHKIENMAYTINH;User ID=sa" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="QL_CUAHANGLINHKIENMAYTINHConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMIN\SQLEXPRESS;Initial Catalog=QL_CUAHANGLINHKIENMAYTINH;User ID=sa" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="QL_CUAHANGLINHKIENMAYTINHConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ChiTietHoaDon" Member="ChiTietHoaDons">
     <Type Name="ChiTietHoaDon">
       <Column Name="MaHoaDon" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -297,18 +297,6 @@
       <Association Name="HoaDon_BaoHanh" Member="HoaDon" ThisKey="MaHoaDon" OtherKey="MaHoaDon" Type="HoaDon" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.View_BieuMauBaoHanh" Member="View_BieuMauBaoHanhs">
-    <Type Name="View_BieuMauBaoHanh">
-      <Column Name="TenSanPham" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="giaban" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NgayLapHoaDon" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="MaHoaDon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Seri" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.DonDatHang" Member="DonDatHangs">
     <Type Name="DonDatHang">
       <Column Name="MaDDH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -382,10 +370,18 @@
       <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.View_BieuMauBaoHanh" Member="View_BieuMauBaoHanhs">
+    <Type Name="View_BieuMauBaoHanh">
+      <Column Name="TenSanPham" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaHoaDon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Seri" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="giaban" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.View_BieuMauBH" Member="View_BieuMauBHs">
     <Type Name="View_BieuMauBH">
       <Column Name="TenSanPham" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="NgayLap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="Seri" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="LyDo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="MaBH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />

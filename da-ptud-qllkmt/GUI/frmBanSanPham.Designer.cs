@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBanSanPham));
             this.dataExcel = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_MaKH = new System.Windows.Forms.TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.button1 = new System.Windows.Forms.Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -56,7 +57,6 @@
             this.dgv_chitiet = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txt_MaKH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataExcel)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Chitiethoadon)).BeginInit();
@@ -103,6 +103,15 @@
             this.groupBox1.TabIndex = 97;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa Đơn";
+            // 
+            // txt_MaKH
+            // 
+            this.txt_MaKH.Enabled = false;
+            this.txt_MaKH.Location = new System.Drawing.Point(95, 63);
+            this.txt_MaKH.Name = "txt_MaKH";
+            this.txt_MaKH.Size = new System.Drawing.Size(87, 20);
+            this.txt_MaKH.TabIndex = 106;
+            this.txt_MaKH.Text = "10000000";
             // 
             // guna2Button1
             // 
@@ -314,6 +323,7 @@
             // 
             // btn_XoaHD
             // 
+            this.btn_XoaHD.Enabled = false;
             this.btn_XoaHD.Image = global::GUI.Properties.Resources.trash_can_115312;
             this.btn_XoaHD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_XoaHD.Name = "btn_XoaHD";
@@ -323,6 +333,7 @@
             // 
             // btn_SuaHD
             // 
+            this.btn_SuaHD.Enabled = false;
             this.btn_SuaHD.Image = global::GUI.Properties.Resources.edithd;
             this.btn_SuaHD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_SuaHD.Name = "btn_SuaHD";
@@ -405,15 +416,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(392, 154);
             this.pictureBox1.TabIndex = 102;
             this.pictureBox1.TabStop = false;
-            // 
-            // txt_MaKH
-            // 
-            this.txt_MaKH.Enabled = false;
-            this.txt_MaKH.Location = new System.Drawing.Point(95, 63);
-            this.txt_MaKH.Name = "txt_MaKH";
-            this.txt_MaKH.Size = new System.Drawing.Size(87, 20);
-            this.txt_MaKH.TabIndex = 106;
-            this.txt_MaKH.Text = "10000000";
             // 
             // frmBanSanPham
             // 

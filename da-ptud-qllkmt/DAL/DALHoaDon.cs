@@ -27,21 +27,21 @@ namespace DAL
             return makh;
         }
 
-        public List<View_HoaDon> GetDanhSachHD()
+        public List<View_CTHD> GetDanhSachHD()
         {
             var response = _apiService.GetResponse(string.Format("api/HD/"));
             if (response.IsSuccessStatusCode)
             {
-                return response.Content.ReadAsAsync<List<View_HoaDon>>().Result;
+                return response.Content.ReadAsAsync<List<View_CTHD>>().Result;
             }
             return null;
         }
-        public List<View_HoaDon> GetWatchListHDNV(int ma)
+        public List<View_CTHD> GetWatchListHDNV(int ma)
         {
             var response = _apiService.GetResponse(string.Format("api/LoadHDNV/{0}", ma));
             if (response.IsSuccessStatusCode)
             {
-                return response.Content.ReadAsAsync<List<View_HoaDon>>().Result;
+                return response.Content.ReadAsAsync<List<View_CTHD>>().Result;
             }
             return null;
         }

@@ -367,14 +367,6 @@ namespace DTO
 			}
 		}
 		
-		public System.Data.Linq.Table<View_BieuMauBaoHanh> View_BieuMauBaoHanhs
-		{
-			get
-			{
-				return this.GetTable<View_BieuMauBaoHanh>();
-			}
-		}
-		
 		public System.Data.Linq.Table<DonDatHang> DonDatHangs
 		{
 			get
@@ -428,6 +420,14 @@ namespace DTO
 			get
 			{
 				return this.GetTable<View_BieuMauNhapHang>();
+			}
+		}
+		
+		public System.Data.Linq.Table<View_BieuMauBaoHanh> View_BieuMauBaoHanhs
+		{
+			get
+			{
+				return this.GetTable<View_BieuMauBaoHanh>();
 			}
 		}
 		
@@ -5162,159 +5162,6 @@ namespace DTO
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_BieuMauBaoHanh")]
-	public partial class View_BieuMauBaoHanh
-	{
-		
-		private string _TenSanPham;
-		
-		private System.Nullable<int> _soluong;
-		
-		private System.Nullable<int> _giaban;
-		
-		private System.Nullable<System.DateTime> _NgayLapHoaDon;
-		
-		private int _MaHoaDon;
-		
-		private System.Nullable<int> _TongTien;
-		
-		private System.Nullable<int> _MaKH;
-		
-		private string _Seri;
-		
-		public View_BieuMauBaoHanh()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSanPham", DbType="NVarChar(200)")]
-		public string TenSanPham
-		{
-			get
-			{
-				return this._TenSanPham;
-			}
-			set
-			{
-				if ((this._TenSanPham != value))
-				{
-					this._TenSanPham = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int")]
-		public System.Nullable<int> soluong
-		{
-			get
-			{
-				return this._soluong;
-			}
-			set
-			{
-				if ((this._soluong != value))
-				{
-					this._soluong = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_giaban", DbType="Int")]
-		public System.Nullable<int> giaban
-		{
-			get
-			{
-				return this._giaban;
-			}
-			set
-			{
-				if ((this._giaban != value))
-				{
-					this._giaban = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLapHoaDon", DbType="Date")]
-		public System.Nullable<System.DateTime> NgayLapHoaDon
-		{
-			get
-			{
-				return this._NgayLapHoaDon;
-			}
-			set
-			{
-				if ((this._NgayLapHoaDon != value))
-				{
-					this._NgayLapHoaDon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaHoaDon", DbType="Int NOT NULL")]
-		public int MaHoaDon
-		{
-			get
-			{
-				return this._MaHoaDon;
-			}
-			set
-			{
-				if ((this._MaHoaDon != value))
-				{
-					this._MaHoaDon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
-		public System.Nullable<int> TongTien
-		{
-			get
-			{
-				return this._TongTien;
-			}
-			set
-			{
-				if ((this._TongTien != value))
-				{
-					this._TongTien = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKH", DbType="Int")]
-		public System.Nullable<int> MaKH
-		{
-			get
-			{
-				return this._MaKH;
-			}
-			set
-			{
-				if ((this._MaKH != value))
-				{
-					this._MaKH = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Seri", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Seri
-		{
-			get
-			{
-				return this._Seri;
-			}
-			set
-			{
-				if ((this._Seri != value))
-				{
-					this._Seri = value;
-				}
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DonDatHang")]
 	public partial class DonDatHang : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -6649,13 +6496,110 @@ namespace DTO
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_BieuMauBaoHanh")]
+	public partial class View_BieuMauBaoHanh
+	{
+		
+		private string _TenSanPham;
+		
+		private System.Nullable<int> _soluong;
+		
+		private int _MaHoaDon;
+		
+		private string _Seri;
+		
+		private System.Nullable<int> _giaban;
+		
+		public View_BieuMauBaoHanh()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSanPham", DbType="NVarChar(200)")]
+		public string TenSanPham
+		{
+			get
+			{
+				return this._TenSanPham;
+			}
+			set
+			{
+				if ((this._TenSanPham != value))
+				{
+					this._TenSanPham = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int")]
+		public System.Nullable<int> soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this._soluong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaHoaDon", DbType="Int NOT NULL")]
+		public int MaHoaDon
+		{
+			get
+			{
+				return this._MaHoaDon;
+			}
+			set
+			{
+				if ((this._MaHoaDon != value))
+				{
+					this._MaHoaDon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Seri", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Seri
+		{
+			get
+			{
+				return this._Seri;
+			}
+			set
+			{
+				if ((this._Seri != value))
+				{
+					this._Seri = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_giaban", DbType="Int")]
+		public System.Nullable<int> giaban
+		{
+			get
+			{
+				return this._giaban;
+			}
+			set
+			{
+				if ((this._giaban != value))
+				{
+					this._giaban = value;
+				}
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_BieuMauBH")]
 	public partial class View_BieuMauBH
 	{
 		
 		private string _TenSanPham;
-		
-		private System.Nullable<System.DateTime> _NgayLap;
 		
 		private string _Seri;
 		
@@ -6679,22 +6623,6 @@ namespace DTO
 				if ((this._TenSanPham != value))
 				{
 					this._TenSanPham = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLap", DbType="Date")]
-		public System.Nullable<System.DateTime> NgayLap
-		{
-			get
-			{
-				return this._NgayLap;
-			}
-			set
-			{
-				if ((this._NgayLap != value))
-				{
-					this._NgayLap = value;
 				}
 			}
 		}

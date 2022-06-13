@@ -48,7 +48,7 @@ namespace GUI
             comboBox2.DataSource = bllbh.getmabh();
             comboBox2.DisplayMember = "MaBH";
             comboBox2.ValueMember = "MaBH";
-            comboBox2.SelectedIndex = 0;
+            //comboBox2.SelectedIndex = 0;
 
             txtManv.Text = frmTrangChuNhanVien.manv;
             loaddata(frmBaoHanh.lstspbh);
@@ -245,9 +245,8 @@ namespace GUI
             {
                 View_BieuMauBH i = new View_BieuMauBH();
                 i.TenSanPham = item.Cells[0].Value.ToString();
-                i.Seri = item.Cells[2].Value.ToString();
-                i.LyDo = item.Cells[3].Value.ToString();
-                i.NgayLap = DateTime.Parse(item.Cells[1].Value.ToString());
+                i.Seri = item.Cells[1].Value.ToString();
+                i.LyDo = item.Cells[2].Value.ToString();
 
 
                 pListKhoa.Add(i);

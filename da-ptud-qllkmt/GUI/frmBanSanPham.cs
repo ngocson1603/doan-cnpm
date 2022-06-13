@@ -31,6 +31,7 @@ namespace GUI
         public static string tennv;
         public static int chonmanv;
         public static DataGridView dgv;
+        public static int makhongchon = 10000000;
         public frmBanSanPham()
         {
             InitializeComponent();
@@ -87,6 +88,9 @@ namespace GUI
                    
                 }
                 txt_TongTien.Text = tongtien.ToString();
+
+                btn_SuaHD.Enabled = true;
+                btn_XoaHD.Enabled = true;
             }
         }
 
@@ -157,14 +161,14 @@ namespace GUI
                 {
                     bllgio.deleteGioHang(int.Parse(txt_MaHoaDon.Text));
                     MessageBox.Show("Xóa thành công");
-                    dgv_HoaDon.DataSource = bllhoadon.LoadHoaDon();
+                    dgv_HoaDon.DataSource = bllhoadon.LoadHoaDonNV(int.Parse(txt_MaNV.Text));
                 }
                 else
                 {
                     MessageBox.Show("Xóa thất bại");
                     return;
                 }
-
+            btn_XoaHD.Enabled = false;
         }
 
         private void btn_SuaHD_Click(object sender, EventArgs e)
@@ -188,7 +192,7 @@ namespace GUI
                 MessageBox.Show("Sửa thất bại");
                 return;
             }
-
+            btn_SuaHD.Enabled = false;
         }
 
         public static int kq;
@@ -236,7 +240,13 @@ namespace GUI
             }
             else
             {
+                if (txt_MaKH.Text == makhongchon.ToString())
+                {
+                    MessageBox.Show("Đơn này đã xuất");
+                    return;
+                }
                 ten = blldn.loadtentheomakh(txt_MaKH.Text);
+                
             }
             
             tennv = blldn.loadtentheoma(txt_MaNV.Text);
@@ -253,7 +263,7 @@ namespace GUI
             int a = 0;
             for (int x = 0; x < dataExcel.Rows.Count; x++)
             {
-                tongtien += int.Parse(dataExcel.Rows[a].Cells[1].Value.ToString()) * int.Parse(dataExcel.Rows[a].Cells[2].Value.ToString());
+                tongtien += int.Parse(dataExcel.Rows[a].Cells[5].Value.ToString());
                 a++;
             }
             manv = int.Parse(txt_MaNV.Text);
@@ -285,6 +295,7 @@ namespace GUI
 
             btn_Xuat.Enabled = false;
             toolStripButton1.Enabled = false;
+            frmKhachHang.check = true;
         }
         public static bool laygiatri = false;
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -321,7 +332,20 @@ namespace GUI
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            ten = blldn.loadtentheomakh(txt_MaKH.Text);
+            if (frmKhachHang.check == false)
+            {
+                ten = frmKhachHang.tenkhachhangkhongluu;
+            }
+            else
+            {
+                if (txt_MaKH.Text == makhongchon.ToString())
+                {
+                    MessageBox.Show("Đơn này đã xuất");
+                    return;
+                }
+                ten = blldn.loadtentheomakh(txt_MaKH.Text);
+                
+            }
             tennv = blldn.loadtentheoma(txt_MaNV.Text);
 
             dataExcel.DataSource = bllbh.loadbieumau(int.Parse(txt_MaHoaDon.Text));
@@ -336,7 +360,7 @@ namespace GUI
             int a = 0;
             for (int x = 0; x < dataExcel.Rows.Count; x++)
             {
-                tongtien += 1 * int.Parse(dataExcel.Rows[a].Cells[2].Value.ToString());
+                tongtien += 1 * int.Parse(dataExcel.Rows[a].Cells[4].Value.ToString());
                 a++;
             }
             manv = int.Parse(txt_MaNV.Text);
@@ -351,10 +375,8 @@ namespace GUI
                     {
                         i.TenSanPham = dataExcel.Rows[b].Cells[0].Value.ToString();
                         i.soluong = 1;
-                        i.giaban = int.Parse(dataExcel.Rows[b].Cells[2].Value.ToString());
-                        i.NgayLapHoaDon = DateTime.Parse((dataExcel.Rows[b].Cells[3].Value.ToString()));
-                        i.TongTien = int.Parse(dataExcel.Rows[b].Cells[2].Value.ToString());
-                        i.Seri = dataExcel.Rows[b].Cells[7].Value.ToString();
+                        i.giaban = int.Parse(dataExcel.Rows[b].Cells[4].Value.ToString());
+                        i.Seri = dataExcel.Rows[b].Cells[3].Value.ToString();
                         pListKhoa.Add(i);
                         //if (dataExcel.Rows[b - 1].Cells[0].Value.ToString() == dataExcel.Rows[b].Cells[0].Value.ToString())
                         //{
@@ -396,7 +418,7 @@ namespace GUI
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            frmQuanLySP.lstsp.RemoveAt(dgv_Chitiethoadon.CurrentCell.RowIndex);
+            UserControls.detailProduct.lstspb.RemoveAt(dgv_Chitiethoadon.CurrentCell.RowIndex);
             guna2Button1.Enabled = false;
         }
 

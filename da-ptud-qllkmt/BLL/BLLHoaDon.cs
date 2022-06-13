@@ -16,7 +16,7 @@ namespace BLL
 
         }
 
-        public List<View_HoaDon> LoadHoaDon()
+        public List<View_CTHD> LoadHoaDon()
         {
             return dalhoadon.GetDanhSachHD();
         }
@@ -24,7 +24,7 @@ namespace BLL
         {
             return dalhoadon.loadmakhongluu();
         }
-        public List<View_HoaDon> LoadHoaDonNV(int ma)
+        public List<View_CTHD> LoadHoaDonNV(int ma)
         {
             return dalhoadon.GetWatchListHDNV(ma);
         }

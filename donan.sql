@@ -268,11 +268,11 @@ FROM     dbo.CTBaoHanh
 
 go
 CREATE VIEW View_BieuMauBaoHanh AS
-SELECT        dbo.SanPham.TenSanPham, dbo.ChiTietHoaDon.soluong, dbo.ChiTietHoaDon.giaban, dbo.HoaDon.NgayLapHoaDon, dbo.HoaDon.MaHoaDon, dbo.ChiTietHoaDon.TongTien, dbo.HoaDon.MaKH, dbo.SeriHD.Seri
-FROM            dbo.ChiTietHoaDon INNER JOIN
-                         dbo.HoaDon ON dbo.ChiTietHoaDon.MaHoaDon = dbo.HoaDon.MaHoaDon INNER JOIN
-                         dbo.SanPham ON dbo.ChiTietHoaDon.MaSanPham = dbo.SanPham.MaSanPham INNER JOIN
-                         dbo.SeriHD ON dbo.HoaDon.MaHoaDon = dbo.SeriHD.MaHoaDon
+SELECT        dbo.SanPham.TenSanPham, dbo.ChiTietHoaDon.soluong, dbo.ChiTietHoaDon.MaHoaDon, dbo.SeriHD.Seri, dbo.ChiTietHoaDon.giaban
+FROM            dbo.SanPham INNER JOIN
+                         dbo.SeriSP ON dbo.SanPham.MaSanPham = dbo.SeriSP.MaSanPham INNER JOIN
+                         dbo.ChiTietHoaDon ON dbo.SanPham.MaSanPham = dbo.ChiTietHoaDon.MaSanPham INNER JOIN
+                         dbo.SeriHD ON dbo.SeriSP.Seri = dbo.SeriHD.Seri
 
 
 go
@@ -284,12 +284,11 @@ FROM     dbo.ChiTietPhieuNhap INNER JOIN
 
 go
 CREATE VIEW View_BieuMauBH AS
-SELECT dbo.SanPham.TenSanPham, dbo.BaoHanh.NgayLap, dbo.CTBaoHanh.Seri, dbo.CTBaoHanh.LyDo, dbo.BaoHanh.MaBH
-FROM     dbo.ChiTietHoaDon INNER JOIN
-                  dbo.SanPham ON dbo.ChiTietHoaDon.MaSanPham = dbo.SanPham.MaSanPham INNER JOIN
-                  dbo.HoaDon ON dbo.ChiTietHoaDon.MaHoaDon = dbo.HoaDon.MaHoaDon INNER JOIN
-                  dbo.BaoHanh INNER JOIN
-                  dbo.CTBaoHanh ON dbo.BaoHanh.MaBH = dbo.CTBaoHanh.MaBH ON dbo.HoaDon.MaHoaDon = dbo.BaoHanh.MaHoaDon
+SELECT        dbo.SanPham.TenSanPham, dbo.SeriHD.Seri, dbo.CTBaoHanh.LyDo, dbo.CTBaoHanh.MaBH
+FROM            dbo.SanPham INNER JOIN
+                         dbo.SeriSP ON dbo.SanPham.MaSanPham = dbo.SeriSP.MaSanPham INNER JOIN
+                         dbo.SeriHD ON dbo.SeriSP.Seri = dbo.SeriHD.Seri INNER JOIN
+                         dbo.CTBaoHanh ON dbo.SeriSP.Seri = dbo.CTBaoHanh.Seri
 --KHOÁ NGOẠI
 ALTER TABLE [dbo].[CTDonDatHang]
 ADD CONSTRAINT FK_ctddh_sp FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
@@ -556,4 +555,4 @@ insert into SeriSP
 				('H19',2,0),
 				('H20',3,0),('H21',3,0),('H22',3,0),('H23',3,0),('H24',3,0),('H25',3,0),('H26',3,0),('H27',3,0),('H28',3,0),('H29',3,0),('H30',3,0),('H31',3,0),
 				('H32',4,0),('H33',4,0),('H34',4,0),('H35',4,0),('H36',4,0),('H37',4,0),('H38',4,0),('H39',4,0),('H40',4,0),('H41',4,0),('H42',4,0),('H43',4,0),
-				('H44',5,0),('H45',5,0),('H46',5,0),('H47',5,0)
+				('H44',5,0),('H45',5,0),('H46',5,0),('H47',5,0),('H48',4,0),('H49',4,0),('H50',4,0),('H51',4,0),('H52',4,0),('H53',4,0),('H54',4,0),('H55',4,0)
