@@ -283,5 +283,23 @@ namespace GUI
                 ThemSanPham sp = new ThemSanPham(tensp, loai, hang, gia, soluong, anh, ma);
                 lstnhap.Add(sp);
         }
+
+        private void txt_TonKho_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtHSD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txt_GiaBan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

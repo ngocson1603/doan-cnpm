@@ -139,6 +139,9 @@
   <data name="capnhat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\capnhat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="about31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,6 +217,9 @@
   <data name="addcthd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addcthd.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1486485589-about-error-notification-help-info-information_81162" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1486485589-about-error-notification-help-info-information_81162.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="factory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\factory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -241,11 +247,20 @@
   <data name="business_application_addmale_useradd_insert_add_user_client_2312" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\business_application_addmale_useradd_insert_add_user_client_2312.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="clipboard_paper_file_correct_done_list_document_icon_219488 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clipboard_paper_file_correct_done_list_document_icon_219488 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="timkiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\timkiem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="order" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="banra" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\banra.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="order1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\order1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="insurance" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\insurance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -258,6 +273,9 @@
   </data>
   <data name="Home-80_icon-icons.com_57317" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home-80_icon-icons.com_57317.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4014665-fix-fixing-phone-repair-tool-wrench_112887" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4014665-fix-fixing-phone-repair-tool-wrench_112887.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,7 +337,7 @@
   <data name="addusergroup_1251" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addusergroup_1251.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clipboard_paper_file_correct_done_list_document_icon_219488 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clipboard_paper_file_correct_done_list_document_icon_219488 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="order32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\order32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

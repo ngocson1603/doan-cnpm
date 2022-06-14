@@ -98,6 +98,7 @@
             this.txt_TonKho.Name = "txt_TonKho";
             this.txt_TonKho.Size = new System.Drawing.Size(121, 20);
             this.txt_TonKho.TabIndex = 78;
+            this.txt_TonKho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TonKho_KeyPress);
             // 
             // label5
             // 
@@ -114,6 +115,7 @@
             this.txt_GiaBan.Name = "txt_GiaBan";
             this.txt_GiaBan.Size = new System.Drawing.Size(121, 20);
             this.txt_GiaBan.TabIndex = 76;
+            this.txt_GiaBan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_GiaBan_KeyPress);
             // 
             // txt_MaSP
             // 
@@ -313,6 +315,7 @@
             this.txtHSD.Name = "txtHSD";
             this.txtHSD.Size = new System.Drawing.Size(121, 20);
             this.txtHSD.TabIndex = 85;
+            this.txtHSD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHSD_KeyPress);
             // 
             // label4
             // 

@@ -16,6 +16,7 @@ namespace GUI
     {
         BLLDangKy blldangky = new BLLDangKy();
         BLLKhachHang bllkh = new BLLKhachHang();
+        Helper hp = new Helper();
         public static string hoten;
         public static int makh;
         public frmThongTinKH()
@@ -81,6 +82,11 @@ namespace GUI
             if (kq < 18)
             {
                 MessageBox.Show("Tuổi phải lớn hơn 18", "Khách hàng", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (hp.kiemtraSDT(txtSoDienThoai.Text)==false)
+            {
+                MessageBox.Show("Sđt sai định dạng");
                 return;
             }
             //if(blldangky.suaThongTin(txtUserName.Text,txtPassWord.Text,txtHoTen.Text,dateTimeNgay.Text,gioitinh,txtDiaChi.Text,txtSoDienThoai.Text)){

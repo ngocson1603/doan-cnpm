@@ -16,6 +16,7 @@ namespace GUI
         QL_CUAHANGLINHKIENMAYTINHDataContext qlkh = new QL_CUAHANGLINHKIENMAYTINHDataContext();
         BLLKhachHang bllkhachhang = new BLLKhachHang();
         BLLDangKy blldk = new BLLDangKy();
+        Helper hp = new Helper();
         public frmKhachHang()
         {
             InitializeComponent();
@@ -54,6 +55,16 @@ namespace GUI
 
         private void btn_ThemKH_Click(object sender, EventArgs e)
         {
+            if (hp.isEmail(txt_Gmail.Text) == false)
+            {
+                MessageBox.Show("Gmail sai định dạng");
+                return;
+            }
+            if (hp.kiemtraSDT(txt_Sdt.Text) == false)
+            {
+                MessageBox.Show("Sđt sai định dạng");
+                return;
+            }
             if (checkBox1.Checked == true)
             {
                 tenkhachhangkhongluu = txtHotenkh.Text;
@@ -140,6 +151,16 @@ namespace GUI
         {
             if (MessageBox.Show("Bạn có muốn sửa không!", "Sửa", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.OK)
             {
+                if (hp.isEmail(txt_Gmail.Text) == false)
+                {
+                    MessageBox.Show("Gmail sai định dạng");
+                    return;
+                }
+                if (hp.kiemtraSDT(txt_Sdt.Text) == false)
+                {
+                    MessageBox.Show("Sđt sai định dạng");
+                    return;
+                }
                 string a = "Nam";
                 if (rbtnNu.Checked == true)
                 {

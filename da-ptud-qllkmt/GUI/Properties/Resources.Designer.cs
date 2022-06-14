@@ -63,6 +63,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1486485589_about_error_notification_help_info_information_81162 {
+            get {
+                object obj = ResourceManager.GetObject("1486485589-about-error-notification-help-info-information_81162", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3706888_assembly_control_fix_setting_108715 {
             get {
                 object obj = ResourceManager.GetObject("3706888-assembly-control-fix-setting_108715", resourceCulture);
@@ -96,6 +106,26 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap _96_pc_gaming__1_ {
             get {
                 object obj = ResourceManager.GetObject("96_pc_gaming (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap about {
+            get {
+                object obj = ResourceManager.GetObject("about", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap about31 {
+            get {
+                object obj = ResourceManager.GetObject("about31", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -526,6 +556,36 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap npp1 {
             get {
                 object obj = ResourceManager.GetObject("npp1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap order {
+            get {
+                object obj = ResourceManager.GetObject("order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap order1 {
+            get {
+                object obj = ResourceManager.GetObject("order1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap order32 {
+            get {
+                object obj = ResourceManager.GetObject("order32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

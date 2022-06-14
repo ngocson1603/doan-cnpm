@@ -277,6 +277,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBanSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -460,6 +466,9 @@
     <Compile Include="XuLy\ID3Learn.cs" />
     <Compile Include="XuLy\loadProduct.cs" />
     <Compile Include="XuLy\WordExport.cs" />
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBanSanPham.resx">
       <DependentUpon>frmBanSanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -640,6 +649,12 @@
     <Content Include="Images\ban-phim-co-akko-3108-v2-world-tour-tokyo.jpg" />
     <Content Include="Images\intelcorei5-12600k.jpg" />
     <Content Include="Images\PSU_GG_GP-P1000GM-5.jpg" />
+    <None Include="Resources\order32.png" />
+    <None Include="Resources\about31.png" />
+    <None Include="Resources\1486485589-about-error-notification-help-info-information_81162.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\order1.png" />
+    <None Include="Resources\order.png" />
     <None Include="Resources\clipboard_paper_file_correct_done_list_document_icon_219488 %281%29.png" />
     <None Include="Resources\clipboard_paper_file_correct_done_list_document_icon_219488.png" />
     <None Include="Resources\96_pc_gaming %281%29.jpg" />

@@ -98,5 +98,11 @@ namespace GUI
             panel2.Controls.Clear();
             hp.motrangcon(new frmDonDatHang(), panel2);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmAbout frm = new frmAbout();
+            frm.ShowDialog();
+        }
     }
 }

@@ -42,11 +42,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -61,10 +61,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(4, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1167, 37);
+            this.label1.Size = new System.Drawing.Size(875, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý nhà phân phối";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -72,92 +71,83 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 64);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(23, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 17);
+            this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã nhà phân phối";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 107);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(23, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 17);
+            this.label3.Size = new System.Drawing.Size(97, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên nhà phân phối";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 155);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(23, 126);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 17);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Địa chỉ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 198);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(23, 161);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 17);
+            this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "SĐT";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 242);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(23, 197);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 17);
+            this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Email";
             // 
             // txtManpp
             // 
             this.txtManpp.Enabled = false;
-            this.txtManpp.Location = new System.Drawing.Point(244, 60);
-            this.txtManpp.Margin = new System.Windows.Forms.Padding(4);
+            this.txtManpp.Location = new System.Drawing.Point(183, 49);
             this.txtManpp.Name = "txtManpp";
-            this.txtManpp.Size = new System.Drawing.Size(192, 22);
+            this.txtManpp.Size = new System.Drawing.Size(145, 20);
             this.txtManpp.TabIndex = 6;
             // 
             // txtTennpp
             // 
-            this.txtTennpp.Location = new System.Drawing.Point(244, 103);
-            this.txtTennpp.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTennpp.Location = new System.Drawing.Point(183, 84);
             this.txtTennpp.Name = "txtTennpp";
-            this.txtTennpp.Size = new System.Drawing.Size(192, 22);
+            this.txtTennpp.Size = new System.Drawing.Size(145, 20);
             this.txtTennpp.TabIndex = 7;
             // 
             // txtDchi
             // 
-            this.txtDchi.Location = new System.Drawing.Point(244, 151);
-            this.txtDchi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDchi.Location = new System.Drawing.Point(183, 123);
             this.txtDchi.Name = "txtDchi";
-            this.txtDchi.Size = new System.Drawing.Size(192, 22);
+            this.txtDchi.Size = new System.Drawing.Size(145, 20);
             this.txtDchi.TabIndex = 8;
             // 
             // txtSdt
             // 
-            this.txtSdt.Location = new System.Drawing.Point(244, 194);
-            this.txtSdt.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSdt.Location = new System.Drawing.Point(183, 158);
             this.txtSdt.Name = "txtSdt";
-            this.txtSdt.Size = new System.Drawing.Size(192, 22);
+            this.txtSdt.Size = new System.Drawing.Size(145, 20);
             this.txtSdt.TabIndex = 9;
+            this.txtSdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSdt_KeyPress);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(244, 239);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Location = new System.Drawing.Point(183, 194);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(192, 22);
+            this.txtEmail.Size = new System.Drawing.Size(145, 20);
             this.txtEmail.TabIndex = 10;
             // 
             // groupBox1
@@ -173,11 +163,9 @@
             this.groupBox1.Controls.Add(this.txtDchi);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(4, 41);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(3, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(514, 506);
+            this.groupBox1.Size = new System.Drawing.Size(385, 407);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhà phân phối";
@@ -187,10 +175,9 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(526, 41);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(394, 33);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(645, 506);
+            this.dataGridView1.Size = new System.Drawing.Size(484, 407);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -204,9 +191,47 @@
             this.toolStripButton4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1175, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(881, 27);
             this.toolStrip1.TabIndex = 13;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::GUI.Properties.Resources.addusergroup_12511;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(61, 24);
+            this.toolStripButton1.Text = "Thêm";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Enabled = false;
+            this.toolStripButton2.Image = global::GUI.Properties.Resources.delete_delete_deleteusers_delete_male_user_maleclient_23481;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(51, 24);
+            this.toolStripButton2.Text = "Xóa";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Enabled = false;
+            this.toolStripButton3.Image = global::GUI.Properties.Resources._3709743_assistance_fix_problem_service_trouble_108085;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(50, 24);
+            this.toolStripButton3.Text = "Sửa";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = global::GUI.Properties.Resources.Home_80_icon_icons1;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(60, 24);
+            this.toolStripButton4.Text = "Đóng";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -218,60 +243,20 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 27);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1175, 551);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(881, 443);
             this.tableLayoutPanel1.TabIndex = 14;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::GUI.Properties.Resources.addusergroup_12511;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(70, 24);
-            this.toolStripButton1.Text = "Thêm";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Enabled = false;
-            this.toolStripButton2.Image = global::GUI.Properties.Resources.delete_delete_deleteusers_delete_male_user_maleclient_23481;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(59, 24);
-            this.toolStripButton2.Text = "Xóa";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Enabled = false;
-            this.toolStripButton3.Image = global::GUI.Properties.Resources._3709743_assistance_fix_problem_service_trouble_108085;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(58, 24);
-            this.toolStripButton3.Text = "Sửa";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Image = global::GUI.Properties.Resources.Home_80_icon_icons1;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(70, 24);
-            this.toolStripButton4.Text = "Đóng";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // frmNPP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 578);
+            this.ClientSize = new System.Drawing.Size(881, 470);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNPP";
             this.Text = "frmNPP";
             this.Load += new System.EventHandler(this.frmNPP_Load);

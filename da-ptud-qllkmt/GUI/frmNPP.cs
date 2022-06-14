@@ -14,6 +14,7 @@ namespace GUI
     public partial class frmNPP : Form
     {
         BLLNPP bllnpp = new BLLNPP();
+        Helper hp = new Helper();
         public frmNPP()
         {
             InitializeComponent();
@@ -29,6 +30,16 @@ namespace GUI
             if (txtDchi.Text == string.Empty || txtEmail.Text == string.Empty || txtSdt.Text == string.Empty || txtTennpp.Text == string.Empty)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            }
+            if (hp.isEmail(txtEmail.Text) == false)
+            {
+                MessageBox.Show("Gmail sai định dạng");
+                return;
+            }
+            if (hp.kiemtraSDT(txtSdt.Text) == false)
+            {
+                MessageBox.Show("Sđt sai định dạng");
+                return;
             }
             else
             {
@@ -98,6 +109,16 @@ namespace GUI
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 }
+                if (hp.isEmail(txtEmail.Text) == false)
+                {
+                    MessageBox.Show("Gmail sai định dạng");
+                    return;
+                }
+                if (hp.kiemtraSDT(txtSdt.Text) == false)
+                {
+                    MessageBox.Show("Sđt sai định dạng");
+                    return;
+                }
                 else
                 {
                     NhaPhanPhoi kh = new NhaPhanPhoi()
@@ -121,6 +142,12 @@ namespace GUI
                 }
                 toolStripButton3.Enabled = true;
             }
+        }
+
+        private void txtSdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
