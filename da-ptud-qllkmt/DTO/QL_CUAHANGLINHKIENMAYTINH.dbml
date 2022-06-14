@@ -370,6 +370,14 @@
       <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.View_BieuMauBH" Member="View_BieuMauBHs">
+    <Type Name="View_BieuMauBH">
+      <Column Name="TenSanPham" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Seri" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LyDo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaBH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
   <Table Name="dbo.View_BieuMauBaoHanh" Member="View_BieuMauBaoHanhs">
     <Type Name="View_BieuMauBaoHanh">
       <Column Name="TenSanPham" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
@@ -377,14 +385,6 @@
       <Column Name="MaHoaDon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Seri" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="giaban" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.View_BieuMauBH" Member="View_BieuMauBHs">
-    <Type Name="View_BieuMauBH">
-      <Column Name="TenSanPham" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="Seri" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="LyDo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="MaBH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

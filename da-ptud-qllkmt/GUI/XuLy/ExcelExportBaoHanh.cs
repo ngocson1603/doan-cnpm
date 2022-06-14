@@ -524,10 +524,13 @@ namespace GUI.XuLy
                 string month = currentDate.Month.ToString();
                 string Year = currentDate.Year.ToString();
                 pReplacer.Add("%Ngay", day);
-                pReplacer.Add("%Thang", month);
+                pReplacer.Add("%Thng", month);
                 pReplacer.Add("%Nam", Year);
+
                 pReplacer.Add("%TenNhanVien", frmBaoHanh.tennv);
 
+                string ngaytra = "Ngày " + frmBaoHanh.ngaytra.Day + " tháng " + frmBaoHanh.ngaytra.Month + " năm " + frmBaoHanh.ngaytra.Year;
+                pReplacer.Add("%DuKien", ngaytra);
                 pReplacer.Add("%MaDonHang", string.Format("{0}", frmBaoHanh.mahd));
                 pReplacer.Add("%MaNhanVien", string.Format("{0}", frmBaoHanh.manv));
                 pReplacer.Add("%MaBaoHanh", string.Format("{0}", frmBaoHanh.mabh));

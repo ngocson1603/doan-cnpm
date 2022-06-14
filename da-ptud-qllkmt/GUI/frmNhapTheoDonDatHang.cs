@@ -38,6 +38,7 @@ namespace GUI
             
             dgv_DSSanPham.DataSource = bllsanpham.LoadSanPham();
             dgv_DSSanPham.Columns[7].Visible = false;
+            dgv_DSSanPham.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; 
         }
 
         public int tinhTongThanhTien()

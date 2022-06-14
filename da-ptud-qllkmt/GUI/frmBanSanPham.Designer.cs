@@ -70,7 +70,7 @@
             // dataExcel
             // 
             this.dataExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataExcel.Location = new System.Drawing.Point(449, 27);
+            this.dataExcel.Location = new System.Drawing.Point(437, 20);
             this.dataExcel.Margin = new System.Windows.Forms.Padding(2);
             this.dataExcel.Name = "dataExcel";
             this.dataExcel.RowTemplate.Height = 24;

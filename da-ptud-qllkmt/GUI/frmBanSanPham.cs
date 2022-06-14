@@ -89,6 +89,9 @@ namespace GUI
                 }
                 txt_TongTien.Text = tongtien.ToString();
 
+                dgv_chitiet.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dgv_chitiet.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; 
+
                 btn_SuaHD.Enabled = true;
                 btn_XoaHD.Enabled = true;
             }
@@ -216,6 +219,8 @@ namespace GUI
         public void loaddata(BindingList<ThemSanPham> loadsp)
         {
             dgv_Chitiethoadon.DataSource = loadsp;
+
+            dgv_Chitiethoadon.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; 
 
             dgv_Chitiethoadon.Columns[0].ReadOnly = true;
             dgv_Chitiethoadon.Columns[1].ReadOnly = true;
@@ -407,6 +412,7 @@ namespace GUI
             btn_Xuat.Enabled = false;
             toolStripButton1.Enabled = false;
             tongtien = 0;
+            frmKhachHang.check = true;
         }
 
         private void button1_Click(object sender, EventArgs e)

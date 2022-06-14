@@ -40,16 +40,6 @@ namespace GUI
 
         private void frmBaoHanh_Load(object sender, EventArgs e)
         {
-            comboBox1.DataSource = bllbh.getmahd();
-            comboBox1.DisplayMember = "MaHoaDon";
-            comboBox1.ValueMember = "MaHoaDon";
-            comboBox1.SelectedIndex = 0;
-
-            comboBox2.DataSource = bllbh.getmabh();
-            comboBox2.DisplayMember = "MaBH";
-            comboBox2.ValueMember = "MaBH";
-            //comboBox2.SelectedIndex = 0;
-
             txtManv.Text = frmTrangChuNhanVien.manv;
             loaddata(frmBaoHanh.lstspbh);
 
@@ -154,7 +144,7 @@ namespace GUI
 
                 if (bllbh.thembh(cthdsp))
                 {
-                    int macuoicung = bllbh.laodmacuoicung();
+                    int macuoicung = bllbh.loadmacuoicung();
                     for (int x = 0; x < dataGridView1.Rows.Count; x++)
                     {
                         ThemCTBH cthd = new ThemCTBH()
@@ -179,26 +169,55 @@ namespace GUI
                     lstspbh.Clear();
                 }
             }
-            comboBox2.DataSource = bllbh.getmabh();
-            comboBox2.DisplayMember = "MaBH";
-            comboBox2.ValueMember = "MaBH";
+
+            XuatPhieu();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        public void XuatPhieu()
         {
-            if (bllbh.xoabhct(int.Parse(comboBox2.Text)))
+            manv = int.Parse(txtManv.Text);
+
+            tennv = blldn.loadtentheoma(txtManv.Text);
+
+            mabh = bllbh.loadmacuoicung();
+
+            ngaytra = DateTime.Parse(dtp_NgayTra.Value.ToString());
+            DateTime ngaydau = DateTime.Parse(dateTimePicker1.Value.ToString());
+            double thoihan = (ngaytra - ngaydau).TotalDays;
+
+            if (thoihan<1)
             {
-                bllbh.xoabh(int.Parse(comboBox2.Text));
-                MessageBox.Show("Xóa thành công");
-            }
-            else
-            {
-                MessageBox.Show("Xóa thất bại");
+                MessageBox.Show("Vui lòng chọn hạn trả");
                 return;
             }
-            comboBox2.DataSource = bllbh.getmabh();
-            comboBox2.DisplayMember = "MaBH";
-            comboBox2.ValueMember = "MaBH";
+
+            dataExcel.DataSource = bllbh.getmabaohanh(mabh);
+
+
+            ExcelExportBaoHanh ex = new ExcelExportBaoHanh();
+
+            List<View_BieuMauBH> pListKhoa = new List<View_BieuMauBH>();
+
+            foreach (DataGridViewRow item in dataExcel.Rows)
+            {
+                View_BieuMauBH i = new View_BieuMauBH();
+                i.TenSanPham = item.Cells[0].Value.ToString();
+                i.Seri = item.Cells[1].Value.ToString();
+                i.LyDo = item.Cells[2].Value.ToString();
+
+
+                pListKhoa.Add(i);
+            }
+
+
+            string path = string.Empty;
+
+            ex.ExportKhoa(pListKhoa, ref path, false);
+
+            if (!string.IsNullOrEmpty(path))
+            {
+                System.Diagnostics.Process.Start(path);
+            }
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -221,51 +240,103 @@ namespace GUI
         public static int manv;
         public static int mahd;
         public static string tennv;
+        public static DateTime ngaytra;
         private void btn_Xuat_ButtonClick(object sender, EventArgs e)
         {
+            XuatPhieu();
+
             //if (dgv_ChiTietPhieuNhap.Rows.Count == 0)
             //{
             //    MessageBox.Show("khong co du lieu de xuat");
             //    return;
             //}
-            manv = int.Parse(txtManv.Text);
+            //manv = int.Parse(txtManv.Text);
 
-            tennv = blldn.loadtentheoma(txtManv.Text);
+            //tennv = blldn.loadtentheoma(txtManv.Text);
 
-            mabh = int.Parse(comboBox2.Text);
+            //mabh = int.Parse(comboBox2.Text);
 
-            dataExcel.DataSource = bllbh.getmabaohanh(int.Parse(comboBox2.Text));
+            //dataExcel.DataSource = bllbh.getmabaohanh(int.Parse(comboBox2.Text));
            
 
-            ExcelExportBaoHanh ex = new ExcelExportBaoHanh();
+            //ExcelExportBaoHanh ex = new ExcelExportBaoHanh();
 
-            List<View_BieuMauBH> pListKhoa = new List<View_BieuMauBH>();
+            //List<View_BieuMauBH> pListKhoa = new List<View_BieuMauBH>();
 
-            foreach (DataGridViewRow item in dataExcel.Rows)
+            //foreach (DataGridViewRow item in dataExcel.Rows)
+            //{
+            //    View_BieuMauBH i = new View_BieuMauBH();
+            //    i.TenSanPham = item.Cells[0].Value.ToString();
+            //    i.Seri = item.Cells[1].Value.ToString();
+            //    i.LyDo = item.Cells[2].Value.ToString();
+
+
+            //    pListKhoa.Add(i);
+            //}
+
+
+            //string path = string.Empty;
+
+            //ex.ExportKhoa(pListKhoa, ref path, false);
+
+            //DialogResult r = MessageBox.Show("ban co muon mo file khong", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            //if (!string.IsNullOrEmpty(path) && r == DialogResult.Yes)
+            //{
+            //    System.Diagnostics.Process.Start(path);
+            //}
+
+            //btn_Xuat.Enabled = false;
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            string ma = comboBox1.Text;
+            if (ma.Equals("DTO.HoaDon"))
+                return;
+
+            if (ma.Length == 0)
             {
-                View_BieuMauBH i = new View_BieuMauBH();
-                i.TenSanPham = item.Cells[0].Value.ToString();
-                i.Seri = item.Cells[1].Value.ToString();
-                i.LyDo = item.Cells[2].Value.ToString();
-
-
-                pListKhoa.Add(i);
+                dataGridView2.DataSource = null;
+                dataGridView3.DataSource = null;
+                return;
             }
+            HoaDon hd = bllhd.GetThongTinHoaDon(int.Parse(ma));
+            soThangSuDung = DateTime.Now.Subtract(hd.NgayLapHoaDon.Value).Days / (365 / 12);
+            
 
 
-            string path = string.Empty;
+            List<SeriHD> lst = bllsr.loadsr(int.Parse(ma), bllbh.getlist(int.Parse(ma), soThangSuDung));
+            
 
-            ex.ExportKhoa(pListKhoa, ref path, false);
+            //dataGridView3.DataSource = bllsr.loadsr(int.Parse(ma), bllbh.getlist(int.Parse(ma), soThangSuDung));
 
-            DialogResult r = MessageBox.Show("ban co muon mo file khong", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            lstspbh.Clear();
 
-            if (!string.IsNullOrEmpty(path) && r == DialogResult.Yes)
+            string a = comboBox1.Text;
+            if (a.Length > 0)
             {
-                System.Diagnostics.Process.Start(path);
-            }
+                dataGridView2.DataSource = bllbh.getlist(int.Parse(ma), soThangSuDung);
+                dataGridView3.DataSource = bllsr.loadsr(int.Parse(ma), bllbh.getlist(int.Parse(ma), soThangSuDung));
 
-            btn_Xuat.Enabled = false;
-            toolStripButton1.Enabled = false;
+                dataGridView2.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dataGridView2.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; 
+            }
+            else if (comboBox1.Text.Length == 0)
+            {
+                dataGridView3.DataSource = null;
+            }
+            else
+            {
+                dataGridView3.DataSource = null;
+            }
+            dataGridView3.DataSource = bllsr.ListToDataTable(lst);
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

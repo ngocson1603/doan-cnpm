@@ -59,7 +59,7 @@ namespace BLL
         {
             return dalbh.gettensp(ma);
         }
-        public int laodmacuoicung()
+        public int loadmacuoicung()
         {
             return dalbh.loadMaCuoiCung();
         }

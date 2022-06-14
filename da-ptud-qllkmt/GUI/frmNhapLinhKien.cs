@@ -29,7 +29,7 @@ namespace GUI
             //dgv_PhieuNhap.DataSource = bllpn.LoadPN();
             //dgv_ChiTietPhieuNhap.DataSource = bllpn.LoadCTPN();
             dgv_PhieuNhap.DataSource = bllpn.LoadPhieuNhapNV(int.Parse(frmTrangChuNhanVien.manv));
- 
+            dgv_PhieuNhap.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; 
             //dgv.Refresh();
             loaddata(frmQuanLySP.lstnhap);
             if (dgv_Chitiethoadon.Rows.Count >= 0)
@@ -233,7 +233,7 @@ namespace GUI
         public void loaddata(BindingList<ThemSanPham> loadsp)
         {
             dgv_Chitiethoadon.DataSource = loadsp;
-
+            dgv_Chitiethoadon.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; 
             //dgv_Chitiethoadon.Columns[0].ReadOnly = true;
             //dgv_Chitiethoadon.Columns[1].ReadOnly = true;
             //dgv_Chitiethoadon.Columns[2].ReadOnly = true;
@@ -288,7 +288,7 @@ namespace GUI
                 dateTimePicker1.Text = dgv_PhieuNhap.Rows[e.RowIndex].Cells[4].Value.ToString();
 
                 dgv_ChiTietPhieuNhap.DataSource = bllpn.LoadCTPhieuNhap(int.Parse(row.Cells[0].Value.ToString()));
-
+                dgv_ChiTietPhieuNhap.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight; 
             }
 
            
