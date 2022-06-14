@@ -207,6 +207,10 @@ namespace GUI.UserControls
             {
                 gunathoat.Visible = false;
             }
+            else
+            {
+                gunathoat.Visible = true;
+            }
         }
     }
 }

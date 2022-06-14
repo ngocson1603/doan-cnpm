@@ -256,6 +256,7 @@
       <Association Name="SanPham_ChiTietPhieuNhap" Member="ChiTietPhieuNhaps" ThisKey="MaSanPham" OtherKey="MaSanPham" Type="ChiTietPhieuNhap" />
       <Association Name="SanPham_SeriSP" Member="SeriSPs" ThisKey="MaSanPham" OtherKey="MaSanPham" Type="SeriSP" />
       <Association Name="SanPham_CTDonDatHang" Member="CTDonDatHangs" ThisKey="MaSanPham" OtherKey="MaSanPham" Type="CTDonDatHang" />
+      <Association Name="SanPham_CTDDH" Member="CTDDHs" ThisKey="MaSanPham" OtherKey="MaSanPham" Type="CTDDH" />
       <Association Name="HangSanXuat_SanPham" Member="HangSanXuat1" ThisKey="HangSanXuat" OtherKey="MaHangSanXuat" Type="HangSanXuat" IsForeignKey="true" />
       <Association Name="LoaiSanPham_SanPham" Member="LoaiSanPham1" ThisKey="LoaiSanPham" OtherKey="MaLoaiSanPham" Type="LoaiSanPham" IsForeignKey="true" />
     </Type>
@@ -385,6 +386,27 @@
       <Column Name="MaHoaDon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Seri" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="giaban" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DH" Member="DHs">
+    <Type Name="DH">
+      <Column Name="iddh" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="hoten" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="tongtien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DH_CTDDH" Member="CTDDHs" ThisKey="iddh" OtherKey="iddh" Type="CTDDH" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CTDDH" Member="CTDDHs">
+    <Type Name="CTDDH">
+      <Column Name="iddh" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaSanPham" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DH_CTDDH" Member="DH" ThisKey="iddh" OtherKey="iddh" Type="DH" IsForeignKey="true" />
+      <Association Name="SanPham_CTDDH" Member="SanPham" ThisKey="MaSanPham" OtherKey="MaSanPham" Type="SanPham" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

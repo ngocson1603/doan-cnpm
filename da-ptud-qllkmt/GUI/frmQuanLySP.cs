@@ -282,9 +282,6 @@ namespace GUI
                 MessageBox.Show("Đã thêm");
                 ThemSanPham sp = new ThemSanPham(tensp, loai, hang, gia, soluong, anh, ma);
                 lstnhap.Add(sp);
-
         }
-
-        
     }
 }

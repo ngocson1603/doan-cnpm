@@ -167,6 +167,28 @@ create table [dbo].[CTDonDatHang](
 	CONSTRAINT PK_ctddhdh PRIMARY KEY (MaDDH,MaSanPham)
 )
 
+create table [dbo].[DH](
+	iddh int IDENTITY(1,1), 
+	hoten nvarchar(100),
+	diachi nvarchar(100),
+	sdt nvarchar(11),
+	email nvarchar(100),
+	tongtien int
+
+	PRIMARY KEY (iddh)
+)
+
+create table [dbo].[CTDDH](
+	iddh int, 
+	MaSanPham int,
+	SoLuong int,
+	DonGia int
+
+	PRIMARY KEY (iddh,MaSanPham)
+)
+
+
+
 CREATE VIEW View_KH AS
 SELECT        MaKH, Gmail, Pass, TenKhachHang, Ngaysinh, GioiTinh, DiaChi, SDT
 FROM            dbo.KhachHang
@@ -268,11 +290,12 @@ FROM     dbo.CTBaoHanh
 
 go
 CREATE VIEW View_BieuMauBaoHanh AS
-SELECT        dbo.SanPham.TenSanPham, dbo.ChiTietHoaDon.soluong, dbo.ChiTietHoaDon.MaHoaDon, dbo.SeriHD.Seri, dbo.ChiTietHoaDon.giaban
-FROM            dbo.SanPham INNER JOIN
-                         dbo.SeriSP ON dbo.SanPham.MaSanPham = dbo.SeriSP.MaSanPham INNER JOIN
+SELECT        dbo.SanPham.TenSanPham, dbo.ChiTietHoaDon.soluong, dbo.HoaDon.MaHoaDon, dbo.SeriHD.Seri, dbo.ChiTietHoaDon.giaban
+FROM            dbo.SeriSP INNER JOIN
+                         dbo.SeriHD ON dbo.SeriSP.Seri = dbo.SeriHD.Seri INNER JOIN
+                         dbo.SanPham ON dbo.SeriSP.MaSanPham = dbo.SanPham.MaSanPham INNER JOIN
                          dbo.ChiTietHoaDon ON dbo.SanPham.MaSanPham = dbo.ChiTietHoaDon.MaSanPham INNER JOIN
-                         dbo.SeriHD ON dbo.SeriSP.Seri = dbo.SeriHD.Seri
+                         dbo.HoaDon ON dbo.SeriHD.MaHoaDon = dbo.HoaDon.MaHoaDon AND dbo.ChiTietHoaDon.MaHoaDon = dbo.HoaDon.MaHoaDon
 
 
 go
@@ -290,6 +313,11 @@ FROM            dbo.SanPham INNER JOIN
                          dbo.SeriHD ON dbo.SeriSP.Seri = dbo.SeriHD.Seri INNER JOIN
                          dbo.CTBaoHanh ON dbo.SeriSP.Seri = dbo.CTBaoHanh.Seri
 --KHOÁ NGOẠI
+alter table CTDDH
+ADD CONSTRAINT fk_ctddh_spp FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
+alter table CTDDH
+ADD CONSTRAINT fk_ctddh_ddhp FOREIGN KEY(iddh) REFERENCES [dbo].[DH](iddh)
+
 ALTER TABLE [dbo].[CTDonDatHang]
 ADD CONSTRAINT FK_ctddh_sp FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
 ALTER TABLE [dbo].[CTDonDatHang]

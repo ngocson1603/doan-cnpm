@@ -212,5 +212,11 @@ namespace GUI
                 dgvKhachhang.DataSource = bllkhachhang.loaddanhsachKhachHang();
             }
         }
+
+        private void txt_Sdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

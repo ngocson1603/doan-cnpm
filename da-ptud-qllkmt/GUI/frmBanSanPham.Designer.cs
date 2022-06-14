@@ -57,6 +57,7 @@
             this.dgv_chitiet = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataExcel)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Chitiethoadon)).BeginInit();
@@ -305,7 +306,8 @@
             this.btn_SuaHD,
             this.btn_Xuat,
             this.toolStripButton1,
-            this.btnrs});
+            this.btnrs,
+            this.toolStripButton2});
             this.toolStrip3.Location = new System.Drawing.Point(0, 0);
             this.toolStrip3.Name = "toolStrip3";
             this.toolStrip3.Size = new System.Drawing.Size(874, 27);
@@ -417,6 +419,16 @@
             this.pictureBox1.TabIndex = 102;
             this.pictureBox1.TabStop = false;
             // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(51, 24);
+            this.toolStripButton2.Text = "Đặt Onl";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
             // frmBanSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,6 +487,7 @@
         private System.Windows.Forms.ToolStripButton btnrs;
         public System.Windows.Forms.DataGridView dgv_Chitiethoadon;
         private System.Windows.Forms.TextBox txt_MaKH;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
 
     }
 }

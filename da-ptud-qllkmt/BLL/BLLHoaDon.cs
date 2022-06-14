@@ -24,6 +24,23 @@ namespace BLL
         {
             return dalhoadon.loadmakhongluu();
         }
+        public int loadmacuoi(int ma)
+        {
+            return dalhoadon.loadMaCuoiCung(ma);
+        }
+
+        public bool KTTontai(int ma)
+        {
+            return dalhoadon.KTTonTai(ma);
+        }
+        public List<DH> DHOnl()
+        {
+            return dalhoadon.DonMuaOnl();
+        }
+        public List<CTDDH> CTDHOnl(int ma)
+        {
+            return dalhoadon.CTDonMuaOnl(ma);
+        }
         public List<View_CTHD> LoadHoaDonNV(int ma)
         {
             return dalhoadon.GetWatchListHDNV(ma);
@@ -48,6 +65,16 @@ namespace BLL
         public HoaDon GetThongTinHoaDon(int maHD)
         {
             return dalhoadon.GetThongTinHoaDon(maHD);
+        }
+
+        //xoa dh
+        public bool xoaDH(int ma)
+        {
+            return dalhoadon.xoaDH(ma);
+        }
+        public bool xoaCTDH(int ma)
+        {
+            return dalhoadon.xoaCTDH(ma);
         }
     }
 }

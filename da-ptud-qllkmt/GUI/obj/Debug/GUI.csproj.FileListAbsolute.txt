@@ -560,3 +560,4 @@ C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\AForge.Video.xml
 C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\AForge.Video.DirectShow.xml
 C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\zxing.xml
 C:\Users\Admin\Desktop\doan-cnpm\da-ptud-qllkmt\GUI\bin\Debug\zxing.presentation.xml
+D:\DULIEUHOCTAP\ki6\doan\doan-cnpm\da-ptud-qllkmt\GUI\obj\Debug\GUI.frmThemHoaDonTuDonDatHang.resources

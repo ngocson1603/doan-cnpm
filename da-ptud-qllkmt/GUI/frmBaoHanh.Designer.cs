@@ -36,11 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.btn_Xuat = new System.Windows.Forms.ToolStripSplitButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtp_NgayTra = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.TextBox();
             this.dataExcel = new System.Windows.Forms.DataGridView();
@@ -56,7 +53,9 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dtp_NgayTra = new System.Windows.Forms.DateTimePicker();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataExcel)).BeginInit();
@@ -129,51 +128,12 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton3,
-            this.toolStripButton4,
-            this.btn_Xuat});
+            this.toolStripButton4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(932, 27);
             this.toolStrip1.TabIndex = 9;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::GUI.Properties.Resources.themhd;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(61, 24);
-            this.toolStripButton1.Text = "Thêm";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Enabled = false;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(95, 24);
-            this.toolStripButton3.Text = "Chọn sản phẩm";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Image = global::GUI.Properties.Resources.xoahd;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(60, 24);
-            this.toolStripButton4.Text = "Đóng";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
-            // btn_Xuat
-            // 
-            this.btn_Xuat.Image = global::GUI.Properties.Resources.banra;
-            this.btn_Xuat.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Xuat.Name = "btn_Xuat";
-            this.btn_Xuat.Size = new System.Drawing.Size(67, 24);
-            this.btn_Xuat.Text = "Xuất";
-            this.btn_Xuat.ButtonClick += new System.EventHandler(this.btn_Xuat_ButtonClick);
             // 
             // groupBox1
             // 
@@ -197,6 +157,15 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bảo hành sản phẩm";
+            // 
+            // dtp_NgayTra
+            // 
+            this.dtp_NgayTra.CustomFormat = "dd/MM/yyyy";
+            this.dtp_NgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_NgayTra.Location = new System.Drawing.Point(123, 182);
+            this.dtp_NgayTra.Name = "dtp_NgayTra";
+            this.dtp_NgayTra.Size = new System.Drawing.Size(237, 20);
+            this.dtp_NgayTra.TabIndex = 17;
             // 
             // label7
             // 
@@ -348,14 +317,34 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(932, 511);
             this.tableLayoutPanel1.TabIndex = 14;
             // 
-            // dtp_NgayTra
+            // toolStripButton1
             // 
-            this.dtp_NgayTra.CustomFormat = "dd/MM/yyyy";
-            this.dtp_NgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_NgayTra.Location = new System.Drawing.Point(123, 182);
-            this.dtp_NgayTra.Name = "dtp_NgayTra";
-            this.dtp_NgayTra.Size = new System.Drawing.Size(237, 20);
-            this.dtp_NgayTra.TabIndex = 17;
+            this.toolStripButton1.Image = global::GUI.Properties.Resources.themhd;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(61, 24);
+            this.toolStripButton1.Text = "Thêm";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton3.Enabled = false;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(95, 24);
+            this.toolStripButton3.Text = "Chọn sản phẩm";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = global::GUI.Properties.Resources.xoahd;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(60, 24);
+            this.toolStripButton4.Text = "Đóng";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // frmBaoHanh
             // 
@@ -408,7 +397,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ToolStripSplitButton btn_Xuat;
         private System.Windows.Forms.DataGridView dataExcel;
         private System.Windows.Forms.TextBox comboBox1;
         private System.Windows.Forms.Label label7;

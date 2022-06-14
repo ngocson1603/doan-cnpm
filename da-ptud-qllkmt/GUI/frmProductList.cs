@@ -101,10 +101,6 @@ namespace GUI
             timer1.Start();
         }
 
-        private void frmProductList_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            frmBanSanPham.dgv.Refresh();
-        }
         void captureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
@@ -152,6 +148,14 @@ namespace GUI
         {
             if (captureDevice.IsRunning)
                 captureDevice.Stop();
+            if (frmBanSanPham.laygiatri == true)
+            {
+                frmBanSanPham.dgv.Refresh();
+            }
+        }
+
+        private void frmProductList_FormClosed(object sender, FormClosedEventArgs e)
+        {
         }
     }
 }

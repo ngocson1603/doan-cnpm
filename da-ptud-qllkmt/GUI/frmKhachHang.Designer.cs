@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btn_ThemKH = new System.Windows.Forms.ToolStripButton();
-            this.btn_XoaKH = new System.Windows.Forms.ToolStripButton();
-            this.btn_SuaKH = new System.Windows.Forms.ToolStripButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.rbtnNu = new System.Windows.Forms.RadioButton();
             this.rbtnNam = new System.Windows.Forms.RadioButton();
@@ -44,6 +41,7 @@
             this.dateTimeNgaysinhkhachhang = new System.Windows.Forms.DateTimePicker();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Sdt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,7 +55,9 @@
             this.txt_Diachi = new System.Windows.Forms.TextBox();
             this.txt_Gmail = new System.Windows.Forms.TextBox();
             this.txtMakh = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btn_ThemKH = new System.Windows.Forms.ToolStripButton();
+            this.btn_XoaKH = new System.Windows.Forms.ToolStripButton();
+            this.btn_SuaKH = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -80,36 +80,6 @@
             this.toolStrip1.TabIndex = 36;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // btn_ThemKH
-            // 
-            this.btn_ThemKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_ThemKH.Image = global::GUI.Properties.Resources.addusergroup_1251;
-            this.btn_ThemKH.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_ThemKH.Name = "btn_ThemKH";
-            this.btn_ThemKH.Size = new System.Drawing.Size(129, 24);
-            this.btn_ThemKH.Text = "Thêm Khách Hàng";
-            this.btn_ThemKH.Click += new System.EventHandler(this.btn_ThemKH_Click);
-            // 
-            // btn_XoaKH
-            // 
-            this.btn_XoaKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_XoaKH.Image = global::GUI.Properties.Resources.delete_delete_deleteusers_delete_male_user_maleclient_2348;
-            this.btn_XoaKH.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_XoaKH.Name = "btn_XoaKH";
-            this.btn_XoaKH.Size = new System.Drawing.Size(119, 24);
-            this.btn_XoaKH.Text = "Xóa Khách Hàng";
-            this.btn_XoaKH.Click += new System.EventHandler(this.btn_XoaKH_Click);
-            // 
-            // btn_SuaKH
-            // 
-            this.btn_SuaKH.ForeColor = System.Drawing.Color.LightPink;
-            this.btn_SuaKH.Image = global::GUI.Properties.Resources._3706888_assembly_control_fix_setting_108715;
-            this.btn_SuaKH.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_SuaKH.Name = "btn_SuaKH";
-            this.btn_SuaKH.Size = new System.Drawing.Size(118, 24);
-            this.btn_SuaKH.Text = "Sửa Khách Hàng";
-            this.btn_SuaKH.Click += new System.EventHandler(this.btn_SuaKH_Click);
-            // 
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Transparent;
@@ -129,13 +99,13 @@
             this.rbtnNu.Name = "rbtnNu";
             this.rbtnNu.Size = new System.Drawing.Size(39, 17);
             this.rbtnNu.TabIndex = 1;
-            this.rbtnNu.TabStop = true;
             this.rbtnNu.Text = "Nữ";
             this.rbtnNu.UseVisualStyleBackColor = true;
             // 
             // rbtnNam
             // 
             this.rbtnNam.AutoSize = true;
+            this.rbtnNam.Checked = true;
             this.rbtnNam.Location = new System.Drawing.Point(33, 20);
             this.rbtnNam.Name = "rbtnNam";
             this.rbtnNam.Size = new System.Drawing.Size(50, 17);
@@ -169,9 +139,9 @@
             this.groupBox1.Controls.Add(this.txt_timkiem);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Location = new System.Drawing.Point(404, 168);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(304, 60);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
@@ -205,7 +175,7 @@
             this.dgvKhachhang.BackgroundColor = System.Drawing.Color.White;
             this.dgvKhachhang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachhang.Location = new System.Drawing.Point(16, 16);
-            this.dgvKhachhang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvKhachhang.Margin = new System.Windows.Forms.Padding(2);
             this.dgvKhachhang.Name = "dgvKhachhang";
             this.dgvKhachhang.RowHeadersWidth = 62;
             this.dgvKhachhang.RowTemplate.Height = 28;
@@ -219,7 +189,7 @@
             this.dateTimeNgaysinhkhachhang.CustomFormat = "dd/MM/yyyy";
             this.dateTimeNgaysinhkhachhang.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeNgaysinhkhachhang.Location = new System.Drawing.Point(129, 125);
-            this.dateTimeNgaysinhkhachhang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeNgaysinhkhachhang.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeNgaysinhkhachhang.Name = "dateTimeNgaysinhkhachhang";
             this.dateTimeNgaysinhkhachhang.Size = new System.Drawing.Size(181, 20);
             this.dateTimeNgaysinhkhachhang.TabIndex = 30;
@@ -272,6 +242,16 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Quản lý khách hàng";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(59, 234);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(78, 17);
+            this.checkBox1.TabIndex = 39;
+            this.checkBox1.Text = "Không Lưu";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -293,6 +273,7 @@
             this.txt_Sdt.Name = "txt_Sdt";
             this.txt_Sdt.Size = new System.Drawing.Size(173, 20);
             this.txt_Sdt.TabIndex = 37;
+            this.txt_Sdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Sdt_KeyPress);
             // 
             // label2
             // 
@@ -405,15 +386,35 @@
             this.txtMakh.Size = new System.Drawing.Size(181, 20);
             this.txtMakh.TabIndex = 0;
             // 
-            // checkBox1
+            // btn_ThemKH
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(59, 234);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 17);
-            this.checkBox1.TabIndex = 39;
-            this.checkBox1.Text = "Không Lưu";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.btn_ThemKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_ThemKH.Image = global::GUI.Properties.Resources.addusergroup_1251;
+            this.btn_ThemKH.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_ThemKH.Name = "btn_ThemKH";
+            this.btn_ThemKH.Size = new System.Drawing.Size(129, 24);
+            this.btn_ThemKH.Text = "Thêm Khách Hàng";
+            this.btn_ThemKH.Click += new System.EventHandler(this.btn_ThemKH_Click);
+            // 
+            // btn_XoaKH
+            // 
+            this.btn_XoaKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_XoaKH.Image = global::GUI.Properties.Resources.delete_delete_deleteusers_delete_male_user_maleclient_2348;
+            this.btn_XoaKH.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_XoaKH.Name = "btn_XoaKH";
+            this.btn_XoaKH.Size = new System.Drawing.Size(119, 24);
+            this.btn_XoaKH.Text = "Xóa Khách Hàng";
+            this.btn_XoaKH.Click += new System.EventHandler(this.btn_XoaKH_Click);
+            // 
+            // btn_SuaKH
+            // 
+            this.btn_SuaKH.ForeColor = System.Drawing.Color.LightPink;
+            this.btn_SuaKH.Image = global::GUI.Properties.Resources._3706888_assembly_control_fix_setting_108715;
+            this.btn_SuaKH.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_SuaKH.Name = "btn_SuaKH";
+            this.btn_SuaKH.Size = new System.Drawing.Size(118, 24);
+            this.btn_SuaKH.Text = "Sửa Khách Hàng";
+            this.btn_SuaKH.Click += new System.EventHandler(this.btn_SuaKH_Click);
             // 
             // frmKhachHang
             // 
@@ -421,7 +422,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 495);
             this.Controls.Add(this.groupBox4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmKhachHang";
             this.Text = "frmKhachHang";
             this.Load += new System.EventHandler(this.frmKhachHang_Load);

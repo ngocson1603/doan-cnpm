@@ -17,6 +17,7 @@ namespace GUI
     {
         Helper hp = new Helper();
         BLLGioHang bllgiohang = new BLLGioHang();
+        BLLBaoHanh bll = new BLLBaoHanh();
         public static string taikhoan;
         public string tensanpham;
         public frmGioHang()
@@ -124,8 +125,9 @@ namespace GUI
             string sl = txtSL.Text.ToString();
             string gia = txtGiaTien.Text.ToString();
             string tongtien = txtTongTien.Text.ToString();
+            string hsd = bll.loadhsd(int.Parse(txtMaSP.Text));
 
-            we.QuyetDinhKhenThuong(ngay, thang, nam, ma, ngayt,thangt,namt, tensp, sl, gia, tongtien);
+            we.QuyetDinhKhenThuong(ngay, thang, nam, ma, ngayt, thangt, namt, tensp, sl, gia, tongtien, hsd);
             guna2Button3.Enabled = false;
         }
         public static int? tongtien = 0;

@@ -19,12 +19,12 @@ namespace GUI
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult a = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
             if (a == DialogResult.Yes)
             {
+                frmBanSanPham.laygiatri = false;
                 Close();
                 frmDN f = new frmDN();
                 f.Show();

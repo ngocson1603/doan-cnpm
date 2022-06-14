@@ -195,7 +195,7 @@ namespace GUI.XuLy
 
         #endregion
 
-        public void QuyetDinhKhenThuong(string pNgay, string pThang, string pNam, string pMa,string pNgayT, string pThangT, string pNamT,string pTenSP, string pSL, string pGiaTien, string pTongTien)
+        public void QuyetDinhKhenThuong(string pNgay, string pThang, string pNam, string pMa,string pNgayT, string pThangT, string pNamT,string pTenSP, string pSL, string pGiaTien, string pTongTien,string pHSD)
         {
             #region ===== Core======
             MemoryStream mStream = null;
@@ -245,10 +245,10 @@ namespace GUI.XuLy
 
 
 
-            string[] fields = new string[] { "Ngay", "Thang", "Nam", "MaHang","NgayT", "ThangT", "NamT", "TenSP","SoLuong","GiaTien","TongTien" };
+            string[] fields = new string[] { "Ngay", "Thang", "Nam", "MaHang","NgayT", "ThangT", "NamT", "TenSP","SoLuong","GiaTien","TongTien","HSD" };
 
 
-            string[] values = new string[] {  pNgay,  pThang,  pNam,  pMa,  pNgayT,pThangT,pNamT,  pTenSP,  pSL,  pGiaTien,  pTongTien };
+            string[] values = new string[] {  pNgay,  pThang,  pNam,  pMa,  pNgayT,pThangT,pNamT,  pTenSP,  pSL,  pGiaTien,  pTongTien,pHSD };
 
             #endregion End Set Value=====
 

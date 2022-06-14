@@ -123,7 +123,7 @@ namespace GUI
             List<SeriHD> lst = bllsr.loadsr(int.Parse(ma), bllbh.getlist(int.Parse(ma), soThangSuDung));
             dataGridView3.DataSource = bllsr.ListToDataTable(lst);
 
-            //dataGridView3.DataSource = bllsr.loadsr(int.Parse(ma), bllbh.getlist(int.Parse(ma), soThangSuDung));
+            dataGridView3.DataSource = bllsr.loadsr(int.Parse(ma), bllbh.getlist(int.Parse(ma), soThangSuDung));
 
             lstspbh.Clear();
         }
@@ -243,8 +243,6 @@ namespace GUI
         public static DateTime ngaytra;
         private void btn_Xuat_ButtonClick(object sender, EventArgs e)
         {
-            XuatPhieu();
-
             //if (dgv_ChiTietPhieuNhap.Rows.Count == 0)
             //{
             //    MessageBox.Show("khong co du lieu de xuat");
@@ -301,6 +299,14 @@ namespace GUI
                 dataGridView3.DataSource = null;
                 return;
             }
+            if (bllhd.KTTontai(int.Parse(ma))==false)
+            {
+                MessageBox.Show("Không tồn tại hóa đơn này");
+                dataGridView2.DataSource = null;
+                dataGridView3.DataSource = null;
+                return;
+            }
+
             HoaDon hd = bllhd.GetThongTinHoaDon(int.Parse(ma));
             soThangSuDung = DateTime.Now.Subtract(hd.NgayLapHoaDon.Value).Days / (365 / 12);
             

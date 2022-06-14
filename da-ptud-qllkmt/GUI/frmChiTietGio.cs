@@ -115,15 +115,15 @@ namespace GUI
                          
                             if (bllgiohang.postGioHangCTHD(cthd))
                             {
-                                //for (int i = 0; i < int.Parse(dataGridView1.Rows[a].Cells[4].Value.ToString()); i++)
-                                //{
-                                //    SeriHD sr = new SeriHD()
-                                //    {
-                                //        Seri = bllsr.loadseritheoma(int.Parse(dataGridView1.Rows[a].Cells[6].Value.ToString())),
-                                //        MaHoaDon = int.Parse(textBox1.Text),
-                                //    };
-                                //    bllsr.postSP(sr);
-                                //}
+                                for (int i = 0; i < int.Parse(dataGridView1.Rows[a].Cells[4].Value.ToString()); i++)
+                                {
+                                    SeriHD sr = new SeriHD()
+                                    {
+                                        Seri = bllsr.loadseritheoma(int.Parse(dataGridView1.Rows[a].Cells[6].Value.ToString())),
+                                        MaHoaDon = int.Parse(textBox1.Text),
+                                    };
+                                    bllsr.postSP(sr);
+                                }
                             }
                             else
                             {

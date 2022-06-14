@@ -42,10 +42,10 @@ namespace GUI.UserControls
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gunaMua = new Guna.UI2.WinForms.Guna2Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureDetailSP = new System.Windows.Forms.PictureBox();
+            this.gunaMua = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblHSD = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -237,12 +237,12 @@ namespace GUI.UserControls
             this.tableLayoutPanel1.Controls.Add(this.lblTenSanPham, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.gunaMua, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.gunathoat, 2, 8);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label8, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.lblHSD, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.gunaMua, 1, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -259,6 +259,17 @@ namespace GUI.UserControls
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1089, 597);
             this.tableLayoutPanel1.TabIndex = 1;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // pictureDetailSP
+            // 
+            this.pictureDetailSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureDetailSP.Location = new System.Drawing.Point(437, 69);
+            this.pictureDetailSP.Name = "pictureDetailSP";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureDetailSP, 6);
+            this.pictureDetailSP.Size = new System.Drawing.Size(649, 390);
+            this.pictureDetailSP.TabIndex = 15;
+            this.pictureDetailSP.TabStop = false;
+            this.pictureDetailSP.Click += new System.EventHandler(this.pictureDetailSP_Click);
             // 
             // gunaMua
             // 
@@ -283,30 +294,6 @@ namespace GUI.UserControls
             this.gunaMua.UseTransparentBackground = true;
             this.gunaMua.Click += new System.EventHandler(this.gunaMua_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(220, 462);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(211, 66);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "label8";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // pictureDetailSP
-            // 
-            this.pictureDetailSP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureDetailSP.Location = new System.Drawing.Point(437, 69);
-            this.pictureDetailSP.Name = "pictureDetailSP";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureDetailSP, 6);
-            this.pictureDetailSP.Size = new System.Drawing.Size(649, 390);
-            this.pictureDetailSP.TabIndex = 15;
-            this.pictureDetailSP.TabStop = false;
-            this.pictureDetailSP.Click += new System.EventHandler(this.pictureDetailSP_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -319,6 +306,19 @@ namespace GUI.UserControls
             this.label7.TabIndex = 27;
             this.label7.Text = "Mã sản phẩm";
             this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(220, 462);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(211, 66);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "label8";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 

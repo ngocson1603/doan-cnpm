@@ -20,13 +20,23 @@ namespace DAL
         {
             return qllk.HoaDons.Select(t => t).ToList<HoaDon>();
         }
-
+        public List<DH> DonMuaOnl()
+        {
+            return qllk.DHs.Select(t => t).ToList();
+        }
+        public List<CTDDH> CTDonMuaOnl(int ma)
+        {
+            return qllk.CTDDHs.Where(t=>t.iddh == ma).Select(t => t).ToList();
+        }
         public int loadmakhongluu()
         {
             var makh = (from p in qllk.KhachHangs where p.Gmail == null select p.MaKH).FirstOrDefault();
             return makh;
         }
-
+        public int loadMaCuoiCung(int manv)
+        {
+            return qllk.HoaDons.OrderByDescending(t => t.MaHoaDon).Where(t=>t.MaNhanVien == manv).First().MaHoaDon;
+        }
         public List<View_CTHD> GetDanhSachHD()
         {
             var response = _apiService.GetResponse(string.Format("api/HD/"));
@@ -73,6 +83,41 @@ namespace DAL
         public HoaDon GetThongTinHoaDon(int maHD)
         {
             return qllk.HoaDons.First(t => t.MaHoaDon == maHD);
+        }
+        public bool KTTonTai(int ma)
+        {
+            return qllk.HoaDons.Where(t => t.MaHoaDon == ma).FirstOrDefault() != null;
+        }
+        //xoa don
+        public bool xoaDH(int ma)
+        {
+            try
+            {
+                var kh = qllk.DHs.Where(t => t.iddh == ma).FirstOrDefault();
+
+                qllk.DHs.DeleteOnSubmit(kh);
+                qllk.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public bool xoaCTDH(int ma)
+        {
+            try
+            {
+                var kh = qllk.CTDDHs.Where(t => t.iddh == ma).ToList();
+
+                qllk.CTDDHs.DeleteAllOnSubmit(kh);
+                qllk.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

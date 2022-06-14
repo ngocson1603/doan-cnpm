@@ -391,6 +391,12 @@
     <Compile Include="frmQuanLySP.Designer.cs">
       <DependentUpon>frmQuanLySP.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemHoaDonTuDonDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemHoaDonTuDonDatHang.Designer.cs">
+      <DependentUpon>frmThemHoaDonTuDonDatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThongKeMuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -447,6 +453,7 @@
     <Compile Include="XuLy\ExcelExportBaoHanh.cs" />
     <Compile Include="XuLy\ExcelExportBH.cs" />
     <Compile Include="XuLy\ExcelExportNV.cs" />
+    <Compile Include="XuLy\ExcelExportOnl.cs" />
     <Compile Include="XuLy\ExcelExportPN.cs" />
     <Compile Include="XuLy\FileCommon.cs" />
     <Compile Include="XuLy\Global.cs" />
@@ -509,6 +516,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLySP.resx">
       <DependentUpon>frmQuanLySP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemHoaDonTuDonDatHang.resx">
+      <DependentUpon>frmThemHoaDonTuDonDatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKeMuaHang.resx">
       <DependentUpon>frmThongKeMuaHang.cs</DependentUpon>

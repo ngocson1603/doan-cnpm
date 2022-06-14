@@ -154,7 +154,6 @@ namespace GUI
                     MessageBox.Show("Mua hàng thành công");
                     UserControls.detailProduct.lstspb.Clear();
                 }
-            
         }
 
         private void btn_XoaHD_Click(object sender, EventArgs e)
@@ -432,6 +431,12 @@ namespace GUI
         {
             loaddata(UserControls.detailProduct.lstspb);
             dgv_Chitiethoadon.Refresh();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            frmThemHoaDonTuDonDatHang frm = new frmThemHoaDonTuDonDatHang();
+            frm.ShowDialog();
         }
     }
 }
