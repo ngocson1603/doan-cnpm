@@ -163,9 +163,9 @@
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(13, 19);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(133, 13);
+            this.label18.Size = new System.Drawing.Size(137, 13);
             this.label18.TabIndex = 31;
-            this.label18.Text = "Tìm kiếm (Mã khách hàng)";
+            this.label18.Text = "Tìm kiếm (Tên khách hàng)";
             // 
             // dgvKhachhang
             // 

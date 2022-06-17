@@ -37,7 +37,7 @@ namespace GUI
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
             }
-            else if (a == 3)
+            else if (a == 5)
             {
                 splashScreenManager1.ShowWaitForm();
                 Thread.Sleep(1000);
@@ -53,6 +53,7 @@ namespace GUI
                 splashScreenManager1.CloseWaitForm();
                 frmTrangChuNhanVien frm = new frmTrangChuNhanVien();
                 frm.Show();
+                frm.btn_NhapSP.Visible = true;
                 this.Hide();
             }
             else if (a == 1)
@@ -62,6 +63,34 @@ namespace GUI
                 splashScreenManager1.CloseWaitForm();
                 frmTrangChuNhanVien frm = new frmTrangChuNhanVien();
                 frm.Show();
+                frm.btn_BanSP.Visible = true;
+                this.Hide();
+            }
+            else if (a == 4)
+            {
+                MessageBox.Show("Tài khoản chưa được kích hoạt");
+                return;
+            }
+            else if (a == 3)
+            {
+                splashScreenManager1.ShowWaitForm();
+                Thread.Sleep(1000);
+                splashScreenManager1.CloseWaitForm();
+                frmTrangChuNhanVien frm = new frmTrangChuNhanVien();
+                frm.Show();
+                frm.button3.Visible = true;
+                this.Hide();
+            }
+            else if (a == 6)
+            {
+                splashScreenManager1.ShowWaitForm();
+                Thread.Sleep(1000);
+                splashScreenManager1.CloseWaitForm();
+                frmTrangChuNhanVien frm = new frmTrangChuNhanVien();
+                frm.Show();
+                frm.button3.Visible = true;
+                frm.btn_BanSP.Visible = true;
+                frm.btn_NhapSP.Visible = true;
                 this.Hide();
             }
             else

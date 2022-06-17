@@ -187,7 +187,68 @@ create table [dbo].[CTDDH](
 	PRIMARY KEY (iddh,MaSanPham)
 )
 
+--KHOÁ NGOẠI
+alter table CTDDH
+ADD CONSTRAINT fk_ctddh_spp FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
+alter table CTDDH
+ADD CONSTRAINT fk_ctddh_ddhp FOREIGN KEY(iddh) REFERENCES [dbo].[DH](iddh)
 
+ALTER TABLE [dbo].[CTDonDatHang]
+ADD CONSTRAINT FK_ctddh_sp FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
+ALTER TABLE [dbo].[CTDonDatHang]
+ADD CONSTRAINT FK_ctddh_ddh FOREIGN KEY(MaDDH) REFERENCES [dbo].[DonDatHang](MaDDH)
+ALTER TABLE [dbo].[DonDatHang]
+ADD CONSTRAINT FK_ddh_nv FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
+ALTER TABLE [dbo].[DonDatHang]
+ADD CONSTRAINT FK_ddh_npp FOREIGN KEY(MaNhaPhanPhoi) REFERENCES [dbo].[NhaPhanPhoi](MaNhaPhanPhoi)
+
+ALTER TABLE [dbo].[BaoHanh]
+ADD CONSTRAINT FK_bh FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
+ALTER TABLE [dbo].[BaoHanh]
+ADD CONSTRAINT FK_bhhd FOREIGN KEY(MaHoaDon) REFERENCES [dbo].[HoaDon](MaHoaDon)
+ALTER TABLE [dbo].[CTBaoHanh]
+ADD CONSTRAINT FK_bhhdct FOREIGN KEY(MaBH) REFERENCES [dbo].[BaoHanh](MaBH)
+ALTER TABLE [dbo].[CTBaoHanh]
+ADD CONSTRAINT FK_bhhdctsp FOREIGN KEY(Seri) REFERENCES [dbo].[SeriSP](Seri)
+
+ALTER TABLE [dbo].[SeriSP]
+ADD CONSTRAINT FK_seri FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
+ALTER TABLE [dbo].[SeriHD]
+ADD CONSTRAINT FK_serihd FOREIGN KEY(Seri) REFERENCES [dbo].[SeriSP](Seri)
+ALTER TABLE [dbo].[SeriHD]
+ADD CONSTRAINT FK_serihdsp FOREIGN KEY(MaHoaDon) REFERENCES [dbo].[HoaDon](MaHoaDon)
+
+ALTER TABLE [dbo].[KetQua]
+ADD CONSTRAINT FK_TinhTrang1 FOREIGN KEY(TenTinhTrangOne) REFERENCES [dbo].[TinhTrangOne](TenTinhTrangOne)
+ALTER TABLE [dbo].[KetQua]
+ADD CONSTRAINT FK_TinhTrang2 FOREIGN KEY(TenTinhTrangTwo) REFERENCES [dbo].[TinhTrangTwo](TenTinhTrangTwo)
+ALTER TABLE [dbo].[KetQua]
+ADD CONSTRAINT FK_TinhTrang3 FOREIGN KEY(TenTinhTrangThree) REFERENCES [dbo].[TinhTrangThree](TenTinhTrangThree)
+
+ALTER TABLE [dbo].[ChiTietHoaDon]
+ADD CONSTRAINT FK_cthdsp FOREIGN KEY(MaHoaDon) REFERENCES [dbo].[HoaDon](MaHoaDon)
+ALTER TABLE [dbo].[SanPham]
+ADD CONSTRAINT FK_SP_LH FOREIGN KEY(LoaiSanPham) REFERENCES [dbo].[LoaiSanPham](MaLoaiSanPham)
+ALTER TABLE [dbo].[SanPham]
+ADD CONSTRAINT FK_SP_HSX FOREIGN KEY(HangSanXuat) REFERENCES [dbo].[HangSanXuat](MaHangSanXuat)
+ALTER TABLE [dbo].[PhieuNhap]
+ADD CONSTRAINT FK_PN_NCC FOREIGN KEY(MaNhaPhanPhoi) REFERENCES [dbo].[NhaPhanPhoi](MaNhaPhanPhoi)
+ALTER TABLE [dbo].[PhieuNhap]
+ADD CONSTRAINT FK_PN_NV FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
+ALTER TABLE [dbo].[PhieuNhap]
+ADD CONSTRAINT FK_PN_ddh FOREIGN KEY(MaDDH) REFERENCES [dbo].[DonDatHang](MaDDH)
+ALTER TABLE [dbo].[NhanVien]
+ADD CONSTRAINT FK_NV_CV FOREIGN KEY(ChucVu) REFERENCES [dbo].[ChucVu](MaChucVu)
+ALTER TABLE [dbo].[ChiTietPhieuNhap]
+ADD CONSTRAINT FK_CTPN_PN FOREIGN KEY(MaPhieuNhap) REFERENCES [dbo].[PhieuNhap](MaPhieuNhap)
+ALTER TABLE [dbo].[ChiTietPhieuNhap]
+ADD CONSTRAINT FK_CTPN_SP FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
+ALTER TABLE [dbo].[ChiTietHoaDon]
+ADD CONSTRAINT FK_CT_HOADON_SANPHAM FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
+ALTER TABLE [dbo].[HoaDon]
+ADD CONSTRAINT FK_CT_HOADON_User FOREIGN KEY(MaKH) REFERENCES [dbo].[KhachHang](MaKH)
+ALTER TABLE [dbo].[Users]
+ADD CONSTRAINT FK_User FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
 
 CREATE VIEW View_KH AS
 SELECT        MaKH, Gmail, Pass, TenKhachHang, Ngaysinh, GioiTinh, DiaChi, SDT
@@ -312,68 +373,7 @@ FROM            dbo.SanPham INNER JOIN
                          dbo.SeriSP ON dbo.SanPham.MaSanPham = dbo.SeriSP.MaSanPham INNER JOIN
                          dbo.SeriHD ON dbo.SeriSP.Seri = dbo.SeriHD.Seri INNER JOIN
                          dbo.CTBaoHanh ON dbo.SeriSP.Seri = dbo.CTBaoHanh.Seri
---KHOÁ NGOẠI
-alter table CTDDH
-ADD CONSTRAINT fk_ctddh_spp FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
-alter table CTDDH
-ADD CONSTRAINT fk_ctddh_ddhp FOREIGN KEY(iddh) REFERENCES [dbo].[DH](iddh)
 
-ALTER TABLE [dbo].[CTDonDatHang]
-ADD CONSTRAINT FK_ctddh_sp FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
-ALTER TABLE [dbo].[CTDonDatHang]
-ADD CONSTRAINT FK_ctddh_ddh FOREIGN KEY(MaDDH) REFERENCES [dbo].[DonDatHang](MaDDH)
-ALTER TABLE [dbo].[DonDatHang]
-ADD CONSTRAINT FK_ddh_nv FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
-ALTER TABLE [dbo].[DonDatHang]
-ADD CONSTRAINT FK_ddh_npp FOREIGN KEY(MaNhaPhanPhoi) REFERENCES [dbo].[NhaPhanPhoi](MaNhaPhanPhoi)
-
-ALTER TABLE [dbo].[BaoHanh]
-ADD CONSTRAINT FK_bh FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
-ALTER TABLE [dbo].[BaoHanh]
-ADD CONSTRAINT FK_bhhd FOREIGN KEY(MaHoaDon) REFERENCES [dbo].[HoaDon](MaHoaDon)
-ALTER TABLE [dbo].[CTBaoHanh]
-ADD CONSTRAINT FK_bhhdct FOREIGN KEY(MaBH) REFERENCES [dbo].[BaoHanh](MaBH)
-ALTER TABLE [dbo].[CTBaoHanh]
-ADD CONSTRAINT FK_bhhdctsp FOREIGN KEY(Seri) REFERENCES [dbo].[SeriSP](Seri)
-
-ALTER TABLE [dbo].[SeriSP]
-ADD CONSTRAINT FK_seri FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
-ALTER TABLE [dbo].[SeriHD]
-ADD CONSTRAINT FK_serihd FOREIGN KEY(Seri) REFERENCES [dbo].[SeriSP](Seri)
-ALTER TABLE [dbo].[SeriHD]
-ADD CONSTRAINT FK_serihdsp FOREIGN KEY(MaHoaDon) REFERENCES [dbo].[HoaDon](MaHoaDon)
-
-ALTER TABLE [dbo].[KetQua]
-ADD CONSTRAINT FK_TinhTrang1 FOREIGN KEY(TenTinhTrangOne) REFERENCES [dbo].[TinhTrangOne](TenTinhTrangOne)
-ALTER TABLE [dbo].[KetQua]
-ADD CONSTRAINT FK_TinhTrang2 FOREIGN KEY(TenTinhTrangTwo) REFERENCES [dbo].[TinhTrangTwo](TenTinhTrangTwo)
-ALTER TABLE [dbo].[KetQua]
-ADD CONSTRAINT FK_TinhTrang3 FOREIGN KEY(TenTinhTrangThree) REFERENCES [dbo].[TinhTrangThree](TenTinhTrangThree)
-
-ALTER TABLE [dbo].[ChiTietHoaDon]
-ADD CONSTRAINT FK_cthdsp FOREIGN KEY(MaHoaDon) REFERENCES [dbo].[HoaDon](MaHoaDon)
-ALTER TABLE [dbo].[SanPham]
-ADD CONSTRAINT FK_SP_LH FOREIGN KEY(LoaiSanPham) REFERENCES [dbo].[LoaiSanPham](MaLoaiSanPham)
-ALTER TABLE [dbo].[SanPham]
-ADD CONSTRAINT FK_SP_HSX FOREIGN KEY(HangSanXuat) REFERENCES [dbo].[HangSanXuat](MaHangSanXuat)
-ALTER TABLE [dbo].[PhieuNhap]
-ADD CONSTRAINT FK_PN_NCC FOREIGN KEY(MaNhaPhanPhoi) REFERENCES [dbo].[NhaPhanPhoi](MaNhaPhanPhoi)
-ALTER TABLE [dbo].[PhieuNhap]
-ADD CONSTRAINT FK_PN_NV FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
-ALTER TABLE [dbo].[PhieuNhap]
-ADD CONSTRAINT FK_PN_ddh FOREIGN KEY(MaDDH) REFERENCES [dbo].[DonDatHang](MaDDH)
-ALTER TABLE [dbo].[NhanVien]
-ADD CONSTRAINT FK_NV_CV FOREIGN KEY(ChucVu) REFERENCES [dbo].[ChucVu](MaChucVu)
-ALTER TABLE [dbo].[ChiTietPhieuNhap]
-ADD CONSTRAINT FK_CTPN_PN FOREIGN KEY(MaPhieuNhap) REFERENCES [dbo].[PhieuNhap](MaPhieuNhap)
-ALTER TABLE [dbo].[ChiTietPhieuNhap]
-ADD CONSTRAINT FK_CTPN_SP FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
-ALTER TABLE [dbo].[ChiTietHoaDon]
-ADD CONSTRAINT FK_CT_HOADON_SANPHAM FOREIGN KEY(MaSanPham) REFERENCES [dbo].[SanPham](MaSanPham)
-ALTER TABLE [dbo].[HoaDon]
-ADD CONSTRAINT FK_CT_HOADON_User FOREIGN KEY(MaKH) REFERENCES [dbo].[KhachHang](MaKH)
-ALTER TABLE [dbo].[Users]
-ADD CONSTRAINT FK_User FOREIGN KEY(MaNhanVien) REFERENCES [dbo].[NhanVien](MaNhanVien)
 
 -----------------------RẰNG BUỘC--------------------------------------------
 ALTER TABLE [dbo].[ChiTietPhieuNhap]
@@ -492,19 +492,25 @@ INSERT [dbo].[HangSanXuat] ([MaHangSanXuat], [TenHangSanXuat]) VALUES (7, N'Giga
 SET IDENTITY_INSERT [HangSanXuat] OFF
 
 SET IDENTITY_INSERT [ChucVu] ON
-INSERT [dbo].[ChucVu] ([MaChucVu], [TenChucVu]) VALUES (1, N'Thu Ngân')
-INSERT [dbo].[ChucVu] ([MaChucVu], [TenChucVu]) VALUES (2, N'Kế Toán')
-INSERT [dbo].[ChucVu] ([MaChucVu], [TenChucVu]) VALUES (3, N'Admin')
+INSERT [dbo].[ChucVu] ([MaChucVu], [TenChucVu]) VALUES (1, N'Bán Hàng')
+INSERT [dbo].[ChucVu] ([MaChucVu], [TenChucVu]) VALUES (2, N'Nhập Hàng')
+INSERT [dbo].[ChucVu] ([MaChucVu], [TenChucVu]) VALUES (3, N'Bảo Hành')
+INSERT [dbo].[ChucVu] ([MaChucVu], [TenChucVu]) VALUES (4, N'Admin')
 SET IDENTITY_INSERT [ChucVu] OFF
 
 SET IDENTITY_INSERT [NhanVien] ON
-INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [NgaySinh], [GioiTinh], [NgayVaoLam], [ChucVu], [DiaChi], [SoDT]) VALUES(1,N'Sơn sama','11/1/1999',N'Nam','16/3/2019',3,N'Việt Nam',N'0123131231');
-INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [NgaySinh], [GioiTinh], [NgayVaoLam], [ChucVu], [DiaChi], [SoDT]) VALUES(2,N'Huy kun','24/2/2001',N'Nam','16/4/2020',1,N'Thái Lan',N'0121231231');
-INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [NgaySinh], [GioiTinh], [NgayVaoLam], [ChucVu], [DiaChi], [SoDT]) VALUES(3,N'Lộc chan','14/3/1996',N'Nữ','16/1/2015',2,N'Campuchia',N'0176131231');
+INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [NgaySinh], [GioiTinh], [NgayVaoLam], [ChucVu], [DiaChi], [SoDT]) VALUES(1,N'Sơn sama','11/1/1999',N'Nam','16/3/2019',1,N'Việt Nam',N'0123131231');
+INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [NgaySinh], [GioiTinh], [NgayVaoLam], [ChucVu], [DiaChi], [SoDT]) VALUES(2,N'Huy kun','24/2/2001',N'Nam','16/4/2020',2,N'Thái Lan',N'0121231231');
+INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [NgaySinh], [GioiTinh], [NgayVaoLam], [ChucVu], [DiaChi], [SoDT]) VALUES(3,N'Lộc chan','14/3/1996',N'Nữ','16/1/2015',3,N'Campuchia',N'0176131231');
+INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [NgaySinh], [GioiTinh], [NgayVaoLam], [ChucVu], [DiaChi], [SoDT]) VALUES(4,N'hieu thu hai','24/2/2001',N'Nam','16/4/2020',2,N'Thái Lan',N'0121231231');
+INSERT [dbo].[NhanVien] ([MaNhanVien], [TenNhanVien], [NgaySinh], [GioiTinh], [NgayVaoLam], [ChucVu], [DiaChi], [SoDT]) VALUES(5,N'ngoc son','14/3/1996',N'Nữ','16/1/2015',4,N'Campuchia',N'0176131231');
 SET IDENTITY_INSERT [NhanVien] OFF
 
 INSERT [dbo].[Users] ([TenDangNhap], [Password],[MaNhanVien], [Quyen]) VALUES (N'son', N'son',1, 1)
-INSERT [dbo].[Users] ([TenDangNhap], [Password],[MaNhanVien], [Quyen]) VALUES (N'huy', N'huy',2, 0)
+INSERT [dbo].[Users] ([TenDangNhap], [Password],[MaNhanVien], [Quyen]) VALUES (N'huy', N'huy',2, 1)
+INSERT [dbo].[Users] ([TenDangNhap], [Password],[MaNhanVien], [Quyen]) VALUES (N'huy1', N'huy1',3, 1)
+INSERT [dbo].[Users] ([TenDangNhap], [Password],[MaNhanVien], [Quyen]) VALUES (N'huy12', N'huy12',4, 0)
+INSERT [dbo].[Users] ([TenDangNhap], [Password],[MaNhanVien], [Quyen]) VALUES (N'ngocson', N'ngocson',5, 1)
 
 SET IDENTITY_INSERT [SanPham] ON
 INSERT [dbo].[SanPham] ([MaSanPham], [TenSanPham], [LoaiSanPham], [HangSanXuat],[HSD], [GiaBan], [TonKho], [Image]) VALUES (1, N'Ban phim co AKKO', 10, 1,24, 1590000, 34,'ban-phim-co-akko-3108-v2-world-tour-tokyo.jpg')

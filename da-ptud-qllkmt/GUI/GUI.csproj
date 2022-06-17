@@ -453,6 +453,12 @@
     <Compile Include="UserControls\listProduct.Designer.cs">
       <DependentUpon>listProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Text_Effect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Text_Effect.Designer.cs">
+      <DependentUpon>Text_Effect.cs</DependentUpon>
+    </Compile>
     <Compile Include="XuLy\Constants.cs" />
     <Compile Include="XuLy\DangNhap.cs" />
     <Compile Include="XuLy\ExcelExport.cs" />
@@ -563,6 +569,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\listProduct.resx">
       <DependentUpon>listProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Text_Effect.resx">
+      <DependentUpon>Text_Effect.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

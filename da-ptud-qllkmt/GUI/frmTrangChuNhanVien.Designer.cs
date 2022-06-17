@@ -33,8 +33,6 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.lblxinchao = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -48,6 +46,7 @@
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
+            this.text_Effect1 = new GUI.UserControls.Text_Effect();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -109,33 +108,11 @@
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "GEARVN\r\n";
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTitle.Location = new System.Drawing.Point(485, 15);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(307, 36);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Trang Chủ Nhân Viên";
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(2, 68);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 81);
-            this.panel1.TabIndex = 2;
-            // 
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.panelTitleBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelTitleBar.Controls.Add(this.panel1);
-            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Controls.Add(this.text_Effect1);
             this.panelTitleBar.Controls.Add(this.panelLogo);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
@@ -210,6 +187,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_HeThong
@@ -282,6 +260,7 @@
             this.btn_BanSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_BanSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_BanSP.UseVisualStyleBackColor = true;
+            this.btn_BanSP.Visible = false;
             this.btn_BanSP.Click += new System.EventHandler(this.btn_BanSP_Click);
             // 
             // btn_NhapSP
@@ -301,6 +280,7 @@
             this.btn_NhapSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_NhapSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_NhapSP.UseVisualStyleBackColor = true;
+            this.btn_NhapSP.Visible = false;
             this.btn_NhapSP.Click += new System.EventHandler(this.btn_NhapSP_Click);
             // 
             // btnKhachHang
@@ -361,6 +341,19 @@
             this.btnSanPham.UseVisualStyleBackColor = true;
             this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
+            // text_Effect1
+            // 
+            this.text_Effect1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.text_Effect1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Effect1.ForeColor = System.Drawing.Color.Lime;
+            this.text_Effect1.Location = new System.Drawing.Point(165, 9);
+            this.text_Effect1.Name = "text_Effect1";
+            this.text_Effect1.Set_Speed = 5;
+            this.text_Effect1.Size = new System.Drawing.Size(360, 39);
+            this.text_Effect1.TabIndex = 2;
+            this.text_Effect1.Text = "Một ngày mới tốt lành";
+            this.text_Effect1.UseCompatibleTextRendering = true;
+            // 
             // frmTrangChuNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,7 +372,6 @@
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
-            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -390,20 +382,19 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_NhaPhanPhoi;
-        private System.Windows.Forms.Button btn_BanSP;
-        private System.Windows.Forms.Button btn_NhapSP;
         private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnSanPham;
         private System.Windows.Forms.Button btn_HeThong;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Label lblxinchao;
         private System.Windows.Forms.Label lblLogo;
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button btn_BanSP;
+        public System.Windows.Forms.Button btn_NhapSP;
+        public System.Windows.Forms.Button button3;
+        private UserControls.Text_Effect text_Effect1;
     }
 }

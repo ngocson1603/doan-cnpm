@@ -115,7 +115,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAbout";
+            this.Text = "Thông tin";
             this.Load += new System.EventHandler(this.frmAbout_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
