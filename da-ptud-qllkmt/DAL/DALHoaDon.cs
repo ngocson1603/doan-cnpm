@@ -37,6 +37,10 @@ namespace DAL
         {
             return qllk.HoaDons.OrderByDescending(t => t.MaHoaDon).Where(t=>t.MaNhanVien == manv).First().MaHoaDon;
         }
+        public int loadmacuoionl()
+        {
+            return qllk.HoaDons.OrderByDescending(t => t.MaHoaDon).First().MaHoaDon;
+        }
         public List<View_CTHD> GetDanhSachHD()
         {
             var response = _apiService.GetResponse(string.Format("api/HD/"));

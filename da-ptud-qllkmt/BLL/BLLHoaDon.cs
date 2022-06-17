@@ -28,7 +28,10 @@ namespace BLL
         {
             return dalhoadon.loadMaCuoiCung(ma);
         }
-
+        public int loadmacuoionl()
+        {
+            return dalhoadon.loadmacuoionl();
+        }
         public bool KTTontai(int ma)
         {
             return dalhoadon.KTTonTai(ma);

@@ -78,9 +78,9 @@ namespace GUI
                 MessageBox.Show("Mua hàng thành công");
             }
 
-
-            xoa();
             XuatHD();
+            xoa();
+           
             toolStripButton1.Enabled = false;
         }
         public void xoa()
@@ -109,7 +109,7 @@ namespace GUI
 
             dataExcel.DataSource = bllgio.loadBieuMauGioHangAPI(int.Parse(txt_MaKH.Text), bllhoadon.loadmacuoi(int.Parse(txt_MaNV.Text)));
             taikhoan = txt_MaKH.Text;
-            mahd = int.Parse(dgv_HoaDon.CurrentRow.Cells[0].Value.ToString());
+            mahd = bllhoadon.loadmacuoionl();
             ExcelExportOnl ex = new ExcelExportOnl();
             if (dgv_HoaDon.Rows.Count == 0)
             {

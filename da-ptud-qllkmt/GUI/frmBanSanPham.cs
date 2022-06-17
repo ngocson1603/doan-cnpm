@@ -290,7 +290,7 @@ namespace GUI
 
             ex.ExportKhoa(pListKhoa, ref path, false);
 
-            DialogResult r = MessageBox.Show("ban co muon mo file khong", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult r = MessageBox.Show("Bạn có muốn mở file không", "thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (!string.IsNullOrEmpty(path) && r == DialogResult.Yes)
             {
@@ -401,7 +401,7 @@ namespace GUI
 
             ex.ExportKhoa(pListKhoa, ref path, false);
 
-            DialogResult r = MessageBox.Show("ban co muon mo file khong", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult r = MessageBox.Show("Bạn có muốn mở file không", "thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (!string.IsNullOrEmpty(path) && r == DialogResult.Yes)
             {
