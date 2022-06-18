@@ -21,6 +21,7 @@ namespace GUI
         public frmQuanLySP()
         {
             InitializeComponent();
+            
         }
 
         private void frmQuanLySP_Load(object sender, EventArgs e)
@@ -213,7 +214,7 @@ namespace GUI
             string a = textBox1.Text;
             if (a.Length > 0)
             {
-                var orders = (from s in qllk.SanPhams where s.TenSanPham.Contains(a.ToString()) select s).ToList();
+                var orders = (from s in qllk.View_SanPhams where s.TenSanPham.Contains(a.ToString()) select s).ToList();
                 dgv_QLLK.DataSource = orders;
 
             }

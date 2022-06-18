@@ -15,6 +15,7 @@ namespace GUI
     public partial class frmDangKy : Form
     {
         BLLDangKy blldangky = new BLLDangKy();
+        Helper hp = new Helper();
         public frmDangKy()
         {
             InitializeComponent();
@@ -51,6 +52,16 @@ namespace GUI
             if (blldangky.kiemtratontai(txtUserName.Text))
             {
                 MessageBox.Show("Tài khoản này đã được đăng ký");
+                return;
+            }
+            if (hp.isEmail(txtUserName.Text) == false)
+            {
+                MessageBox.Show("Gmail sai định dạng");
+                return;
+            }
+            if (hp.kiemtraSDT(txtSoDienThoai.Text) == false)
+            {
+                MessageBox.Show("Sđt sai định dạng");
                 return;
             }
             else
